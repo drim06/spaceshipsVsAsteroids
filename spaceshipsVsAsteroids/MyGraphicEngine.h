@@ -4,6 +4,7 @@
 #include "Papillon.h"
 #include "Fourmis.h"
 #include "Square.h"
+#include "utility.h"
 
 class MyGraphicEngine:public GraphicEngine {
     
@@ -21,10 +22,4 @@ public:
     	str(new char[13]{'C','l','i','c',' ','&',' ','E','n','j','o','y','\0'}){}
     
     virtual void Draw();
-
-    static char* itoa(int , char*);
-
-    static char* reverse(char*);
-
-    
 };

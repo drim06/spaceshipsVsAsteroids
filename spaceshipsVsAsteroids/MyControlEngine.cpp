@@ -14,7 +14,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 			std::cout << "elt numero :" << i << std::endl;
 			std::cout << "is clicked? " << (*square_)[i]->isClicked(posClickX, posClickY) << posClickX << "/" << posClickY << "\n";
 			if ((*square_)[i]->isClicked(posClickX, posClickY)){
-				(*square_)[i]->changeColor();
+				//(*square_)[i]->changeColor();
 				(*square_)[i]->incrNbClick();
 			}
 		}

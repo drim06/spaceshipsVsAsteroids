@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include "Engine.h"
 
@@ -18,7 +16,7 @@ int main(int argc, char * argv[])
 	std::vector<Square *> square_;
 
 	for (int i = 0; i < 10; i++){
-		square_.push_back(new Square(-1 + i*(0.2), 0 - 0.1, 0.2, 0 + i % 2, 0, 1 + i % 2));
+		square_.push_back(new Square(-1 + i*(0.2), 0 - 0.1, 0.2, 0 + i % 2, 1 + i % 2, 0.2));
 	}
     
     GraphicEngine * ge = new MyGraphicEngine(&paps_, &fourmis_, &square_);

@@ -26,7 +26,5 @@ public:
 	bool isClicked(float&, float&);
 	void changeColor();
 	void incrNbClick();
-	char* itoa(int, char*);
-	char* reverse(char*);
 };
 
