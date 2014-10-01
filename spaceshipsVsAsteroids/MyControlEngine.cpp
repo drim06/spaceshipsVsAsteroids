@@ -4,8 +4,8 @@
 
 
 void MyControlEngine::MouseCallback(int button, int state, int x, int y){
-	float middleWidth = Engine::getWindowsWidth() / 2.0f;
-	float middleHeight = Engine::getWindowsHeight() / 2.0f;
+	float middleWidth = f_.getWindowsWidth() / 2.0f;
+	float middleHeight = f_.getWindowsHeight() / 2.0f;
 	float posClickX = (x-middleWidth) / middleWidth; // compris entre -1.0f et 1.0f
 	float posClickY = (y-middleHeight) / -middleHeight; // compris entre -1.0f et 1.0f
     if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {

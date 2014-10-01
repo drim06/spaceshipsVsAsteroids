@@ -4,7 +4,7 @@
 
 void MyGameEngine::idle(){
 	if(tick % 30 == 0){
-		for (int i = 0; i < paps_->size(); i++) {
+		/*for (int i = 0; i < paps_->size(); i++) {
         	(*paps_)[i]->tick();
 			for (int j = 0; j < fourmis_->size(); j++){
 				if ((*paps_)[i]->hit(*(*fourmis_)[j])){
@@ -12,10 +12,10 @@ void MyGameEngine::idle(){
 					(*fourmis_).erase((*fourmis_).begin() + j);		// on supprime la fourmis
 				}
 			}
-    	}
-		for (int i = 0; i < fourmis_->size(); i++) {
+    	}*/
+		/*for (int i = 0; i < fourmis_->size(); i++) {
         	(*fourmis_)[i]->tick();
-    	}
+    	}*/
 	}
 	tick++;
 }
