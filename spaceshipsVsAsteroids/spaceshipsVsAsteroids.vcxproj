@@ -82,6 +82,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Fourmis.cpp" />
+    <ClCompile Include="Laser.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyControlEngine.cpp" />
     <ClCompile Include="MyGameEngine.cpp" />
@@ -94,6 +95,8 @@
   <ItemGroup>
     <ClInclude Include="Dimension.h" />
     <ClInclude Include="Fourmis.h" />
+    <ClInclude Include="Laser.h" />
+    <ClInclude Include="Missile.h" />
     <ClInclude Include="MyControlEngine.h" />
     <ClInclude Include="MyGameEngine.h" />
     <ClInclude Include="MyGraphicEngine.h" />

@@ -16,7 +16,7 @@ void SpaceCruiser::draw(){
 		squarePosY + squareSide / 2 + (squareSide / 3),
 		squarePosX + squareSide - (squareSide * 0.7f),
 		squarePosY + squareSide / 2 - (squareSide / 3),
-		1.0f,
-		0.0f,
-		0.0f);
+		red_,
+		green_,
+		blue_);
 }

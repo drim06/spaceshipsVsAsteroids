@@ -6,6 +6,7 @@
 #include "MyControlEngine.h"
 #include "Dimension.h"
 #include "SpaceShip.h"
+#include "Missile.h"
 
 
 int main(int argc, char * argv[])
@@ -17,6 +18,8 @@ int main(int argc, char * argv[])
     std::vector<Fourmis *> fourmis_;
 	std::vector<std::vector <Square> > square_;
 	std::vector<SpaceShip * > spaceShips_;
+	std::vector<Missile * > missiles_;
+	missiles_.push_back(new Laser(0.0f, 0.0f));
 	
 	for (int rows = 0; rows < 10; rows++) {
 		square_.emplace_back();
@@ -26,8 +29,8 @@ int main(int argc, char * argv[])
 		}
 	}
     
-    GraphicEngine * ge = new MyGraphicEngine(dim, &paps_, &fourmis_, &square_, &spaceShips_);
-	GameEngine * gme = new MyGameEngine(dim, &paps_, &fourmis_);
+    GraphicEngine * ge = new MyGraphicEngine(dim, &paps_, &fourmis_, &square_, &spaceShips_, &missiles_);
+	GameEngine * gme = new MyGameEngine(dim, &paps_, &fourmis_, &missiles_);
 	ControlEngine * ce = new MyControlEngine(dim, &paps_, &fourmis_, &square_, &spaceShips_);
     
     e.setGraphicEngine(ge);
