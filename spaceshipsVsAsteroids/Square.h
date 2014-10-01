@@ -26,5 +26,6 @@ public:
 	bool isClicked(float&, float&);
 	void changeColor();
 	void incrNbClick();
+	float getSide();
 };
 
