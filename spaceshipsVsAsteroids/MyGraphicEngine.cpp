@@ -16,6 +16,11 @@ void MyGraphicEngine::Draw(){
 			(*square_)[rows][columns].draw();
 		}
 	}
+
+	for (int i = 0; i < spaceShips_->size(); i++){
+		(*spaceShips_)[i]->draw();
+	}
+
     for (int i = 0; i < paps_->size(); i++) {
         (*paps_)[i]->draw();
     }

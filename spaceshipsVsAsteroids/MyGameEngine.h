@@ -9,6 +9,7 @@ class MyGameEngine:public GameEngine {
 	Dimension dim_;
     std::vector<Papillon * > *paps_;
     std::vector<Fourmis * > *fourmis_;
+
 public:
     int tick;
 	MyGameEngine(Dimension dim, std::vector<Papillon * > * paps, std::vector<Fourmis * > * fourmis) :

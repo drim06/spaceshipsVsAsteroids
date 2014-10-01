@@ -6,6 +6,8 @@
 #include "Square.h"
 #include "utility.h"
 #include "Dimension.h"
+#include "SpaceShip.h"
+#include "SpaceCruiser.h"
 
 class MyGraphicEngine:public GraphicEngine {
     
@@ -13,15 +15,17 @@ class MyGraphicEngine:public GraphicEngine {
     std::vector<Papillon * > *paps_;
     std::vector<Fourmis * > *fourmis_;
 	std::vector<std::vector <Square> > *square_;
+	std::vector<SpaceShip * > *spaceShips_;
     
     char * str;
 public:
     
-	MyGraphicEngine(Dimension dim, std::vector<Papillon * > * paps, std::vector<Fourmis * > * fourmis, std::vector<std::vector <Square> > *square) :
+	MyGraphicEngine(Dimension dim, std::vector<Papillon * > * paps, std::vector<Fourmis * > * fourmis, std::vector<std::vector <Square> > *square, std::vector<SpaceShip * > * spaceShips) :
 		dim_(dim),
 		paps_(paps),
         fourmis_(fourmis),
 		square_(square),
+		spaceShips_(spaceShips),
     	str(new char[13]{'C','l','i','c',' ','&',' ','E','n','j','o','y','\0'}){}
     
     virtual void Draw();

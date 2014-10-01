@@ -17,6 +17,15 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		std::cout << "indiceX : " << indiceRows << std::endl;
 		std::cout << "indiceY : " << indiceColumns << std::endl;
     } else if(button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) {
-        fourmis_->push_back(new Fourmis(posClickX, posClickY));
+		int indiceColumns = x / ((*square_)[0][0].getSide() * (dim_.getWindowsWidth() / 2));
+		int indiceRows = y / ((*square_)[0][0].getSide() * (dim_.getWindowsHeight() / 2));
+		// si la case existe et qu'elle n'est pas occupée
+		if (indiceColumns < 10 && indiceRows < 10 && !((*square_)[indiceRows][indiceColumns].isOccuped())){
+			std::cout << "occuped :" << ((*square_)[indiceRows][indiceColumns].isOccuped()) << std::endl;
+			spaceShips_->push_back(new SpaceCruiser((*square_)[indiceRows][indiceColumns]));
+			(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
+		}
+		std::cout << "indiceX : " << indiceRows << std::endl;
+		std::cout << "indiceY : " << indiceColumns << std::endl;
     }
 }

@@ -87,6 +87,7 @@
     <ClCompile Include="MyGameEngine.cpp" />
     <ClCompile Include="MyGraphicEngine.cpp" />
     <ClCompile Include="Papillon.cpp" />
+    <ClCompile Include="SpaceCruiser.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="utility.cpp" />
   </ItemGroup>
@@ -97,6 +98,8 @@
     <ClInclude Include="MyGameEngine.h" />
     <ClInclude Include="MyGraphicEngine.h" />
     <ClInclude Include="Papillon.h" />
+    <ClInclude Include="SpaceCruiser.h" />
+    <ClInclude Include="SpaceShip.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>

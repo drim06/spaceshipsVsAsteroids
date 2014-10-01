@@ -39,6 +39,22 @@ void Square::incrNbClick(){
 	std::cout << "nb click : " << nbClick_ << std::endl;
 }
 
-float Square::getSide(){
+float Square::getSide() const{
 	return side_;
+}
+
+float Square::getPosX() const{
+	return posX_;
+}
+
+float Square::getPosY() const{
+	return posY_;
+}
+
+bool Square::isOccuped() const{
+	return occuped_;
+}
+
+void Square::setIsOccuped(bool b){
+	occuped_ = b;
 }
