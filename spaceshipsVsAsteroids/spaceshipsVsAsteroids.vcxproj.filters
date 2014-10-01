@@ -62,7 +62,7 @@
     <ClInclude Include="utility.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Fenetre.h">
+    <ClInclude Include="Dimension.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

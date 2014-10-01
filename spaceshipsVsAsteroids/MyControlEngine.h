@@ -3,16 +3,16 @@
 #include "Papillon.h"
 #include "Fourmis.h"
 #include "Square.h"
-#include "Fenetre.h"
+#include "Dimension.h"
 
 class MyControlEngine:public ControlEngine {
-	Fenetre f_;
+	Dimension dim_;
     std::vector<Papillon * > *paps_;
     std::vector<Fourmis * > *fourmis_;
 	std::vector<std::vector <Square> > *square_;
 public:
-	MyControlEngine(Fenetre f, std::vector<Papillon * > * paps, std::vector<Fourmis *> * fourmis, std::vector<std::vector <Square> > * square) :
-		f_(f),
+	MyControlEngine(Dimension dim, std::vector<Papillon * > * paps, std::vector<Fourmis *> * fourmis, std::vector<std::vector <Square> > * square) :
+		dim_(dim),
 		paps_(paps),
     	fourmis_(fourmis),
 		square_(square)

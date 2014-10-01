@@ -5,11 +5,11 @@
 #include "Fourmis.h"
 #include "Square.h"
 #include "utility.h"
-#include "Fenetre.h"
+#include "Dimension.h"
 
 class MyGraphicEngine:public GraphicEngine {
     
-	Fenetre f_;
+	Dimension dim_;
     std::vector<Papillon * > *paps_;
     std::vector<Fourmis * > *fourmis_;
 	std::vector<std::vector <Square> > *square_;
@@ -17,8 +17,8 @@ class MyGraphicEngine:public GraphicEngine {
     char * str;
 public:
     
-	MyGraphicEngine(Fenetre f, std::vector<Papillon * > * paps, std::vector<Fourmis * > * fourmis, std::vector<std::vector <Square> > *square) :
-		f_(f),
+	MyGraphicEngine(Dimension dim, std::vector<Papillon * > * paps, std::vector<Fourmis * > * fourmis, std::vector<std::vector <Square> > *square) :
+		dim_(dim),
 		paps_(paps),
         fourmis_(fourmis),
 		square_(square),
