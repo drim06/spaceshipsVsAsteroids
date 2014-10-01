@@ -9,9 +9,9 @@ class MyControlEngine:public ControlEngine {
 	Fenetre f_;
     std::vector<Papillon * > *paps_;
     std::vector<Fourmis * > *fourmis_;
-	std::vector<Square * > *square_;
+	std::vector<std::vector <Square> > *square_;
 public:
-	MyControlEngine(Fenetre f, std::vector<Papillon * > * paps, std::vector<Fourmis *> * fourmis, std::vector<Square * > *square) :
+	MyControlEngine(Fenetre f, std::vector<Papillon * > * paps, std::vector<Fourmis *> * fourmis, std::vector<std::vector <Square> > * square) :
 		f_(f),
 		paps_(paps),
     	fourmis_(fourmis),

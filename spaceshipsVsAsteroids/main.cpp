@@ -14,10 +14,14 @@ int main(int argc, char * argv[])
     
     std::vector<Papillon *> paps_;
     std::vector<Fourmis *> fourmis_;
-	std::vector<Square *> square_;
-
-	for (int i = 0; i < 10; i++){
-		square_.push_back(new Square(-1 + i*(0.2), 0 - 0.1, 0.2, 0 + i % 2, 1 + i % 2, 0.2));
+	std::vector<std::vector <Square> > square_;
+	
+	for (int rows = 0; rows < 10; rows++) {
+		square_.emplace_back();
+		for (int columns = 0; columns < 10; columns++){
+			std::cout << rows << " " << columns << std::endl;
+			square_[rows].emplace_back(-1 + columns*0.2f, 1.f - 0.2f - rows*0.2f, 0.2f, 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2));
+		}
 	}
     
     GraphicEngine * ge = new MyGraphicEngine(f, &paps_, &fourmis_, &square_);
