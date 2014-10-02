@@ -1,6 +1,7 @@
 #pragma once
 #include "Missile.h"
 #include "GraphicPrimitives.h"
+#include "Enemy.h"
 
 class Laser : public Missile
 {
@@ -29,5 +30,6 @@ public:
 	void draw();
 	void tick();
 	float getPosX() const;
+	bool hit(const Enemy& enemy);
 };
 

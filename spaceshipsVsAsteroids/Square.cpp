@@ -36,7 +36,6 @@ void Square::changeColor(){
 
 void Square::incrNbClick(){
 	nbClick_++;
-	std::cout << "nb click : " << nbClick_ << std::endl;
 }
 
 float Square::getSide() const{

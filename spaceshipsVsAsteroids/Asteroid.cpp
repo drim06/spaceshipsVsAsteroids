@@ -1,18 +1,5 @@
 #include "Asteroid.h"
 
-/*void Asteroid::draw(){
-	GraphicPrimitives::drawFillTriangle2D(
-		posX_,
-		posY_,
-		posX_ -0.05f,
-		posY_ -0.02f,
-		posX_ -0.05f,
-		posY_ + 0.02f,
-		red_,
-		green_,
-		blue_);
-}*/
-
 void Asteroid::draw(){
 	std::vector<float> x;
 	std::vector<float> y;
@@ -47,4 +34,8 @@ void Asteroid::tick(){
 
 float Asteroid::getPosX() const{
 	return posX_;
+}
+
+float Asteroid::getPosY() const{
+	return posY_;
 }

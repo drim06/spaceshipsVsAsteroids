@@ -15,7 +15,7 @@ public:
 	Asteroid(int const rows) :
 		rows_(rows),
 		posX_(1.0f - 0.42f),
-		posY_(0.0f),
+		posY_(0.05f),
 		rapidity_(0.002f),
 		health_(100),
 		red_(0.0f),
@@ -28,5 +28,6 @@ public:
 	void draw();
 	void tick();
 	float getPosX() const;
+	float getPosY() const;
 };
 

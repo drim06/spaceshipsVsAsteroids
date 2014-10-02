@@ -18,6 +18,18 @@ void MyGameEngine::idle(){
 				(*missiles_)[i] = nullptr;
 				(*missiles_).erase((*missiles_).begin() + i);
 			}
+			for (int j = 0; j < enemy_->size(); j++){ 
+				if ((*missiles_)[i] != nullptr){
+					if ((*missiles_)[i]->hit(*(*enemy_)[j])){			
+						delete (*enemy_)[j];							// on désalloue la mémoire
+						(*enemy_)[j] = nullptr;
+						(*enemy_).erase((*enemy_).begin() + j);			// on supprime l'asteroide
+						delete (*missiles_)[i];							// on désalloue la mémoire
+						(*missiles_)[i] = nullptr;
+						(*missiles_).erase((*missiles_).begin() + i);	// on supprime le missile
+					}
+				}
+			}
 		}
 		for (int i = 0; i < enemy_->size(); i++){
 			(*enemy_)[i]->tick();
