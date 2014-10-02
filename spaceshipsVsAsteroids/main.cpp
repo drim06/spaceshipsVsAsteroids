@@ -19,7 +19,6 @@ int main(int argc, char * argv[])
 	std::vector<std::vector <Square> > square_;
 	std::vector<SpaceShip * > spaceShips_;
 	std::vector<Missile * > missiles_;
-	//missiles_.push_back(new Laser(0.0f, 0.0f));
 	
 	for (int rows = 0; rows < 10; rows++) {
 		square_.emplace_back();

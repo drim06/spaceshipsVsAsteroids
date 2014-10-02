@@ -23,12 +23,10 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		int indiceRows = y / ((*square_)[0][0].getSide() * (dim_.getWindowsHeight() / 2));
 		// si la case existe et qu'elle n'est pas occupée
 		if (indiceColumns < 10 && indiceRows < 10 && !((*square_)[indiceRows][indiceColumns].isOccuped())){
-			std::cout << "occuped :" << ((*square_)[indiceRows][indiceColumns].isOccuped()) << std::endl;
+
 			spaceShips_->push_back(new SpaceCruiser((*square_)[indiceRows][indiceColumns]));
 			(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
 			missiles_->push_back(new Laser((*square_)[indiceRows][indiceColumns].getPosX() + (*square_)[indiceRows][indiceColumns].getSide(), (*square_)[indiceRows][indiceColumns].getPosY() + (*square_)[indiceRows][indiceColumns].getSide()/2));
 		}
-		std::cout << "indiceX : " << indiceRows << std::endl;
-		std::cout << "indiceY : " << indiceColumns << std::endl;
     }
 }

@@ -5,7 +5,7 @@
 void MyGameEngine::idle(){
 	if(tick % 2 == 0){
 		for (int s = 0; s < spaceShips_->size(); s++){
-			if (tick % (*missiles_)[s]->getFrenquency() == 0){ 
+			if ((*spaceShips_)[s]->canShoot(tick)){
 				missiles_->push_back(new Laser((*spaceShips_)[s]->getWeaponPosX(), (*spaceShips_)[s]->getWeaponPosY()));
 				// plus tard fair un switch case avec pour chaque type
 				// de vaisseau, le missile correspondant
