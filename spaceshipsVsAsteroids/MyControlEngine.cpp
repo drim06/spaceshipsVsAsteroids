@@ -24,6 +24,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 			std::cout << "occuped :" << ((*square_)[indiceRows][indiceColumns].isOccuped()) << std::endl;
 			spaceShips_->push_back(new SpaceCruiser((*square_)[indiceRows][indiceColumns]));
 			(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
+			missiles_->push_back(new Laser((*square_)[indiceRows][indiceColumns].getPosX() + (*square_)[indiceRows][indiceColumns].getSide(), (*square_)[indiceRows][indiceColumns].getPosY() + (*square_)[indiceRows][indiceColumns].getSide()/2));
 		}
 		std::cout << "indiceX : " << indiceRows << std::endl;
 		std::cout << "indiceY : " << indiceColumns << std::endl;

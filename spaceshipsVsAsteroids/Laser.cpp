@@ -22,11 +22,11 @@ Laser::~Laser()
 }*/
 
 void Laser::draw(){
-	GraphicPrimitives::drawLine2D(
+	GraphicPrimitives::drawFillRect2D(
 		posX_,
 		posY_,
-		posX_ - 0.5f,
-		posY_ + 0.0f,
+		width_,
+		height_,
 		red_,
 		green_,
 		blue_);
@@ -34,4 +34,12 @@ void Laser::draw(){
 
 void Laser::tick(){
 	posX_ += rapidity_;
+}
+
+bool Laser::isInScreen() const{
+	//return posX_ < (-1.0 + 10 * squareSide_);
+}
+
+int Laser::getFrenquency() const{
+	return frequency_;
 }

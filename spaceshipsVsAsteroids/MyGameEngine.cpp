@@ -4,6 +4,17 @@
 
 void MyGameEngine::idle(){
 	if(tick % 2 == 0){
+		for (int s = 0; s < spaceShips_->size(); s++){
+			if (tick % (*missiles_)[s]->getFrenquency() == 0){
+				missiles_->push_back(new Laser(0.0f, 0.0f));
+				//missiles_->push_back(new Laser((*spaceShips_)[s]->getWeaponPosX(), (*spaceShips_)[s]->getWeaponPosY()));
+			}
+			/*for (int i = 0; i < missiles_->size(); i++){
+				//if (tick % (*missiles_)[i]->getFrenquency() == 0){
+					missiles_->push_back(new Laser(0.0f, 0.0f));
+				//}
+			}*/
+		}
 		for (int i = 0; i < missiles_->size(); i++){
 			(*missiles_)[i]->tick();
 		}
