@@ -14,24 +14,18 @@ private:
 public:
 	SpaceCruiser(const Square& square) :
 		square_(square),
-		weaponPosX_(0.0f),
-		weaponPosY_(-0.5f),
+		weaponPosX_(square_.getPosX() + square_.getSide()),
+		weaponPosY_(square_.getPosY() + square_.getSide() / 2),
 		red_(1.0f),
 		green_(0.0f),
 		blue_(0.0f)
-	{
-		/*float squarePosX = square_.getPosX();
-		float squarePosY = square_.getPosY();
-		float squareSide = square_.getSide();
-		weaponPosX_ = squarePosX + squareSide;
-		weaponPosY_ = squarePosY + squareSide / 2;*/
-	}
+	{}
 
 	~SpaceCruiser();
 
 	void draw();
-	float getWeaponPosX() const;
-	float getWeaponPosY() const;
+	float getWeaponPosX();
+	float getWeaponPosY();
 
 };
 
