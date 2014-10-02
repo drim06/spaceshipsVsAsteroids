@@ -11,27 +11,27 @@ void MyGameEngine::idle(){
 				// de vaisseau, le missile correspondant
 			}
 		}
-		for (int i = 0; i < missiles_->size(); i++){
+		for (int i = 0; i < missiles_->size(); i++){ // supprime les missiles qui sortent du GameBoard 
 			(*missiles_)[i]->tick();
 			if ((*missiles_)[i]->getPosX() >= 0.67f){
 				delete (*missiles_)[i];						
 				(*missiles_)[i] = nullptr;
 				(*missiles_).erase((*missiles_).begin() + i);
 			}
-			for (int j = 0; j < enemy_->size(); j++){ 
+			for (int j = 0; j < enemy_->size(); j++){ // supprime les missiles/ennemis lors d'une collision
 				if ((*missiles_)[i] != nullptr){
 					if ((*missiles_)[i]->hit(*(*enemy_)[j])){			
-						delete (*enemy_)[j];							// on désalloue la mémoire
+						delete (*enemy_)[j];							
 						(*enemy_)[j] = nullptr;
-						(*enemy_).erase((*enemy_).begin() + j);			// on supprime l'asteroide
-						delete (*missiles_)[i];							// on désalloue la mémoire
+						(*enemy_).erase((*enemy_).begin() + j);			
+						delete (*missiles_)[i];							
 						(*missiles_)[i] = nullptr;
-						(*missiles_).erase((*missiles_).begin() + i);	// on supprime le missile
+						(*missiles_).erase((*missiles_).begin() + i);	
 					}
 				}
 			}
 		}
-		for (int i = 0; i < enemy_->size(); i++){
+		for (int i = 0; i < enemy_->size(); i++){	// supprime les ennemis qui sortent du GameBoard
 			(*enemy_)[i]->tick();
 			if ((*enemy_)[i]->getPosX() <= -1.f){
 				delete (*enemy_)[i];
