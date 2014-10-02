@@ -20,15 +20,3 @@ void SpaceCruiser::draw(){
 		green_,
 		blue_);
 }
-
-float SpaceCruiser::getWeaponPosX() const{
-	return weaponPosX_;
-}
-
-float SpaceCruiser::getWeaponPosY() const{
-	return weaponPosY_;
-}
-
-bool SpaceCruiser::canShoot(const int& x) const{
-	return x % frequency_ == 0;
-}

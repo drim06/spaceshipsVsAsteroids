@@ -28,29 +28,6 @@ void Asteroid::draw(){
 		blue_);
 }
 
-void Asteroid::tick(){
-	posX_ -= rapidity_;
-}
-
-float Asteroid::getPosX() const{
-	return posX_;
-}
-
-float Asteroid::getPosY() const{
-	return posY_;
-}
-
-void Asteroid::receiveDamage(int damage){
-	if (health_ > 0){
-		health_ -= damage;
-		shrink();
-	}
-}
-
-bool Asteroid::isAlive() const{
-	return health_ > 0;
-}
-
 void Asteroid::shrink(){
 	coeffReducteur_ += 0.01f;
 }

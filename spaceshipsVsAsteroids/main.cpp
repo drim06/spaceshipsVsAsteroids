@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
 #include "Engine.h"
 
 #include "MyGraphicEngine.h"
@@ -13,6 +15,8 @@
 
 int main(int argc, char * argv[])
 {
+	srand(time(NULL));
+
 	Fenetre f(800, 600);
     Engine e(argc,argv, f.getWindowsWidth(), f.getWindowsHeight(), "Spaceships VS Asteroids");
     
@@ -31,6 +35,10 @@ int main(int argc, char * argv[])
 			float squareSide = (f.getWindowsHeight()-(f.getWindowsHeight()/7)) / (f.getWindowsHeight() / 2.f) / 10.f;
 			square_[rows].emplace_back(-1 + columns*squareSide, 1.f - squareSide - rows*squareSide, squareSide, 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2));
 		}
+	}
+
+	for (int i = 0; i < 5; i++){
+		enemy_.push_back(new Asteroid(rand() % 10));
 	}
     
     GraphicEngine * ge = new MyGraphicEngine(f, &paps_, &fourmis_, &square_, &spaceShips_, &missiles_, &enemy_);

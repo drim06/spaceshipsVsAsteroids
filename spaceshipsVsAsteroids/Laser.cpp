@@ -19,11 +19,8 @@ void Laser::draw(){
 void Laser::tick(){
 	posX_ += rapidity_;
 }
-float Laser::getPosX() const{
-	return posX_;
-}
 
-bool Laser::hit(const Enemy& enemy){
+bool Laser::hit(Enemy& enemy){
 	// cotés des hitbox A et B
 	float leftA, leftB;
 	float rightA, rightB;
@@ -50,8 +47,4 @@ bool Laser::hit(const Enemy& enemy){
 
 	// alors il y a eu collision
 	return true;
-}
-
-void Laser::dealDamage(Enemy& enemy){
-	enemy.receiveDamage(power_);
 }
