@@ -10,6 +10,7 @@ private:
 	float red_, green_, blue_;
 	float rapidity_;
 	int health_;
+	float coeffReducteur_;
 
 public:
 	Asteroid(int const rows) :
@@ -18,6 +19,7 @@ public:
 		posY_(0.05f),
 		rapidity_(0.002f),
 		health_(100),
+		coeffReducteur_(1.0f),
 		red_(0.0f),
 		green_(1.0f),
 		blue_(0.1f)
@@ -29,5 +31,7 @@ public:
 	void tick();
 	float getPosX() const;
 	float getPosY() const;
+	void receiveDamage(int);
+	bool isAlive() const;
 };
 

@@ -51,3 +51,7 @@ bool Laser::hit(const Enemy& enemy){
 	// alors il y a eu collision
 	return true;
 }
+
+void Laser::dealDamage(Enemy& enemy){
+	enemy.receiveDamage(power_);
+}

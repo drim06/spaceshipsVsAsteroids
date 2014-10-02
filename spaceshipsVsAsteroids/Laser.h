@@ -31,5 +31,6 @@ public:
 	void tick();
 	float getPosX() const;
 	bool hit(const Enemy& enemy);
+	void dealDamage(Enemy& enemy);
 };
 
