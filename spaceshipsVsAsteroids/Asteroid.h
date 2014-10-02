@@ -13,9 +13,9 @@ public:
 		posX_ = (1.0f - 0.42f);
 		posY_ = 1 - rows*0.171667f - 0.171667f / 2;
 		rapidity_ = 0.002f;
-		red_ = 0.0f;
-		green_ = 0.5f;
-		blue_ = 1.0f;
+		red_ = 1.0f;
+		green_ = 1.0f;
+		blue_ = 0.0f;
 	}
 
 	~Asteroid();

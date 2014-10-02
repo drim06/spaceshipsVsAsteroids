@@ -6,7 +6,6 @@
 void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 	int indiceColumns = x / ((*square_)[0][0].getSide() * (f_.getWindowsWidth() / 2));
 	int indiceRows = y / ((*square_)[0][0].getSide() * (f_.getWindowsHeight() / 2));
-	std::cout << ((*square_)[0][0].getSide()) << std::endl;
 
 	if (indiceColumns < 10 && indiceRows < 10){		// si c'est une case du GameBoard
 

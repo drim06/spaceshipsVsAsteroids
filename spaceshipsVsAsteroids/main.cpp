@@ -20,8 +20,6 @@ int main(int argc, char * argv[])
 	Fenetre f(800, 600);
     Engine e(argc,argv, f.getWindowsWidth(), f.getWindowsHeight(), "Spaceships VS Asteroids");
     
-    std::vector<Papillon *> paps_;
-    std::vector<Fourmis *> fourmis_;
 	std::vector<std::vector <Square> > square_;
 	std::vector<SpaceShip * > spaceShips_;
 	std::vector<Missile * > missiles_;
@@ -41,9 +39,9 @@ int main(int argc, char * argv[])
 		enemy_.push_back(new Asteroid(rand() % 10));
 	}
     
-    GraphicEngine * ge = new MyGraphicEngine(f, &paps_, &fourmis_, &square_, &spaceShips_, &missiles_, &enemy_);
-	GameEngine * gme = new MyGameEngine(f, &paps_, &fourmis_, &missiles_, &spaceShips_, &enemy_);
-	ControlEngine * ce = new MyControlEngine(f, &paps_, &fourmis_, &square_, &spaceShips_, &missiles_, &enemy_);
+    GraphicEngine * ge = new MyGraphicEngine(f, &square_, &spaceShips_, &missiles_, &enemy_);
+	GameEngine * gme = new MyGameEngine(f, &spaceShips_, &missiles_, &enemy_);
+	ControlEngine * ce = new MyControlEngine(f, &square_, &spaceShips_, &missiles_, &enemy_);
     
     e.setGraphicEngine(ge);
     e.setGameEngine(gme);

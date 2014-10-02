@@ -3,7 +3,7 @@
 
 
 void MyGameEngine::idle(){
-	if(tick % 2 == 0){
+	if(tick % 3 == 0){
 		for (int s = 0; s < spaceShips_->size(); s++){
 			if ((*spaceShips_)[s]->canShoot(tick)){
 				missiles_->push_back(new Laser((*spaceShips_)[s]->getWeaponPosX(), (*spaceShips_)[s]->getWeaponPosY()));

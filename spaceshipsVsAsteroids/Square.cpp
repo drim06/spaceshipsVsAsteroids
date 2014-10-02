@@ -4,8 +4,6 @@
 #include "utility.h"
 
 void Square::draw(){
-	char* nbClicks = new char[100];
-	utility::itoa(nbClick_, nbClicks);
 	
 	GraphicPrimitives::drawFillRect2D(
 		posX_,
@@ -15,7 +13,6 @@ void Square::draw(){
 		red_,
 		green_,
 		blue_);
-	GraphicPrimitives::drawText2D(nbClicks, posX_, posY_, 0.7f, 0.0f, 0.0f);
 }
 
 void Square::tick(){}

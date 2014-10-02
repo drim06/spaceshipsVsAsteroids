@@ -82,13 +82,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Asteroid.cpp" />
-    <ClCompile Include="Fourmis.cpp" />
     <ClCompile Include="Laser.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyControlEngine.cpp" />
     <ClCompile Include="MyGameEngine.cpp" />
     <ClCompile Include="MyGraphicEngine.cpp" />
-    <ClCompile Include="Papillon.cpp" />
     <ClCompile Include="SpaceCruiser.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="utility.cpp" />
@@ -97,13 +95,11 @@
     <ClInclude Include="Asteroid.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Fenetre.h" />
-    <ClInclude Include="Fourmis.h" />
     <ClInclude Include="Laser.h" />
     <ClInclude Include="Missile.h" />
     <ClInclude Include="MyControlEngine.h" />
     <ClInclude Include="MyGameEngine.h" />
     <ClInclude Include="MyGraphicEngine.h" />
-    <ClInclude Include="Papillon.h" />
     <ClInclude Include="SpaceCruiser.h" />
     <ClInclude Include="SpaceShip.h" />
     <ClInclude Include="Square.h" />
