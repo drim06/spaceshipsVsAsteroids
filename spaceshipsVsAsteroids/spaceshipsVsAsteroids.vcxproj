@@ -93,7 +93,7 @@
     <ClCompile Include="utility.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Dimension.h" />
+    <ClInclude Include="Fenetre.h" />
     <ClInclude Include="Fourmis.h" />
     <ClInclude Include="Laser.h" />
     <ClInclude Include="Missile.h" />

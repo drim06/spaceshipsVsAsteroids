@@ -3,14 +3,14 @@
 #include "Papillon.h"
 #include "Fourmis.h"
 #include "Square.h"
-#include "Dimension.h"
+#include "Fenetre.h"
 #include "SpaceShip.h"
 #include "SpaceCruiser.h"
 #include "Missile.h"
 #include "Laser.h"
 
 class MyControlEngine:public ControlEngine {
-	Dimension dim_;
+	Fenetre f_;
     std::vector<Papillon * > *paps_;
     std::vector<Fourmis * > *fourmis_;
 	std::vector<std::vector <Square> > *square_;
@@ -18,8 +18,8 @@ class MyControlEngine:public ControlEngine {
 	std::vector<Missile * > *missiles_;
 
 public:
-	MyControlEngine(Dimension dim, std::vector<Papillon * > * paps, std::vector<Fourmis *> * fourmis, std::vector<std::vector <Square> > * square, std::vector<SpaceShip * > * spaceShips, std::vector<Missile * > *missiles) :
-		dim_(dim),
+	MyControlEngine(Fenetre f, std::vector<Papillon * > * paps, std::vector<Fourmis *> * fourmis, std::vector<std::vector <Square> > * square, std::vector<SpaceShip * > * spaceShips, std::vector<Missile * > *missiles) :
+		f_(f),
 		paps_(paps),
     	fourmis_(fourmis),
 		square_(square),

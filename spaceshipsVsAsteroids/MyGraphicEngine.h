@@ -5,14 +5,14 @@
 #include "Fourmis.h"
 #include "Square.h"
 #include "utility.h"
-#include "Dimension.h"
+#include "Fenetre.h"
 #include "SpaceShip.h"
 #include "SpaceCruiser.h"
 #include "Missile.h"
 
 class MyGraphicEngine:public GraphicEngine {
     
-	Dimension dim_;
+	Fenetre f_;
     std::vector<Papillon * > *paps_;
     std::vector<Fourmis * > *fourmis_;
 	std::vector<std::vector <Square> > *square_;
@@ -22,8 +22,8 @@ class MyGraphicEngine:public GraphicEngine {
     char * str;
 public:
     
-	MyGraphicEngine(Dimension dim, std::vector<Papillon * > * paps, std::vector<Fourmis * > * fourmis, std::vector<std::vector <Square> > *square, std::vector<SpaceShip * > * spaceShips, std::vector<Missile * > * missiles) :
-		dim_(dim),
+	MyGraphicEngine(Fenetre f, std::vector<Papillon * > * paps, std::vector<Fourmis * > * fourmis, std::vector<std::vector <Square> > *square, std::vector<SpaceShip * > * spaceShips, std::vector<Missile * > * missiles) :
+		f_(f),
 		paps_(paps),
         fourmis_(fourmis),
 		square_(square),

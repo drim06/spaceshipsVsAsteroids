@@ -3,13 +3,13 @@
 #include "Engine.h"
 #include "Papillon.h"
 #include "Fourmis.h"
-#include "Dimension.h"
+#include "Fenetre.h"
 #include "SpaceShip.h"
 #include "Missile.h"
 #include "Laser.h"
 
 class MyGameEngine:public GameEngine {
-	Dimension dim_;
+	Fenetre f_;
     std::vector<Papillon * > *paps_;
     std::vector<Fourmis * > *fourmis_;
 	std::vector<SpaceShip * > *spaceShips_;
@@ -17,8 +17,8 @@ class MyGameEngine:public GameEngine {
 
 public:
     int tick;
-	MyGameEngine(Dimension dim, std::vector<Papillon * > * paps, std::vector<Fourmis * > * fourmis, std::vector<Missile *> * missiles, std::vector<SpaceShip * > *spaceShips) :
-		dim_(dim),
+	MyGameEngine(Fenetre f, std::vector<Papillon * > * paps, std::vector<Fourmis * > * fourmis, std::vector<Missile *> * missiles, std::vector<SpaceShip * > *spaceShips) :
+		f_(f),
     	paps_(paps),
     	fourmis_(fourmis),
 		missiles_(missiles),

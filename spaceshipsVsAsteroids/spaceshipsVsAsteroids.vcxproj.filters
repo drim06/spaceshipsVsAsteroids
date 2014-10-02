@@ -13,6 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Engine">
+      <UniqueIdentifier>{4b0ff112-2567-406f-86e0-36feabf4b21c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Missile">
+      <UniqueIdentifier>{d8ef75dd-3e03-4af8-b9e1-cefc3ffe6709}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Utility">
+      <UniqueIdentifier>{b06eb5e9-cdb9-481c-883c-cb422036bfcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\SpaceShip">
+      <UniqueIdentifier>{f2694bc9-f8c0-4778-9f9c-741fa720ad47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Missile">
+      <UniqueIdentifier>{12d830f6-a7ea-4f16-84ca-bcbee5438c53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Utility">
+      <UniqueIdentifier>{50199466-189b-4046-8e3c-ec3a28bdd603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\SpaceShip">
+      <UniqueIdentifier>{a17bd7b1-28c7-4515-b06e-568931848275}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\GameBoard">
+      <UniqueIdentifier>{72131feb-f780-493b-9972-32910f229305}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\GameBoard">
+      <UniqueIdentifier>{f4ef07a2-64ba-41a7-b417-809d9fc8870a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Engine">
+      <UniqueIdentifier>{3e966cfb-ea84-4df2-9207-40e697677396}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Papillon.cpp">
@@ -25,63 +55,63 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="MyControlEngine.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Engine</Filter>
     </ClCompile>
     <ClCompile Include="MyGameEngine.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Engine</Filter>
     </ClCompile>
     <ClCompile Include="MyGraphicEngine.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Square.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Engine</Filter>
     </ClCompile>
     <ClCompile Include="utility.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="SpaceCruiser.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Utility</Filter>
     </ClCompile>
     <ClCompile Include="Laser.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Missile</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceCruiser.cpp">
+      <Filter>Fichiers sources\SpaceShip</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Fichiers sources\GameBoard</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fourmis.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MyControlEngine.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="MyGameEngine.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="MyGraphicEngine.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Papillon.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Square.h">
+    <ClInclude Include="Missile.h">
+      <Filter>Fichiers d%27en-tête\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="Laser.h">
+      <Filter>Fichiers d%27en-tête\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceCruiser.h">
+      <Filter>Fichiers d%27en-tête\SpaceShip</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceShip.h">
+      <Filter>Fichiers d%27en-tête\SpaceShip</Filter>
+    </ClInclude>
+    <ClInclude Include="MyControlEngine.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MyGameEngine.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MyGraphicEngine.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Fenetre.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="utility.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Dimension.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="SpaceCruiser.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="SpaceShip.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Missile.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Laser.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="Square.h">
+      <Filter>Fichiers d%27en-tête\GameBoard</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
