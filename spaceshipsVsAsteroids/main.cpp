@@ -22,6 +22,7 @@ int main(int argc, char * argv[])
 	std::vector<SpaceShip * > spaceShips_;
 	std::vector<Missile * > missiles_;
 	std::vector<Enemy * > enemy_;
+
 	
 	// GameBoard construction
 	for (int rows = 0; rows < 10; rows++) {

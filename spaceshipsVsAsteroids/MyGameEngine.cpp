@@ -13,9 +13,19 @@ void MyGameEngine::idle(){
 		}
 		for (int i = 0; i < missiles_->size(); i++){
 			(*missiles_)[i]->tick();
+			if ((*missiles_)[i]->getPosX() >= 0.67f){
+				delete (*missiles_)[i];						
+				(*missiles_)[i] = nullptr;
+				(*missiles_).erase((*missiles_).begin() + i);
+			}
 		}
 		for (int i = 0; i < enemy_->size(); i++){
 			(*enemy_)[i]->tick();
+			if ((*enemy_)[i]->getPosX() <= -1.f){
+				delete (*enemy_)[i];
+				(*enemy_)[i] = nullptr;
+				(*enemy_).erase((*enemy_).begin() + i);
+			}
 		}
 	}
 	tick++;

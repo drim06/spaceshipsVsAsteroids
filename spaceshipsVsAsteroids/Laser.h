@@ -28,5 +28,6 @@ public:
 
 	void draw();
 	void tick();
+	float getPosX() const;
 };
 

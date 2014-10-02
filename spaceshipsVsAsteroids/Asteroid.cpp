@@ -16,3 +16,7 @@ void Asteroid::draw(){
 void Asteroid::tick(){
 	posX_ -= rapidity_;
 }
+
+float Asteroid::getPosX() const{
+	return posX_;
+}

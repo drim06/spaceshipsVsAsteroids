@@ -19,3 +19,6 @@ void Laser::draw(){
 void Laser::tick(){
 	posX_ += rapidity_;
 }
+float Laser::getPosX() const{
+	return posX_;
+}
