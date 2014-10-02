@@ -20,6 +20,7 @@ int main(int argc, char * argv[])
 	std::vector<SpaceShip * > spaceShips_;
 	std::vector<Missile * > missiles_;
 	
+	// GameBoard construction
 	for (int rows = 0; rows < 10; rows++) {
 		square_.emplace_back();
 		for (int columns = 0; columns < 10; columns++){

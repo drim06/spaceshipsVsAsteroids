@@ -6,14 +6,14 @@ void MyGraphicEngine::Draw(){
     char* nbPaps = new char[100];
     utility::itoa(paps_->size(), nbPaps);
 	
-	// Plateau de jeu 
+	// GameBoard
 	for (int rows = 0; rows < square_->size(); rows++) {
 		for (int columns = 0; columns < square_->size(); columns++){
 			(*square_)[rows][columns].draw();
 		}
 	}
 
-	// Vaisseaux
+	// SpaceShips
 	for (int i = 0; i < spaceShips_->size(); i++){
 		(*spaceShips_)[i]->draw();
 	}
