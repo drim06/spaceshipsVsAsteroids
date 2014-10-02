@@ -6,11 +6,11 @@
 void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 	int indiceColumns = x / ((*square_)[0][0].getSide() * (f_.getWindowsWidth() / 2));
 	int indiceRows = y / ((*square_)[0][0].getSide() * (f_.getWindowsHeight() / 2));
-
+	std::cout << ((*square_)[0][0].getSide()) << std::endl;
     if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
 		if (indiceColumns < 10 && indiceRows < 10){ // si la case existe 
 			(*square_)[indiceRows][indiceColumns].incrNbClick();
-			enemy_->push_back(new Asteroid(0));
+			enemy_->push_back(new Asteroid(indiceRows));
 		}
 	} else if(button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) {
 		// si la case existe et qu'elle n'est pas occupée

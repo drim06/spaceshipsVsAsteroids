@@ -16,7 +16,7 @@ public:
 	Asteroid(int const rows) :
 		rows_(rows),
 		posX_(1.0f - 0.42f),
-		posY_(0.05f),
+		posY_(1- rows*0.171667f-0.171667f/2),
 		rapidity_(0.002f),
 		health_(100),
 		coeffReducteur_(0.0f),
