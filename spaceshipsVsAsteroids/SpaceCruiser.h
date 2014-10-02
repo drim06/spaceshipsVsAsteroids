@@ -30,8 +30,8 @@ public:
 	~SpaceCruiser();
 
 	void draw();
-	//float getWeaponPosX() const;
-	//float getWeaponPosY() const;
+	float getWeaponPosX() const;
+	float getWeaponPosY() const;
 
 };
 

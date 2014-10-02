@@ -5,9 +5,12 @@
 void MyGameEngine::idle(){
 	if(tick % 2 == 0){
 		for (int s = 0; s < spaceShips_->size(); s++){
-			if (tick % (*missiles_)[s]->getFrenquency() == 0){
+			if (tick % (*missiles_)[s]->getFrenquency() == 0){ 
 				missiles_->push_back(new Laser(0.0f, 0.0f));
+				std::cout << "ajoute un laser" << std::endl;
 				//missiles_->push_back(new Laser((*spaceShips_)[s]->getWeaponPosX(), (*spaceShips_)[s]->getWeaponPosY()));
+				// plus tard fair un switch case avec pour chaque type
+				// de vaisseau, le missile correspondant
 			}
 			/*for (int i = 0; i < missiles_->size(); i++){
 				//if (tick % (*missiles_)[i]->getFrenquency() == 0){

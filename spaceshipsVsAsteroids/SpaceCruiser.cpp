@@ -21,10 +21,10 @@ void SpaceCruiser::draw(){
 		blue_);
 }
 
-/*float SpaceCruiser::getWeaponPosX() const{
+float SpaceCruiser::getWeaponPosX() const{
 	return weaponPosX_;
 }
 
 float SpaceCruiser::getWeaponPosY() const{
 	return weaponPosY_;
-}*/
+}
