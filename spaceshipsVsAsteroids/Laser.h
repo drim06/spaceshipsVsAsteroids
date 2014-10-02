@@ -17,7 +17,7 @@ public:
 		height_(0.02f),
 		posX_(posX),
 		posY_(posY - (0.02f / 2.f)),	// pour placer le rectangle à la bonne hauteur : posY - largeur rectangle /2
-		power_(10),
+		power_(25),
 		rapidity_(0.002f),
 		red_(0.0f),
 		green_(0.0f),

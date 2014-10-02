@@ -10,6 +10,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
     if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
 		if (indiceColumns < 10 && indiceRows < 10){ // si la case existe 
 			(*square_)[indiceRows][indiceColumns].incrNbClick();
+			enemy_->push_back(new Asteroid(0));
 		}
 	} else if(button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) {
 		// si la case existe et qu'elle n'est pas occupée

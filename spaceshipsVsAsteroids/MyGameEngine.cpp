@@ -14,6 +14,9 @@ void MyGameEngine::idle(){
 		for (int i = 0; i < missiles_->size(); i++){
 			(*missiles_)[i]->tick();
 		}
+		for (int i = 0; i < enemy_->size(); i++){
+			(*enemy_)[i]->tick();
+		}
 	}
 	tick++;
 }

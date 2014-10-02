@@ -7,6 +7,8 @@
 #include "Fenetre.h"
 #include "SpaceShip.h"
 #include "Missile.h"
+#include "Enemy.h"
+#include "Asteroid.h"
 
 
 int main(int argc, char * argv[])
@@ -19,6 +21,7 @@ int main(int argc, char * argv[])
 	std::vector<std::vector <Square> > square_;
 	std::vector<SpaceShip * > spaceShips_;
 	std::vector<Missile * > missiles_;
+	std::vector<Enemy * > enemy_;
 	
 	// GameBoard construction
 	for (int rows = 0; rows < 10; rows++) {
@@ -29,9 +32,9 @@ int main(int argc, char * argv[])
 		}
 	}
     
-    GraphicEngine * ge = new MyGraphicEngine(f, &paps_, &fourmis_, &square_, &spaceShips_, &missiles_);
-	GameEngine * gme = new MyGameEngine(f, &paps_, &fourmis_, &missiles_, &spaceShips_);
-	ControlEngine * ce = new MyControlEngine(f, &paps_, &fourmis_, &square_, &spaceShips_, &missiles_);
+    GraphicEngine * ge = new MyGraphicEngine(f, &paps_, &fourmis_, &square_, &spaceShips_, &missiles_, &enemy_);
+	GameEngine * gme = new MyGameEngine(f, &paps_, &fourmis_, &missiles_, &spaceShips_, &enemy_);
+	ControlEngine * ce = new MyControlEngine(f, &paps_, &fourmis_, &square_, &spaceShips_, &missiles_, &enemy_);
     
     e.setGraphicEngine(ge);
     e.setGameEngine(gme);

@@ -7,6 +7,8 @@
 #include "SpaceShip.h"
 #include "Missile.h"
 #include "Laser.h"
+#include "Enemy.h"
+#include "Asteroid.h"
 
 class MyGameEngine:public GameEngine {
 	Fenetre f_;
@@ -14,15 +16,17 @@ class MyGameEngine:public GameEngine {
     std::vector<Fourmis * > *fourmis_;
 	std::vector<SpaceShip * > *spaceShips_;
 	std::vector<Missile * > *missiles_;
+	std::vector<Enemy * > *enemy_;
 
 public:
     int tick;
-	MyGameEngine(Fenetre f, std::vector<Papillon * > * paps, std::vector<Fourmis * > * fourmis, std::vector<Missile *> * missiles, std::vector<SpaceShip * > *spaceShips) :
+	MyGameEngine(Fenetre f, std::vector<Papillon * > * paps, std::vector<Fourmis * > * fourmis, std::vector<Missile *> * missiles, std::vector<SpaceShip * > *spaceShips, std::vector<Enemy * > *enemy) :
 		f_(f),
     	paps_(paps),
     	fourmis_(fourmis),
 		missiles_(missiles),
-		spaceShips_(spaceShips)
+		spaceShips_(spaceShips),
+		enemy_(enemy)
 	{}
     
     virtual void idle();

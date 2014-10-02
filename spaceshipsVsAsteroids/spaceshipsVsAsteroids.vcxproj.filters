@@ -43,6 +43,12 @@
     <Filter Include="Fichiers sources\Engine">
       <UniqueIdentifier>{3e966cfb-ea84-4df2-9207-40e697677396}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Enemy">
+      <UniqueIdentifier>{2838777c-ae23-4b23-94b2-1c78a39e3d37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Enemy">
+      <UniqueIdentifier>{aeb037d1-8e9a-4012-a7d2-e5a57a8762ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Papillon.cpp">
@@ -75,6 +81,9 @@
     <ClCompile Include="Square.cpp">
       <Filter>Fichiers sources\GameBoard</Filter>
     </ClCompile>
+    <ClCompile Include="Asteroid.cpp">
+      <Filter>Fichiers sources\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fourmis.h">
@@ -90,9 +99,6 @@
       <Filter>Fichiers d%27en-tête\Missile</Filter>
     </ClInclude>
     <ClInclude Include="SpaceCruiser.h">
-      <Filter>Fichiers d%27en-tête\SpaceShip</Filter>
-    </ClInclude>
-    <ClInclude Include="SpaceShip.h">
       <Filter>Fichiers d%27en-tête\SpaceShip</Filter>
     </ClInclude>
     <ClInclude Include="MyControlEngine.h">
@@ -112,6 +118,15 @@
     </ClInclude>
     <ClInclude Include="Square.h">
       <Filter>Fichiers d%27en-tête\GameBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceShip.h">
+      <Filter>Fichiers d%27en-tête\SpaceShip</Filter>
+    </ClInclude>
+    <ClInclude Include="Asteroid.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
