@@ -4,10 +4,10 @@ void Asteroid::draw(){
 	GraphicPrimitives::drawFillTriangle2D(
 		posX_,
 		posY_,
-		-0.05f,
-		-0.02f,
-		-0.05f,
-		0.02f,
+		posX_ -0.05f,
+		posY_ -0.02f,
+		posX_ -0.05f,
+		posY_ + 0.02f,
 		red_,
 		green_,
 		blue_);

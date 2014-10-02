@@ -14,7 +14,7 @@ private:
 public:
 	Asteroid(int const rows) :
 		rows_(rows),
-		posX_(1.0f),
+		posX_(1.0f - 0.2f),
 		posY_(0.0f),
 		rapidity_(0.002f),
 		health_(100),
