@@ -19,7 +19,7 @@ public:
 		posY_(0.05f),
 		rapidity_(0.002f),
 		health_(100),
-		coeffReducteur_(1.0f),
+		coeffReducteur_(0.0f),
 		red_(0.0f),
 		green_(1.0f),
 		blue_(0.1f)
@@ -33,5 +33,6 @@ public:
 	float getPosY() const;
 	void receiveDamage(int);
 	bool isAlive() const;
+	void shrink();
 };
 
