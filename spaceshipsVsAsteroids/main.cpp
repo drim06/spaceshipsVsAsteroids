@@ -11,6 +11,7 @@
 #include "Missile.h"
 #include "Enemy.h"
 #include "Asteroid.h"
+#include "AsteroidFragment.h"
 
 
 int main(int argc, char * argv[])
@@ -36,7 +37,14 @@ int main(int argc, char * argv[])
 	}
 
 	for (int i = 0; i < 5; i++){
-		enemy_.push_back(new Asteroid(rand() % 10));
+		switch (rand() % 2){
+		case 0: 
+			enemy_.push_back(new Asteroid(rand() % 10));
+			break;
+		case 1: 
+			enemy_.push_back(new AsteroidFragment(rand() % 10));
+			break;
+		}
 	}
     
     GraphicEngine * ge = new MyGraphicEngine(f, &square_, &spaceShips_, &missiles_, &enemy_);

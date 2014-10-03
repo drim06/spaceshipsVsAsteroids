@@ -78,6 +78,9 @@
     <ClCompile Include="Asteroid.cpp">
       <Filter>Fichiers sources\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="AsteroidFragment.cpp">
+      <Filter>Fichiers sources\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Missile.h">
@@ -114,6 +117,9 @@
       <Filter>Fichiers d%27en-tête\SpaceShip</Filter>
     </ClInclude>
     <ClInclude Include="Asteroid.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="AsteroidFragment.h">
       <Filter>Fichiers d%27en-tête\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
