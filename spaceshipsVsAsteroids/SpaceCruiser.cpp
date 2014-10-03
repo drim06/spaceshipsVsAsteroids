@@ -1,10 +1,6 @@
 #include "SpaceCruiser.h"
 #include <iostream>
 
-SpaceCruiser::~SpaceCruiser()
-{
-}
-
 void SpaceCruiser::draw(){
 	float squarePosX = square_.getPosX();
 	float squarePosY = square_.getPosY();

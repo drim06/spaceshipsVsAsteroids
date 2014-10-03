@@ -1,6 +1,7 @@
 #pragma once
 #include "GraphicPrimitives.h"
 #include "Enemy.h"
+#include "SpaceShip.h"
 
 class Asteroid : public Enemy
 {
@@ -21,6 +22,7 @@ public:
 	~Asteroid();
 
 	void draw();
+	bool hit(SpaceShip&);
 	void shrink();
 };
 

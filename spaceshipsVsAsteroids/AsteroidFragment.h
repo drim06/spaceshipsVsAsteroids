@@ -21,5 +21,6 @@ public:
 	~AsteroidFragment();
 
 	void draw();
+	bool hit(SpaceShip&);
 	void shrink();
 };

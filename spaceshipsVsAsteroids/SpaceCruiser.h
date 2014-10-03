@@ -6,11 +6,11 @@
 
 class SpaceCruiser : public SpaceShip
 {
-	const Square& square_;
+	Square& square_;
 	int tickOnCreation_;
 
 public:
-	SpaceCruiser(const Square& square):
+	SpaceCruiser(Square& square) :
 		square_(square)
 	{
 		weaponPosX_ = square_.getPosX() + square_.getSide();
@@ -20,8 +20,6 @@ public:
 		green_ = 0.0f;
 		blue_ = 0.0f;
 	}
-
-	~SpaceCruiser();
 
 	void draw();
 };

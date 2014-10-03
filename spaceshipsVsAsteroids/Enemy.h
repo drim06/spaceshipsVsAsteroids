@@ -1,5 +1,5 @@
 #pragma once
-
+#include "SpaceShip.h"
 class Enemy // classe abstraite 
 {
 protected:
@@ -12,16 +12,17 @@ protected:
 
 public: 
 	virtual void draw() = 0;
+	virtual bool hit(SpaceShip&) = 0;
 
 	void tick(){
 		posX_ -= rapidity_;
 	}
 
-	float getPosX(){
+	float getPosX()const {
 		return posX_;
 	}
 
-	float getPosY(){
+	float getPosY() const{
 		return posY_;
 	}
 
