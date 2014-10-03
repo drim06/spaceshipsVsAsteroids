@@ -15,11 +15,11 @@ public:
 	virtual void tick() = 0;
 	virtual bool hit(Enemy&) = 0;
 
-	virtual float getPosX() const{
+	float getPosX() const{
 		return posX_;
 	}
 
-	virtual void dealDamage(Enemy& enemy){
+	void dealDamage(Enemy& enemy){
 		enemy.receiveDamage(power_);
 	}
 };

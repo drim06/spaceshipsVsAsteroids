@@ -13,23 +13,23 @@ protected:
 public: 
 	virtual void draw() = 0;
 
-	virtual void tick(){
+	void tick(){
 		posX_ -= rapidity_;
 	}
 
-	virtual float getPosX(){
+	float getPosX(){
 		return posX_;
 	}
 
-	virtual float getPosY(){
+	float getPosY(){
 		return posY_;
 	}
 
-	virtual void receiveDamage(int x){
+	void receiveDamage(int x){
 		health_ -= x;
 	}
 
-	virtual bool isAlive() const{
+	bool isAlive() const{
 		return health_ > 0;
 	}
 };
