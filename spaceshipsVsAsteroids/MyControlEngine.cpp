@@ -39,6 +39,11 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 					spaceShips_->push_back(new SpaceFalcon((*square_)[indiceRows][indiceColumns], player_));
 					(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
 				}
+			case 3:
+				if (player_.getMoney() >= 150){
+					spaceShips_->push_back(new SpaceRandom((*square_)[indiceRows][indiceColumns], player_));
+					(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
+				}
 			}
 		}
 

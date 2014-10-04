@@ -10,6 +10,7 @@
 #include "Wave.h"
 #include "Player.h"
 #include "Needle.h"
+#include "RandomBox.h"
 
 class MyGameEngine:public GameEngine {
 	Fenetre f_;

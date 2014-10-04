@@ -15,7 +15,12 @@ void MyGameEngine::idle(){
 				case 2:
 					missiles_->push_back(new Needle((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY()));
 					break;
-				}	
+				case 3:
+					missiles_->push_back(new RandomBox((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY(), 1, 0.f));
+					missiles_->push_back(new RandomBox((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY(), 1, 0.5f));
+					missiles_->push_back(new RandomBox((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY(), 1, -0.5f));
+					break;
+				}
 			}
 			for (int j = 0; j < enemy_->size(); j++){ // supprime spaceship lors de collision avec enemy
 				if ((*spaceShips_)[i] != nullptr && (*enemy_)[j] != nullptr){
@@ -29,7 +34,10 @@ void MyGameEngine::idle(){
 		}
 		for (int i = 0; i < missiles_->size(); i++){ // supprime les missiles qui sortent du GameBoard 
 			(*missiles_)[i]->tick();
-			if ((*missiles_)[i]->getPosX() >= 0.67f){
+			if ((*missiles_)[i]->getPosX() >= 0.67f 
+				|| (*missiles_)[i]->getPosX() <= -1.1f
+				|| (*missiles_)[i]->getPosY() >= 1.f 
+				|| (*missiles_)[i]->getPosY() <= -0.72f){
 				delete (*missiles_)[i];
 				(*missiles_)[i] = nullptr;
 				(*missiles_).erase((*missiles_).begin() + i);

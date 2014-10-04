@@ -2,7 +2,6 @@
 #include "SpaceShip.h"
 #include "GraphicPrimitives.h"
 #include "Square.h"
-#include "Laser.h"
 #include "Player.h"
 
 class SpaceFalcon : public SpaceShip

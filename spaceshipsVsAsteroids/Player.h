@@ -10,7 +10,7 @@ public:
 	Player() :
 		money_(150),
 		health_(100),
-		spaceShipSelected_(2)
+		spaceShipSelected_(3)
 	{}
 
 	inline int getMoney() const{

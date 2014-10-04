@@ -19,6 +19,10 @@ public:
 		return posX_;
 	}
 
+	float getPosY() const{
+		return posY_;
+	}
+
 	void dealDamage(Enemy& enemy){
 		enemy.receiveDamage(power_);
 	}
