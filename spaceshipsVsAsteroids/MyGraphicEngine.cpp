@@ -28,20 +28,20 @@ void MyGraphicEngine::Draw(){
 
 	if (!wave_.getIsLaunched()){
 		// Button Next Round
-		GraphicPrimitives::drawFillRect2D(0.78f, -0.91f, 0.12f, 0.12f, 0.f, 0.97f, 0.f);
+		GraphicPrimitives::drawFillRect2D(0.78f, -0.91f, 0.12f, 0.12f, 0.35f, 0.5f, 0.3f);
 		// Text "GO"
-		GraphicPrimitives::drawText2D("GO", 0.8f, -0.87f, 1.f, 1.f, 1.f);
+		GraphicPrimitives::drawText2D("GO", 0.8f, -0.87f, 0.9f, 0.9f, 0.9f);
 	}
 
 	// Text Current Round
 	char * roundTxt = new char[7]{ 'R', 'o', 'u', 'n', 'd', ' ', '\0' };
 	char * roundNumber = new char[3];
 	utility::itoa(wave_.getCurrentWaveDifficulty(), roundNumber);
-	GraphicPrimitives::drawText2D(roundTxt, 0.75f, 0.9f, 1.f, 1.f, 1.f);
-	GraphicPrimitives::drawText2D(roundNumber, 0.9f, 0.9f, 1.f, 1.f, 1.f);
+	GraphicPrimitives::drawText2D(roundTxt, 0.75f, 0.9f, 0.9f, 0.9f, 0.9f);
+	GraphicPrimitives::drawText2D(roundNumber, 0.9f, 0.9f, 0.9f, 0.9f, 0.9f);
 
 	// Health
-	GraphicPrimitives::drawText2D("Health", 0.75f, 0.65, 1.f, 1.f, 1.f);
+	GraphicPrimitives::drawText2D("Health", 0.75f, 0.65, 0.9f, 0.9f, 0.9f);
 	GraphicPrimitives::drawFillRect2D(0.75f, 0.5f, 0.1f, 0.1f, 1.f, 1.f, 1.f);
 	int userHealth = player_.getHealth();
 	float yValue = 0.1f * userHealth / 100.f;
@@ -50,13 +50,13 @@ void MyGraphicEngine::Draw(){
 	GraphicPrimitives::drawFillRect2D(0.75f, 0.5f, 0.1f, yValue, rValue, gValue, 0.f);
 	char * healthNumber = new char[4];
 	utility::itoa(userHealth, healthNumber);
-	GraphicPrimitives::drawText2D(healthNumber, 0.9f, 0.53f, 1.f, 1.f, 1.f);
+	GraphicPrimitives::drawText2D(healthNumber, 0.9f, 0.53f, rValue, gValue, 0.f);
 
 	// Money
 	int userMoney = player_.getMoney();
 	char * userMoneyTxt = new char[4];
 	utility::itoa(userMoney, userMoneyTxt);
-	GraphicPrimitives::drawText2D("Money", 0.75f, 0.25, 1.f, 1.f, 1.f);
+	GraphicPrimitives::drawText2D("Money", 0.75f, 0.25, 0.9f, 0.9f, 0.9f);
 	GraphicPrimitives::drawText2D("$", 0.75f, 0.15f, 1.f, 0.8f, 0.f);
 	GraphicPrimitives::drawText2D(userMoneyTxt, 0.79f, 0.15f, 1.f, 0.8f, 0.f);
 
