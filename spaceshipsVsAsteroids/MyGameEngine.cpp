@@ -48,7 +48,7 @@ void MyGameEngine::idle(){
 		}
 		for (int i = 0; i < enemy_->size(); i++){	// supprime les ennemis qui sortent du GameBoard
 			(*enemy_)[i]->tick();
-			if ((*enemy_)[i]->getPosX() <= -1.2f){
+			if ((*enemy_)[i]->getPosX() <= -1.15f){
 				(*enemy_)[i]->dealDamageToPlayer(player_);
 				delete (*enemy_)[i];
 				(*enemy_)[i] = nullptr;

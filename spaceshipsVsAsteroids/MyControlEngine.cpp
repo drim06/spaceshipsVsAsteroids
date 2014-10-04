@@ -17,24 +17,22 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 			&& !wave_.getIsLaunched()){
 			wave_.nextWave();
 		}
-	}
 
-	if (indiceColumns < 10 && indiceRows < 10){		// si c'est une case du GameBoard
-
-		if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
+		if (indiceColumns < 10 && indiceRows < 10){		// si c'est une case du GameBoard
 			if (!((*square_)[indiceRows][indiceColumns].isOccuped()) && player_.getMoney() >= 40){
 				spaceShips_->push_back(new SpaceCruiser((*square_)[indiceRows][indiceColumns], player_));
 				std::cout << "money : " << player_.getMoney();
 				(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
 			}
 
-		} else if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) {
-			(*square_)[indiceRows][indiceColumns].incrNbClick();
-			enemy_->push_back(new AsteroidFragment(indiceRows));
-
-		} else if (button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN) {
-			(*square_)[indiceRows][indiceColumns].incrNbClick();
-			enemy_->push_back(new Asteroid(indiceRows));
 		}
+
+	} else if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) {
+		(*square_)[indiceRows][indiceColumns].incrNbClick();
+		enemy_->push_back(new AsteroidFragment(indiceRows));
+
+	} else if (button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN) {
+		(*square_)[indiceRows][indiceColumns].incrNbClick();
+		enemy_->push_back(new Asteroid(indiceRows));
 	}
 }
