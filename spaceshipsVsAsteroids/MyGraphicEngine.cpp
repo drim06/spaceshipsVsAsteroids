@@ -28,9 +28,9 @@ void MyGraphicEngine::Draw(){
 
 	if (!wave_.getIsLaunched()){
 		// Button Next Round
-		GraphicPrimitives::drawFillTriangle2D(0.9f, -0.85f, 0.8f, -0.8f, 0.8f, -0.9f, 0.f, 0.97f, 0.f);
+		GraphicPrimitives::drawFillRect2D(0.78f, -0.91f, 0.12f, 0.12f, 0.f, 0.97f, 0.f);
 		// Text "GO"
-		GraphicPrimitives::drawText2D("Go", 0.8f, -0.87f, 1.f, 1.f, 1.f);
+		GraphicPrimitives::drawText2D("GO", 0.8f, -0.87f, 1.f, 1.f, 1.f);
 	}
 
 	// Text Current Round
@@ -67,13 +67,13 @@ void MyGraphicEngine::Draw(){
 		// do nothing
 		break;
 	case 1:
-		GraphicPrimitives::drawLine2D(-0.87f, -0.96f, -0.75f, -0.96f, 1.0f, 1.0f, 1.f);
+		GraphicPrimitives::drawLine2D(-0.87f, -0.96f, -0.75f, -0.96f, 1.0f, 0.0f, 0.f);
 		break;
 	case 2:
-		GraphicPrimitives::drawLine2D(-0.72f, -0.96f, -0.6f, -0.96f, 1.0f, 1.0f, 1.f);
+		GraphicPrimitives::drawLine2D(-0.72f, -0.96f, -0.6f, -0.96f, 1.0f, 1.0f, 0.f);
 		break;
 	case 3:
-		GraphicPrimitives::drawLine2D(-0.57f, -0.96f, -0.45f, -0.96f, 1.0f, 1.0f, 1.f);
+		GraphicPrimitives::drawLine2D(-0.57f, -0.96f, -0.45f, -0.96f, 0.0f, 0.0f, 1.f);
 		break;
 	}
 	float squarePosX = -0.92f;

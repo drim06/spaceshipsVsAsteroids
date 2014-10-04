@@ -21,8 +21,8 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		}
 
 		// click sur le bouton pour lancer la prochaine vague
-		if (graphX > 0.8f && graphX < 0.8f + 0.1f
-			&& graphY < -0.8f && graphY > -0.8 - 0.1f
+		if (graphX > 0.78f && graphX < 0.9f
+			&& graphY < -0.78f && graphY > -0.91f
 			&& !wave_.getIsLaunched()){
 			wave_.nextWave();
 		}
