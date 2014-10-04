@@ -14,7 +14,7 @@ class MyGameEngine:public GameEngine {
 	std::vector<SpaceShip * > *spaceShips_;
 	std::vector<Missile * > *missiles_;
 	std::vector<Enemy * > *enemy_;
-	Wave wave_;
+	Wave &wave_;
 
 public:
     int tick;
@@ -22,7 +22,7 @@ public:
 		std::vector<SpaceShip * > *spaceShips, 
 		std::vector<Missile *> * missiles, 
 		std::vector<Enemy * > *enemy,
-		Wave wave) 
+		Wave &wave) 
 		:
 		f_(f),
 		spaceShips_(spaceShips),

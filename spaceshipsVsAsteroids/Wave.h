@@ -13,10 +13,10 @@ private:
 	int nbEnemiesWanted_;
 public:
 	Wave() :
-		waveDifficulty_(1),
-		isLaunched_(true),
+		waveDifficulty_(0),
+		isLaunched_(false),
 		generatedEnemies_(0),
-		nbEnemiesWanted_(10)
+		nbEnemiesWanted_(0)
 	{}
 
 	int getCurrentWaveDifficulty();

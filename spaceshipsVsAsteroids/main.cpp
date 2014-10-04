@@ -37,17 +37,6 @@ int main(int argc, char * argv[])
 			square[rows].emplace_back(-1 + columns*squareSide, 1.f - squareSide - rows*squareSide, squareSide, 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2));
 		}
 	}
-
-	/*for (int i = 0; i < 5; i++){
-		switch (rand() % 2){
-		case 0: 
-			enemy_.push_back(new Asteroid(rand() % 10));
-			break;
-		case 1: 
-			enemy_.push_back(new AsteroidFragment(rand() % 10));
-			break;
-		}
-	}*/
     
     GraphicEngine * ge = new MyGraphicEngine(f, &square, &spaceShips, &missiles, &enemy, wave);
 	GameEngine * gme = new MyGameEngine(f, &spaceShips, &missiles, &enemy, wave);
