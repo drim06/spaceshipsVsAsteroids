@@ -18,13 +18,19 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 			wave_.nextWave();
 		}
 
-		if (indiceColumns < 10 && indiceRows < 10){		// si c'est une case du GameBoard
-			if (!((*square_)[indiceRows][indiceColumns].isOccuped()) && player_.getMoney() >= 40){
-				spaceShips_->push_back(new SpaceCruiser((*square_)[indiceRows][indiceColumns], player_));
-				std::cout << "money : " << player_.getMoney();
-				(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
+		// si c'est une case vide du GameBoard 
+		if (indiceColumns < 10 && indiceRows < 10 && !((*square_)[indiceRows][indiceColumns].isOccuped())){
+			switch (player_.getSpaceShipSelected()){
+			case 0:
+				// do nothing
+				break;
+			case 1:
+				if (player_.getMoney() >= 40){
+					spaceShips_->push_back(new SpaceCruiser((*square_)[indiceRows][indiceColumns], player_));
+					(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
+				}
+				break;
 			}
-
 		}
 
 	} else if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) {

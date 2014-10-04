@@ -88,6 +88,7 @@
     <ClCompile Include="MyControlEngine.cpp" />
     <ClCompile Include="MyGameEngine.cpp" />
     <ClCompile Include="MyGraphicEngine.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="SpaceCruiser.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="utility.cpp" />

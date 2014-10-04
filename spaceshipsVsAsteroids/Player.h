@@ -1,12 +1,16 @@
 #pragma once
+
 class Player
 {
 private:
 	unsigned int money_, health_;
+	int spaceShipSelected_ ;
+
 public:
 	Player() :
 		money_(150),
-		health_(100)
+		health_(100),
+		spaceShipSelected_(1)
 	{}
 
 	inline int getMoney() const{
@@ -17,27 +21,10 @@ public:
 		return health_;
 	}
 
-	void loseMoney(int x){
-		if (x > money_){
-			money_ = 0;
-		}
-		else {
-			money_ -= x;
-		}
-	}
-
-	void loseHealth(int x){
-		if (x > health_){
-			health_ = 0;
-		}
-		else {
-			health_ -= x;
-		}
-		std::cout << "health : " << health_ << std::endl;
-	}
-
-	void earnMoney(int x){
-		money_ += x;
-	}
+	void loseMoney(unsigned int);
+	void loseHealth(unsigned int);
+	void earnMoney(int);
+	int getSpaceShipSelected() const;
+	void setSpaceShipSelected(int);
 };
 
