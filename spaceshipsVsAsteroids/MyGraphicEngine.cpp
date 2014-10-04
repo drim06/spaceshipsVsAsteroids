@@ -79,6 +79,7 @@ void MyGraphicEngine::Draw(){
 	float squarePosX = -0.92f;
 	float squarePosY = -0.96f;
 	float squareSide = (*square_)[0][0].getSide();
+	// spaceship 1
 	GraphicPrimitives::drawFillTriangle2D(
 		squarePosX + squareSide,
 		squarePosY + squareSide / 2,
@@ -86,9 +87,59 @@ void MyGraphicEngine::Draw(){
 		squarePosY + squareSide / 2 + (squareSide / 3),
 		squarePosX + squareSide - (squareSide * 0.7f),
 		squarePosY + squareSide / 2 - (squareSide / 3),
-		1.0,
-		0.0,
-		0.0);
-	//GraphicPrimitives::drawFillRect2D(-0.72f, -0.96f, 0.167f, 0.167f, 1.0f, 1.0f, 1.f);
-	//GraphicPrimitives::drawFillRect2D(-0.52f, -0.96f, 0.167f, 0.167f, 1.0f, 1.0f, 1.f);
+		1.0f,
+		0.0f,
+		0.0f);
+	// spaceship 2
+	GraphicPrimitives::drawFillTriangle2D(
+		squarePosX + squareSide + 0.13f,
+		squarePosY + squareSide / 2,
+		squarePosX + squareSide - (squareSide * 0.7f) + 0.15f,
+		squarePosY + squareSide / 2 + (squareSide / 3),
+		squarePosX + squareSide - (squareSide * 0.7f) + 0.15f,
+		squarePosY + squareSide / 2 - (squareSide / 3),
+		1.0f,
+		1.0f,
+		0.7f);
+	GraphicPrimitives::drawFillTriangle2D(
+		squarePosX + squareSide + 0.15f,
+		squarePosY + squareSide / 2,
+		squarePosX + squareSide - (squareSide * 0.7f) + 0.17f,
+		squarePosY + squareSide / 2 + (squareSide / 3),
+		squarePosX + squareSide - (squareSide * 0.7f) + 0.17f,
+		squarePosY + squareSide / 2 - (squareSide / 3),
+		1.0f,
+		1.0f,
+		0.0f);
+	// spaceship 3
+	GraphicPrimitives::drawFillTriangle2D(
+		squarePosX + squareSide + 0.30f,
+		squarePosY + squareSide / 2,
+		squarePosX + squareSide - (squareSide * 0.7f) + 0.30f,
+		squarePosY + squareSide / 2 + (squareSide / 3),
+		squarePosX + squareSide - (squareSide * 0.7f) + 0.30f,
+		squarePosY + squareSide / 2 - (squareSide / 3),
+		0.2f,
+		0.1f,
+		1.0f);
+	GraphicPrimitives::drawFillTriangle2D(
+		squarePosX + squareSide + 0.30f - squareSide/3,
+		squarePosY + squareSide / 2 + 0.09f,
+		squarePosX + squareSide - (squareSide * 0.7f) + 0.30f,
+		squarePosY + squareSide / 2 + (squareSide / 3),
+		squarePosX + squareSide - (squareSide * 0.7f) + 0.30f,
+		squarePosY + squareSide / 2 - (squareSide / 3),
+		0.2f,
+		0.1f,
+		1.0f);
+	GraphicPrimitives::drawFillTriangle2D(
+		squarePosX + squareSide + 0.30f - squareSide / 3,
+		squarePosY + squareSide / 2 - 0.08f,
+		squarePosX + squareSide - (squareSide * 0.7f) + 0.30f,
+		squarePosY + squareSide / 2 + (squareSide / 3),
+		squarePosX + squareSide - (squareSide * 0.7f) + 0.30f,
+		squarePosY + squareSide / 2 - (squareSide / 3),
+		0.2f,
+		0.1f,
+		1.0f);
 }

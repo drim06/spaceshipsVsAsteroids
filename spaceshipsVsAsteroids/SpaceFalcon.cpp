@@ -8,9 +8,9 @@ void SpaceFalcon::draw(){
 	GraphicPrimitives::drawFillTriangle2D(
 		squarePosX + squareSide - 0.035f,
 		squarePosY + squareSide / 2,
-		squarePosX + squareSide - (squareSide * 0.7f) - 0.035f,
+		squarePosX + squareSide - (squareSide * 0.7f),
 		squarePosY + squareSide / 2 + (squareSide / 3),
-		squarePosX + squareSide - (squareSide * 0.7f) - 0.035f,
+		squarePosX + squareSide - (squareSide * 0.7f),
 		squarePosY + squareSide / 2 - (squareSide / 3),
 		red_,
 		green_,
@@ -18,9 +18,9 @@ void SpaceFalcon::draw(){
 	GraphicPrimitives::drawFillTriangle2D(
 		squarePosX + squareSide,
 		squarePosY + squareSide / 2,
-		squarePosX + squareSide - (squareSide * 0.7f),
+		squarePosX + squareSide - (squareSide * 0.7f)+0.02f,
 		squarePosY + squareSide / 2 + (squareSide / 3),
-		squarePosX + squareSide - (squareSide * 0.7f),
+		squarePosX + squareSide - (squareSide * 0.7f)+0.02f,
 		squarePosY + squareSide / 2 - (squareSide / 3),
 		red_,
 		green_,
