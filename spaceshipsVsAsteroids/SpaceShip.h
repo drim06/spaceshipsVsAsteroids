@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 class SpaceShip // classe abstraite 
 {
