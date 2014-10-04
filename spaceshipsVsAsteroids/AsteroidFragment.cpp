@@ -31,7 +31,7 @@ bool AsteroidFragment::hit(SpaceShip& spaceShip){
 
 	// calcul des cotés de la hitbox A
 	leftA = posX_ + width_ / 2 - height_ / 2;
-	rightA = +width_ / 2 - height_ / 2 +  width_;
+	rightA = posX_ + width_ + 0.1;
 	topA = posY_ - width_ / 2 + height_;
 	bottomA = posY_ - width_ / 2;
 

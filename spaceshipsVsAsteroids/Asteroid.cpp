@@ -37,7 +37,7 @@ bool Asteroid::hit(SpaceShip& spaceShip){
 
 	// calcul des cotés de la hitbox A
 	leftA = posX_;
-	rightA = posX_ + 0.7f;
+	rightA = posX_ + 0.24f;
 	topA = (posY_)-coeffReducteur_;
 	bottomA = (posY_ - 0.07f)+coeffReducteur_;
 

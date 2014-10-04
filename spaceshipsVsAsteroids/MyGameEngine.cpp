@@ -28,7 +28,7 @@ void MyGameEngine::idle(){
 				(*missiles_).erase((*missiles_).begin() + i);
 			}
 			for (int j = 0; j < enemy_->size(); j++){ // supprime les missiles/ennemis lors d'une collision
-				if ((*missiles_)[i] != nullptr && (*enemy_)[j] != nullptr){
+				if ((*missiles_)[i] != nullptr){
 					if ((*missiles_)[i]->hit(*(*enemy_)[j])){
 						(*missiles_)[i]->dealDamage(*(*enemy_)[j]);
 						if (!(*enemy_)[j]->isAlive()){ // s'il ne reste plus de vie à l'ennemi on le supprime du GameBoard
