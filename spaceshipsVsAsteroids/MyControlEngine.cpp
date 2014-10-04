@@ -15,14 +15,11 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		}
 		else if (graphX >= -0.72f && graphX <= -0.6f && graphY >= -0.96f && graphY <= -0.77f){
 			player_.setSpaceShipSelected(2);
-			std::cout << "dans le 2" << std::endl;
 		}
 		else if (graphX >= -0.57f && graphX <= -0.45f && graphY >= -0.96f && graphY <= -0.77f){
 			player_.setSpaceShipSelected(3);
-			std::cout << "dans le 3" << std::endl;
 		}
 
-		std::cout << "graphX : " << graphX << " graphY : " << graphY << std::endl;
 		// click sur le bouton pour lancer la prochaine vague
 		if (graphX > 0.8f && graphX < 0.8f + 0.1f
 			&& graphY < -0.8f && graphY > -0.8 - 0.1f
