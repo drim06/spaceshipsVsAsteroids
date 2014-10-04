@@ -16,9 +16,9 @@ void MyGameEngine::idle(){
 					missiles_->push_back(new Needle((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY()));
 					break;
 				case 3:
-					missiles_->push_back(new RandomBox((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY(), 1, 0.f));
-					missiles_->push_back(new RandomBox((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY(), 1, 0.5f));
-					missiles_->push_back(new RandomBox((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY(), 1, -0.5f));
+					missiles_->push_back(new RapidFire((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY(), 1, 0.f));
+					missiles_->push_back(new RapidFire((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY(), 1, 0.5f));
+					missiles_->push_back(new RapidFire((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY(), 1, -0.5f));
 					break;
 				}
 			}

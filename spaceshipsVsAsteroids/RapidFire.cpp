@@ -1,6 +1,6 @@
-#include "RandomBox.h"
+#include "RapidFire.h"
 
-void RandomBox::draw(){
+void RapidFire::draw(){
 	GraphicPrimitives::drawFillRect2D(
 		posX_,
 		posY_,
@@ -11,12 +11,12 @@ void RandomBox::draw(){
 		blue_);
 }
 
-void RandomBox::tick(){
+void RapidFire::tick(){
 	posX_ += rapidity_ * vectX_;
 	posY_ += rapidity_ * vectY_;
 }
 
-bool RandomBox::hit(Enemy& enemy){
+bool RapidFire::hit(Enemy& enemy){
 	// cotés des hitbox A et B
 	float leftA, leftB;
 	float rightA, rightB;

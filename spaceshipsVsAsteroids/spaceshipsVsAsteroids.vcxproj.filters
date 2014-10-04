@@ -96,10 +96,10 @@
     <ClCompile Include="Needle.cpp">
       <Filter>Fichiers sources\Missile</Filter>
     </ClCompile>
-    <ClCompile Include="SpaceRandom.cpp">
+    <ClCompile Include="SpaceTroy.cpp">
       <Filter>Fichiers sources\SpaceShip</Filter>
     </ClCompile>
-    <ClCompile Include="RandomBox.cpp">
+    <ClCompile Include="RapidFire.cpp">
       <Filter>Fichiers sources\Missile</Filter>
     </ClCompile>
   </ItemGroup>
@@ -158,11 +158,11 @@
     <ClInclude Include="Needle.h">
       <Filter>Fichiers d%27en-tête\Missile</Filter>
     </ClInclude>
-    <ClInclude Include="RandomBox.h">
-      <Filter>Fichiers d%27en-tête\Missile</Filter>
-    </ClInclude>
-    <ClInclude Include="SpaceRandom.h">
+    <ClInclude Include="SpaceTroy.h">
       <Filter>Fichiers d%27en-tête\SpaceShip</Filter>
+    </ClInclude>
+    <ClInclude Include="RapidFire.h">
+      <Filter>Fichiers d%27en-tête\Missile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

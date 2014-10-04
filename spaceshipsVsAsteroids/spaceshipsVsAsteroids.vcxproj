@@ -90,11 +90,11 @@
     <ClCompile Include="MyGraphicEngine.cpp" />
     <ClCompile Include="Needle.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="RandomBox.cpp" />
+    <ClCompile Include="RapidFire.cpp" />
     <ClCompile Include="Shop.cpp" />
     <ClCompile Include="SpaceCruiser.cpp" />
     <ClCompile Include="SpaceFalcon.cpp" />
-    <ClCompile Include="SpaceRandom.cpp" />
+    <ClCompile Include="SpaceTroy.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="utility.cpp" />
     <ClCompile Include="Wave.cpp" />
@@ -111,11 +111,11 @@
     <ClInclude Include="MyGraphicEngine.h" />
     <ClInclude Include="Needle.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="RandomBox.h" />
+    <ClInclude Include="RapidFire.h" />
     <ClInclude Include="Shop.h" />
     <ClInclude Include="SpaceCruiser.h" />
     <ClInclude Include="SpaceFalcon.h" />
-    <ClInclude Include="SpaceRandom.h" />
+    <ClInclude Include="SpaceTroy.h" />
     <ClInclude Include="SpaceShip.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="utility.h" />

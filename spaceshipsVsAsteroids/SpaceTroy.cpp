@@ -1,7 +1,7 @@
-#include "SpaceRandom.h"
+#include "SpaceTroy.h"
 
 
-void SpaceRandom::draw(){
+void SpaceTroy::draw(){
 	float squarePosX = square_.getPosX();
 	float squarePosY = square_.getPosY();
 	float squareSide = square_.getSide();

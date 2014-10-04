@@ -4,7 +4,7 @@
 #include "Square.h"
 #include "Player.h"
 
-class SpaceRandom : public SpaceShip
+class SpaceTroy : public SpaceShip
 {
 	Square& square_;
 	Player& player_;
@@ -12,7 +12,7 @@ class SpaceRandom : public SpaceShip
 	
 
 public:
-	SpaceRandom(Square& square, Player& player) :
+	SpaceTroy(Square& square, Player& player) :
 		square_(square),
 		player_(player)
 	{

@@ -11,7 +11,7 @@
 #include "Wave.h"
 #include "Player.h"
 #include "SpaceFalcon.h"
-#include "SpaceRandom.h"
+#include "SpaceTroy.h"
 
 class MyControlEngine:public ControlEngine {
 	Fenetre f_;

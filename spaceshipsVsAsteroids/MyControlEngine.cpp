@@ -10,8 +10,16 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 	float graphY = (y - (f_.getWindowsHeight() / 2.f)) / (-f_.getWindowsHeight() / 2.f);
 
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN){
-		if (graphX >= -0.87f && graphX <= -0.75f && graphY >= -0.96f && graphY <= -0.82f){
+		if (graphX >= -0.87f && graphX <= -0.75f && graphY >= -0.96f && graphY <= -0.77f){
 			player_.setSpaceShipSelected(1);
+		}
+		else if (graphX >= -0.72f && graphX <= -0.6f && graphY >= -0.96f && graphY <= -0.77f){
+			player_.setSpaceShipSelected(2);
+			std::cout << "dans le 2" << std::endl;
+		}
+		else if (graphX >= -0.57f && graphX <= -0.45f && graphY >= -0.96f && graphY <= -0.77f){
+			player_.setSpaceShipSelected(3);
+			std::cout << "dans le 3" << std::endl;
 		}
 
 		std::cout << "graphX : " << graphX << " graphY : " << graphY << std::endl;
@@ -39,11 +47,13 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 					spaceShips_->push_back(new SpaceFalcon((*square_)[indiceRows][indiceColumns], player_));
 					(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
 				}
+				break;
 			case 3:
 				if (player_.getMoney() >= 150){
-					spaceShips_->push_back(new SpaceRandom((*square_)[indiceRows][indiceColumns], player_));
+					spaceShips_->push_back(new SpaceTroy((*square_)[indiceRows][indiceColumns], player_));
 					(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
 				}
+				break;
 			}
 		}
 

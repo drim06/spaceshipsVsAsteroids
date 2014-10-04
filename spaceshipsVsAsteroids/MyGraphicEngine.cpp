@@ -70,10 +70,10 @@ void MyGraphicEngine::Draw(){
 		GraphicPrimitives::drawLine2D(-0.87f, -0.96f, -0.75f, -0.96f, 1.0f, 1.0f, 1.f);
 		break;
 	case 2:
-		GraphicPrimitives::drawLine2D(-0.7f, -0.96f, -0.58f, -0.96f, 1.0f, 1.0f, 1.f);
+		GraphicPrimitives::drawLine2D(-0.72f, -0.96f, -0.6f, -0.96f, 1.0f, 1.0f, 1.f);
 		break;
 	case 3:
-		GraphicPrimitives::drawLine2D(-0.48f, -0.96f, -0.36f, -0.96f, 1.0f, 1.0f, 1.f);
+		GraphicPrimitives::drawLine2D(-0.57f, -0.96f, -0.45f, -0.96f, 1.0f, 1.0f, 1.f);
 		break;
 	}
 	float squarePosX = -0.92f;
@@ -89,6 +89,6 @@ void MyGraphicEngine::Draw(){
 		1.0,
 		0.0,
 		0.0);
-	GraphicPrimitives::drawFillRect2D(-0.72f, -0.96f, 0.167f, 0.167f, 1.0f, 1.0f, 1.f);
-	GraphicPrimitives::drawFillRect2D(-0.52f, -0.96f, 0.167f, 0.167f, 1.0f, 1.0f, 1.f);
+	//GraphicPrimitives::drawFillRect2D(-0.72f, -0.96f, 0.167f, 0.167f, 1.0f, 1.0f, 1.f);
+	//GraphicPrimitives::drawFillRect2D(-0.52f, -0.96f, 0.167f, 0.167f, 1.0f, 1.0f, 1.f);
 }
