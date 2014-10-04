@@ -1,14 +1,24 @@
-﻿La génération a démarré 04/10/2014 10:29:11.
+﻿La génération a démarré 04/10/2014 11:03:13.
      1>Projet "C:\Users\Marc\Desktop\annees_etudes\M1_info_sophia\S7\C++\PROJET\spaceshipsVsAsteroids\spaceshipsVsAsteroids\spaceshipsVsAsteroids.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Marc\Desktop\annees_etudes\M1_info_sophia\S7\C++\PROJET\uselibgraph\uselibgraph\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MyGameEngine.cpp Wave.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Marc\Desktop\annees_etudes\M1_info_sophia\S7\C++\PROJET\uselibgraph\uselibgraph\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Laser.cpp MyControlEngine.cpp MyGameEngine.cpp MyGraphicEngine.cpp SpaceCruiser.cpp Square.cpp main.cpp
+         Laser.cpp
+         MyControlEngine.cpp
          MyGameEngine.cpp
      1>MyGameEngine.cpp(9): warning C4018: '<' : incompatibilité signed/unsigned
      1>MyGameEngine.cpp(15): warning C4018: '<' : incompatibilité signed/unsigned
      1>MyGameEngine.cpp(25): warning C4018: '<' : incompatibilité signed/unsigned
      1>MyGameEngine.cpp(32): warning C4018: '<' : incompatibilité signed/unsigned
      1>MyGameEngine.cpp(48): warning C4018: '<' : incompatibilité signed/unsigned
-         Wave.cpp
+         MyGraphicEngine.cpp
+     1>MyGraphicEngine.cpp(7): warning C4018: '<' : incompatibilité signed/unsigned
+     1>MyGraphicEngine.cpp(8): warning C4018: '<' : incompatibilité signed/unsigned
+     1>MyGraphicEngine.cpp(14): warning C4018: '<' : incompatibilité signed/unsigned
+     1>MyGraphicEngine.cpp(19): warning C4018: '<' : incompatibilité signed/unsigned
+     1>MyGraphicEngine.cpp(24): warning C4018: '<' : incompatibilité signed/unsigned
+         SpaceCruiser.cpp
+         Square.cpp
+         main.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Marc\Desktop\annees_etudes\M1_info_sophia\S7\C++\PROJET\spaceshipsVsAsteroids\Release\spaceshipsVsAsteroids.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\Users\Marc\Desktop\annees_etudes\M1_info_sophia\S7\C++\PROJET\uselibgraph\uselibgraph\libWin engine.lib glut32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Marc\Desktop\annees_etudes\M1_info_sophia\S7\C++\PROJET\spaceshipsVsAsteroids\Release\spaceshipsVsAsteroids.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Marc\Desktop\annees_etudes\M1_info_sophia\S7\C++\PROJET\spaceshipsVsAsteroids\Release\spaceshipsVsAsteroids.lib" /MACHINE:X86 /SAFESEH Release\Asteroid.obj
          Release\AsteroidFragment.obj
@@ -33,4 +43,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:03.34
+Temps écoulé 00:00:10.45
