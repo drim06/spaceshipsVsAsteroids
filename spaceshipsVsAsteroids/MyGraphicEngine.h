@@ -10,6 +10,7 @@
 #include "Enemy.h"
 #include "Asteroid.h"
 #include "Wave.h"
+#include "Player.h"
 
 class MyGraphicEngine:public GraphicEngine {
     
@@ -19,16 +20,18 @@ class MyGraphicEngine:public GraphicEngine {
 	std::vector<Missile * > *missiles_;
 	std::vector<Enemy * > *enemy_;
 	Wave &wave_;
-    
+	Player &player_;
+
     char * str;
 public:
     
-	MyGraphicEngine(Fenetre f, 
-		std::vector<std::vector <Square> > *square, 
-		std::vector<SpaceShip * > * spaceShips, 
-		std::vector<Missile * > * missiles, 
+	MyGraphicEngine(Fenetre f,
+		std::vector<std::vector <Square> > *square,
+		std::vector<SpaceShip * > * spaceShips,
+		std::vector<Missile * > * missiles,
 		std::vector<Enemy * > *enemy,
-		Wave &wave) 
+		Wave &wave,
+		Player &player)
 		:
 		f_(f),
 		square_(square),
@@ -36,6 +39,7 @@ public:
 		missiles_(missiles),
 		enemy_(enemy),
 		wave_(wave),
+		player_(player),
     	str(new char[13]{'C','l','i','c',' ','&',' ','E','n','j','o','y','\0'}){}
     
     virtual void Draw();

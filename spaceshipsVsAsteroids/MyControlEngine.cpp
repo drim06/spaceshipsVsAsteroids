@@ -16,21 +16,20 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 			&& graphY < -0.8f && graphY > -0.8 - side
 			&& !wave_.getIsLaunched()){
 			wave_.nextWave();
-			// effacer le bouton
 		}
 	}
 
 	if (indiceColumns < 10 && indiceRows < 10){		// si c'est une case du GameBoard
 
 		if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
-			if (!((*square_)[indiceRows][indiceColumns].isOccuped())){
-				spaceShips_->push_back(new SpaceCruiser((*square_)[indiceRows][indiceColumns]));
+			if (!((*square_)[indiceRows][indiceColumns].isOccuped()) && player_.getMoney() >= 40){
+				spaceShips_->push_back(new SpaceCruiser((*square_)[indiceRows][indiceColumns], player_));
 				(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
 			}
 
 		} else if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) {
 			(*square_)[indiceRows][indiceColumns].incrNbClick();
-			enemy_->push_back(new Asteroid(indiceRows));
+			enemy_->push_back(new AsteroidFragment(indiceRows));
 
 		} else if (button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN) {
 			(*square_)[indiceRows][indiceColumns].incrNbClick();

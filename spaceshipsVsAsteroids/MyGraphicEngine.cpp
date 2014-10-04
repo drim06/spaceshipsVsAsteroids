@@ -43,7 +43,7 @@ void MyGraphicEngine::Draw(){
 	// Health
 	GraphicPrimitives::drawText2D("Health", 0.75f, 0.65, 1.f, 1.f, 1.f);
 	GraphicPrimitives::drawFillRect2D(0.75f, 0.5f, 0.1f, 0.1f, 1.f, 1.f, 1.f);
-	int userHealth = 100;
+	int userHealth = player_.getHealth();
 	float yValue = 0.1f * userHealth / 100.f;
 	float rValue = (100 - userHealth) / 100.f;
 	float gValue = userHealth / 100.f;
@@ -53,7 +53,7 @@ void MyGraphicEngine::Draw(){
 	GraphicPrimitives::drawText2D(healthNumber, 0.9f, 0.53f, 1.f, 1.f, 1.f);
 
 	// Money
-	int userMoney = 150;
+	int userMoney = player_.getMoney();
 	char * userMoneyTxt = new char[4];
 	utility::itoa(userMoney, userMoneyTxt);
 	GraphicPrimitives::drawText2D("Money", 0.75f, 0.25, 1.f, 1.f, 1.f);

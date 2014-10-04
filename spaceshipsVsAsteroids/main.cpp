@@ -13,6 +13,7 @@
 #include "Asteroid.h"
 #include "AsteroidFragment.h"
 #include "Wave.h"
+#include "Player.h"
 
 
 int main(int argc, char * argv[])
@@ -27,6 +28,7 @@ int main(int argc, char * argv[])
 	std::vector<Missile * > missiles;
 	std::vector<Enemy * > enemy;
 	Wave wave;
+	Player player;
 
 	
 	// GameBoard construction
@@ -38,9 +40,9 @@ int main(int argc, char * argv[])
 		}
 	}
     
-    GraphicEngine * ge = new MyGraphicEngine(f, &square, &spaceShips, &missiles, &enemy, wave);
-	GameEngine * gme = new MyGameEngine(f, &spaceShips, &missiles, &enemy, wave);
-	ControlEngine * ce = new MyControlEngine(f, &square, &spaceShips, &missiles, &enemy, wave);
+    GraphicEngine * ge = new MyGraphicEngine(f, &square, &spaceShips, &missiles, &enemy, wave, player);
+	GameEngine * gme = new MyGameEngine(f, &spaceShips, &missiles, &enemy, wave, player);
+	ControlEngine * ce = new MyControlEngine(f, &square, &spaceShips, &missiles, &enemy, wave, player);
     
     e.setGraphicEngine(ge);
     e.setGameEngine(gme);

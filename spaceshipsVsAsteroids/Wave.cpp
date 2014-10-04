@@ -24,7 +24,7 @@ void Wave::run(const int &tick, std::vector<Enemy * > *enemy){
 		switch (waveDifficulty_){
 
 		case 1:
-			if ((tick % 1000) == 0){
+			if ((tick % 500) == 0){
 				enemy->push_back(new Asteroid(rand() % 10));
 				generatedEnemies_++;
 			}

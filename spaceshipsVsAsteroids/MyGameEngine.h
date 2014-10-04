@@ -8,6 +8,7 @@
 #include "Asteroid.h"
 #include "AsteroidFragment.h"
 #include "Wave.h"
+#include "Player.h"
 
 class MyGameEngine:public GameEngine {
 	Fenetre f_;
@@ -15,6 +16,7 @@ class MyGameEngine:public GameEngine {
 	std::vector<Missile * > *missiles_;
 	std::vector<Enemy * > *enemy_;
 	Wave &wave_;
+	Player &player_;
 
 public:
     int tick;
@@ -22,13 +24,15 @@ public:
 		std::vector<SpaceShip * > *spaceShips, 
 		std::vector<Missile *> * missiles, 
 		std::vector<Enemy * > *enemy,
-		Wave &wave) 
+		Wave &wave,
+		Player &player) 
 		:
 		f_(f),
 		spaceShips_(spaceShips),
 		missiles_(missiles),
 		enemy_(enemy),
-		wave_(wave)
+		wave_(wave),
+		player_(player)
 	{}
     
     virtual void idle();

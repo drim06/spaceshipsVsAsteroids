@@ -103,6 +103,7 @@
     <ClInclude Include="MyControlEngine.h" />
     <ClInclude Include="MyGameEngine.h" />
     <ClInclude Include="MyGraphicEngine.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="SpaceCruiser.h" />
     <ClInclude Include="SpaceShip.h" />
     <ClInclude Include="Square.h" />

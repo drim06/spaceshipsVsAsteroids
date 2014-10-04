@@ -9,6 +9,7 @@
 #include "Enemy.h"
 #include "Asteroid.h"
 #include "Wave.h"
+#include "Player.h"
 
 class MyControlEngine:public ControlEngine {
 	Fenetre f_;
@@ -17,6 +18,7 @@ class MyControlEngine:public ControlEngine {
 	std::vector<Missile * > *missiles_;
 	std::vector<Enemy * > *enemy_;
 	Wave &wave_;
+	Player &player_;
 
 public:
 	MyControlEngine(
@@ -25,14 +27,16 @@ public:
 		std::vector<SpaceShip * > * spaceShips,
 		std::vector<Missile * > *missiles,
 		std::vector<Enemy * > *enemy,
-		Wave &wave)
+		Wave &wave,
+		Player &player)
 		:
 		f_(f),
 		square_(square),
 		spaceShips_(spaceShips),
 		missiles_(missiles),
 		enemy_(enemy),
-		wave_(wave)
+		wave_(wave),
+		player_(player)
 	{}
     
     virtual void MouseCallback(int button, int state, int x, int y) ;

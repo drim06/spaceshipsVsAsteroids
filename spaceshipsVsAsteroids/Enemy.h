@@ -9,6 +9,7 @@ protected:
 	float red_, green_, blue_;
 	int rows_;
 	float coeffReducteur_;
+	int dropMoney_;
 
 public: 
 	virtual void draw() = 0;
@@ -32,6 +33,10 @@ public:
 
 	bool isAlive() const{
 		return health_ > 0;
+	}
+
+	int getDropMoney(){
+		return dropMoney_;
 	}
 };
 

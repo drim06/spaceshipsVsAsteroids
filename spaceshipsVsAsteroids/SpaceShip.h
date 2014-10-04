@@ -7,6 +7,7 @@ protected:
 	float weaponPosX_, weaponPosY_;
 	int frequency_;
 	float red_, green_, blue_;
+	int cost_;
 	
 
 public:
