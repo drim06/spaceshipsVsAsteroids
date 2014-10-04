@@ -27,4 +27,5 @@ public:
 	}
 
 	void draw();
+	void cleanSquare();
 };

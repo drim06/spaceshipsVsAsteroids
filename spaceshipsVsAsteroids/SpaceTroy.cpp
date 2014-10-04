@@ -36,3 +36,7 @@ void SpaceTroy::draw(){
 		green_,
 		blue_);
 }
+
+void SpaceTroy::cleanSquare(){
+	square_.setIsOccuped(false);
+}

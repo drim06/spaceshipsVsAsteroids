@@ -25,6 +25,7 @@ void MyGameEngine::idle(){
 			for (int j = 0; j < enemy_->size(); j++){ // supprime spaceship lors de collision avec enemy
 				if ((*spaceShips_)[i] != nullptr && (*enemy_)[j] != nullptr){
 					if ((*enemy_)[j]->hit(*(*spaceShips_)[i])){
+						(*spaceShips_)[i]->cleanSquare();
 						delete (*spaceShips_)[i];
 						(*spaceShips_)[i] = nullptr;
 						(*spaceShips_).erase((*spaceShips_).begin() + i);

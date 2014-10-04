@@ -16,3 +16,8 @@ void SpaceCruiser::draw(){
 		green_,
 		blue_);
 }
+
+void SpaceCruiser::cleanSquare(){
+	square_.setIsOccuped(false);
+	std::cout << "yeah" << std::endl;
+}

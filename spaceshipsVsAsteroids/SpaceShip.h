@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 
 class SpaceShip // classe abstraite 
 {
@@ -13,6 +12,7 @@ protected:
 
 public:
 	virtual void draw() = 0;
+	virtual void cleanSquare() = 0;
 
 	float getWeaponPosX() const{
 		return weaponPosX_;

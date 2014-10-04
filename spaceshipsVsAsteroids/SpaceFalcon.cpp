@@ -27,3 +27,7 @@ void SpaceFalcon::draw(){
 		blue_);
 	
 }
+
+void SpaceFalcon::cleanSquare(){
+	square_.setIsOccuped(false);
+}
