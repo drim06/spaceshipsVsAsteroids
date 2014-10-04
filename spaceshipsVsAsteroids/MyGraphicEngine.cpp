@@ -5,24 +5,24 @@
 void MyGraphicEngine::Draw(){
     
 	// GameBoard
-	for (int rows = 0; rows < square_->size(); rows++) {
-		for (int columns = 0; columns < square_->size(); columns++){
+	for (unsigned int rows = 0; rows < square_->size(); rows++) {
+		for (unsigned int columns = 0; columns < square_->size(); columns++){
 			(*square_)[rows][columns].draw();
 		}
 	}
 
 	// SpaceShips
-	for (int i = 0; i < spaceShips_->size(); i++){
+	for (unsigned int i = 0; i < spaceShips_->size(); i++){
 		(*spaceShips_)[i]->draw();
 	}
 
 	// Missiles
-	for (int i = 0; i < missiles_->size(); i++){
+	for (unsigned int i = 0; i < missiles_->size(); i++){
 		(*missiles_)[i]->draw();
 	}
 
 	// Enemies
-	for (int i = 0; i < enemy_->size(); i++){
+	for (unsigned int i = 0; i < enemy_->size(); i++){
 		(*enemy_)[i]->draw();
 	}
 
@@ -59,4 +59,36 @@ void MyGraphicEngine::Draw(){
 	GraphicPrimitives::drawText2D("Money", 0.75f, 0.25, 1.f, 1.f, 1.f);
 	GraphicPrimitives::drawText2D("$", 0.75f, 0.15f, 1.f, 0.8f, 0.f);
 	GraphicPrimitives::drawText2D(userMoneyTxt, 0.79f, 0.15f, 1.f, 0.8f, 0.f);
+
+	// Shop
+	int spaceShipSelected = player_.getSpaceShipSelected();
+	switch (spaceShipSelected){
+	case 0:
+		// do nothing
+		break;
+	case 1:
+		GraphicPrimitives::drawLine2D(-0.87f, -0.96f, -0.75f, -0.96f, 1.0f, 1.0f, 1.f);
+		break;
+	case 2:
+		GraphicPrimitives::drawLine2D(-0.7f, -0.96f, -0.58f, -0.96f, 1.0f, 1.0f, 1.f);
+		break;
+	case 3:
+		GraphicPrimitives::drawLine2D(-0.48f, -0.96f, -0.36f, -0.96f, 1.0f, 1.0f, 1.f);
+		break;
+	}
+	float squarePosX = -0.92f;
+	float squarePosY = -0.96f;
+	float squareSide = (*square_)[0][0].getSide();
+	GraphicPrimitives::drawFillTriangle2D(
+		squarePosX + squareSide,
+		squarePosY + squareSide / 2,
+		squarePosX + squareSide - (squareSide * 0.7f),
+		squarePosY + squareSide / 2 + (squareSide / 3),
+		squarePosX + squareSide - (squareSide * 0.7f),
+		squarePosY + squareSide / 2 - (squareSide / 3),
+		1.0,
+		0.0,
+		0.0);
+	GraphicPrimitives::drawFillRect2D(-0.72f, -0.96f, 0.167f, 0.167f, 1.0f, 1.0f, 1.f);
+	GraphicPrimitives::drawFillRect2D(-0.52f, -0.96f, 0.167f, 0.167f, 1.0f, 1.0f, 1.f);
 }

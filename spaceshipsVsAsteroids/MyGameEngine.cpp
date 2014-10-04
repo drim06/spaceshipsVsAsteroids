@@ -8,9 +8,14 @@ void MyGameEngine::idle(){
 
 		for (int i = 0; i < spaceShips_->size(); i++){
 			if ((*spaceShips_)[i]->canShoot(tick)){
-				missiles_->push_back(new Laser((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY()));
-				// plus tard fair un switch case avec pour chaque type
-				// de vaisseau, le missile correspondant
+				switch ((*spaceShips_)[i]->getSpaceShipValue()){
+				case 1:
+					missiles_->push_back(new Laser((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY()));
+					break;
+				case 2:
+					missiles_->push_back(new Needle((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY()));
+					break;
+				}	
 			}
 			for (int j = 0; j < enemy_->size(); j++){ // supprime spaceship lors de collision avec enemy
 				if ((*spaceShips_)[i] != nullptr && (*enemy_)[j] != nullptr){

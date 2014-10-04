@@ -10,10 +10,14 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 	float graphY = (y - (f_.getWindowsHeight() / 2.f)) / (-f_.getWindowsHeight() / 2.f);
 
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN){
-		float side = 0.1f;
+		if (graphX >= -0.87f && graphX <= -0.75f && graphY >= -0.96f && graphY <= -0.82f){
+			player_.setSpaceShipSelected(1);
+		}
+
 		std::cout << "graphX : " << graphX << " graphY : " << graphY << std::endl;
-		if (graphX > 0.8f && graphX < 0.8f + side
-			&& graphY < -0.8f && graphY > -0.8 - side
+		// click sur le bouton pour lancer la prochaine vague
+		if (graphX > 0.8f && graphX < 0.8f + 0.1f
+			&& graphY < -0.8f && graphY > -0.8 - 0.1f
 			&& !wave_.getIsLaunched()){
 			wave_.nextWave();
 		}
@@ -30,6 +34,11 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 					(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
 				}
 				break;
+			case 2:
+				if (player_.getMoney() >= 75){
+					spaceShips_->push_back(new SpaceFalcon((*square_)[indiceRows][indiceColumns], player_));
+					(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
+				}
 			}
 		}
 

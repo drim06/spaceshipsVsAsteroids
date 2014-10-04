@@ -10,6 +10,7 @@
 #include "Asteroid.h"
 #include "Wave.h"
 #include "Player.h"
+#include "SpaceFalcon.h"
 
 class MyControlEngine:public ControlEngine {
 	Fenetre f_;

@@ -21,6 +21,7 @@ public:
 		frequency_ = 150;
 		cost_ = 40;
 		player_.loseMoney(cost_);
+		spaceShipValue_ = 1;
 		red_ = 1.0f;
 		green_ = 0.0f;
 		blue_ = 0.0f;

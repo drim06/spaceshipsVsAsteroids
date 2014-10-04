@@ -88,8 +88,11 @@
     <ClCompile Include="MyControlEngine.cpp" />
     <ClCompile Include="MyGameEngine.cpp" />
     <ClCompile Include="MyGraphicEngine.cpp" />
+    <ClCompile Include="Needle.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Shop.cpp" />
     <ClCompile Include="SpaceCruiser.cpp" />
+    <ClCompile Include="SpaceFalcon.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="utility.cpp" />
     <ClCompile Include="Wave.cpp" />
@@ -104,8 +107,11 @@
     <ClInclude Include="MyControlEngine.h" />
     <ClInclude Include="MyGameEngine.h" />
     <ClInclude Include="MyGraphicEngine.h" />
+    <ClInclude Include="Needle.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Shop.h" />
     <ClInclude Include="SpaceCruiser.h" />
+    <ClInclude Include="SpaceFalcon.h" />
     <ClInclude Include="SpaceShip.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="utility.h" />

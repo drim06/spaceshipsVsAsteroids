@@ -36,6 +36,7 @@ int main(int argc, char * argv[])
 		square.emplace_back();
 		for (int columns = 0; columns < 10; columns++){
 			float squareSide = (f.getWindowsHeight()-(f.getWindowsHeight()/7)) / (f.getWindowsHeight() / 2.f) / 10.f;
+			std::cout << squareSide;
 			square[rows].emplace_back(-1 + columns*squareSide, 1.f - squareSide - rows*squareSide, squareSide, 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2));
 		}
 	}

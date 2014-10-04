@@ -87,6 +87,15 @@
     <ClCompile Include="Player.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceFalcon.cpp">
+      <Filter>Fichiers sources\SpaceShip</Filter>
+    </ClCompile>
+    <ClCompile Include="Needle.cpp">
+      <Filter>Fichiers sources\Missile</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Missile.h">
@@ -133,6 +142,15 @@
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceFalcon.h">
+      <Filter>Fichiers d%27en-tête\SpaceShip</Filter>
+    </ClInclude>
+    <ClInclude Include="Needle.h">
+      <Filter>Fichiers d%27en-tête\Missile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

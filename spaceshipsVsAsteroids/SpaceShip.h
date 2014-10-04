@@ -8,6 +8,7 @@ protected:
 	int frequency_;
 	float red_, green_, blue_;
 	int cost_;
+	int spaceShipValue_;
 	
 
 public:
@@ -23,5 +24,9 @@ public:
 
 	bool canShoot(const int& x) const{
 		return x % frequency_ == 0;
+	}
+
+	int getSpaceShipValue() const{
+		return spaceShipValue_;
 	}
 }; 

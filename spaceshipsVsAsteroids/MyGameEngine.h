@@ -9,6 +9,7 @@
 #include "AsteroidFragment.h"
 #include "Wave.h"
 #include "Player.h"
+#include "Needle.h"
 
 class MyGameEngine:public GameEngine {
 	Fenetre f_;
