@@ -8,6 +8,7 @@
 #include "Laser.h"
 #include "Enemy.h"
 #include "Asteroid.h"
+#include "Wave.h"
 
 class MyControlEngine:public ControlEngine {
 	Fenetre f_;
@@ -15,6 +16,7 @@ class MyControlEngine:public ControlEngine {
 	std::vector<SpaceShip * > *spaceShips_;
 	std::vector<Missile * > *missiles_;
 	std::vector<Enemy * > *enemy_;
+	Wave wave_;
 
 public:
 	MyControlEngine(
@@ -22,13 +24,15 @@ public:
 		std::vector<std::vector <Square> > * square,
 		std::vector<SpaceShip * > * spaceShips,
 		std::vector<Missile * > *missiles,
-		std::vector<Enemy * > *enemy)
+		std::vector<Enemy * > *enemy,
+		Wave wave)
 		:
 		f_(f),
 		square_(square),
 		spaceShips_(spaceShips),
 		missiles_(missiles),
-		enemy_(enemy)
+		enemy_(enemy),
+		wave_(wave)
 	{}
     
     virtual void MouseCallback(int button, int state, int x, int y) ;

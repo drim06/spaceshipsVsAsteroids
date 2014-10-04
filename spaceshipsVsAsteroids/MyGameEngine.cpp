@@ -3,7 +3,9 @@
 
 
 void MyGameEngine::idle(){
-	if(tick % 3 == 0){
+	if (tick % 3 == 0){
+		wave_.run(tick, enemy_);
+
 		for (int i = 0; i < spaceShips_->size(); i++){
 			if ((*spaceShips_)[i]->canShoot(tick)){
 				missiles_->push_back(new Laser((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY()));
@@ -23,7 +25,7 @@ void MyGameEngine::idle(){
 		for (int i = 0; i < missiles_->size(); i++){ // supprime les missiles qui sortent du GameBoard 
 			(*missiles_)[i]->tick();
 			if ((*missiles_)[i]->getPosX() >= 0.67f){
-				delete (*missiles_)[i];						
+				delete (*missiles_)[i];
 				(*missiles_)[i] = nullptr;
 				(*missiles_).erase((*missiles_).begin() + i);
 			}
@@ -36,9 +38,9 @@ void MyGameEngine::idle(){
 							(*enemy_)[j] = nullptr;
 							(*enemy_).erase((*enemy_).begin() + j);
 						}
-						delete (*missiles_)[i];							
+						delete (*missiles_)[i];
 						(*missiles_)[i] = nullptr;
-						(*missiles_).erase((*missiles_).begin() + i);	
+						(*missiles_).erase((*missiles_).begin() + i);
 					}
 				}
 			}
@@ -51,6 +53,7 @@ void MyGameEngine::idle(){
 				(*enemy_).erase((*enemy_).begin() + i);
 			}
 		}
+
 	}
 	tick++;
 }

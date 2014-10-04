@@ -81,6 +81,9 @@
     <ClCompile Include="AsteroidFragment.cpp">
       <Filter>Fichiers sources\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="Wave.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Missile.h">
@@ -121,6 +124,9 @@
     </ClInclude>
     <ClInclude Include="AsteroidFragment.h">
       <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Wave.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

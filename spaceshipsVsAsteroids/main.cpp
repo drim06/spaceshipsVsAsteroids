@@ -12,6 +12,7 @@
 #include "Enemy.h"
 #include "Asteroid.h"
 #include "AsteroidFragment.h"
+#include "Wave.h"
 
 
 int main(int argc, char * argv[])
@@ -21,22 +22,23 @@ int main(int argc, char * argv[])
 	Fenetre f(800, 600);
     Engine e(argc,argv, f.getWindowsWidth(), f.getWindowsHeight(), "Spaceships VS Asteroids");
     
-	std::vector<std::vector <Square> > square_;
-	std::vector<SpaceShip * > spaceShips_;
-	std::vector<Missile * > missiles_;
-	std::vector<Enemy * > enemy_;
+	std::vector<std::vector <Square> > square;
+	std::vector<SpaceShip * > spaceShips;
+	std::vector<Missile * > missiles;
+	std::vector<Enemy * > enemy;
+	Wave wave;
 
 	
 	// GameBoard construction
 	for (int rows = 0; rows < 10; rows++) {
-		square_.emplace_back();
+		square.emplace_back();
 		for (int columns = 0; columns < 10; columns++){
 			float squareSide = (f.getWindowsHeight()-(f.getWindowsHeight()/7)) / (f.getWindowsHeight() / 2.f) / 10.f;
-			square_[rows].emplace_back(-1 + columns*squareSide, 1.f - squareSide - rows*squareSide, squareSide, 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2));
+			square[rows].emplace_back(-1 + columns*squareSide, 1.f - squareSide - rows*squareSide, squareSide, 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2), 1.f - 0.5f*((columns + rows) % 2));
 		}
 	}
 
-	for (int i = 0; i < 5; i++){
+	/*for (int i = 0; i < 5; i++){
 		switch (rand() % 2){
 		case 0: 
 			enemy_.push_back(new Asteroid(rand() % 10));
@@ -45,11 +47,11 @@ int main(int argc, char * argv[])
 			enemy_.push_back(new AsteroidFragment(rand() % 10));
 			break;
 		}
-	}
+	}*/
     
-    GraphicEngine * ge = new MyGraphicEngine(f, &square_, &spaceShips_, &missiles_, &enemy_);
-	GameEngine * gme = new MyGameEngine(f, &spaceShips_, &missiles_, &enemy_);
-	ControlEngine * ce = new MyControlEngine(f, &square_, &spaceShips_, &missiles_, &enemy_);
+    GraphicEngine * ge = new MyGraphicEngine(f, &square, &spaceShips, &missiles, &enemy, wave);
+	GameEngine * gme = new MyGameEngine(f, &spaceShips, &missiles, &enemy, wave);
+	ControlEngine * ce = new MyControlEngine(f, &square, &spaceShips, &missiles, &enemy, wave);
     
     e.setGraphicEngine(ge);
     e.setGameEngine(gme);
