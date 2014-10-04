@@ -1,5 +1,6 @@
 #pragma once
 #include "SpaceShip.h"
+#include "Player.h"
 class Enemy // classe abstraite 
 {
 protected:
@@ -10,6 +11,7 @@ protected:
 	int rows_;
 	float coeffReducteur_;
 	int dropMoney_;
+	int power_;
 
 public: 
 	virtual void draw() = 0;
@@ -37,6 +39,10 @@ public:
 
 	int getDropMoney(){
 		return dropMoney_;
+	}
+
+	void dealDamageToPlayer(Player& player){
+		player.loseHealth(power_);
 	}
 };
 

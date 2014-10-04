@@ -15,6 +15,7 @@ public:
 		posY_ = 1 - rows*0.171667f - 0.171667f / 2;
 		rapidity_ = 0.005f;
 		dropMoney_ = 20;
+		power_ = 5;
 		red_ = 0.0f;
 		green_ = 1.0f;
 		blue_ = 0.0f;

@@ -18,17 +18,16 @@ public:
 	}
 
 	void loseMoney(int x){
-		if (money_ - x < 0){
+		if (x > money_){
 			money_ = 0;
 		}
 		else {
 			money_ -= x;
 		}
-		std::cout << "money :" << money_ << std::endl;
 	}
 
 	void loseHealth(int x){
-		if (health_ - x < 0){
+		if (x > health_){
 			health_ = 0;
 		}
 		else {

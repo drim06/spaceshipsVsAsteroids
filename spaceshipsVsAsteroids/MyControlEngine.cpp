@@ -24,6 +24,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
 			if (!((*square_)[indiceRows][indiceColumns].isOccuped()) && player_.getMoney() >= 40){
 				spaceShips_->push_back(new SpaceCruiser((*square_)[indiceRows][indiceColumns], player_));
+				std::cout << "money : " << player_.getMoney();
 				(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
 			}
 
