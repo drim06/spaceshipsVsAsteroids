@@ -19,5 +19,4 @@ void SpaceCruiser::draw(){
 
 void SpaceCruiser::cleanSquare(){
 	square_.setIsOccuped(false);
-	std::cout << "yeah" << std::endl;
 }

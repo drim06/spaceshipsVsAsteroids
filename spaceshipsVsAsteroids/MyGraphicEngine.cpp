@@ -90,6 +90,14 @@ void MyGraphicEngine::Draw(){
 		1.0f,
 		0.0f,
 		0.0f);
+	GraphicPrimitives::drawText2D(
+		"40$",
+		-0.87f,
+		-0.77f,
+		1.f,
+		0.8f,
+		0.f);
+	
 	// spaceship 2
 	GraphicPrimitives::drawFillTriangle2D(
 		squarePosX + squareSide + 0.13f,
@@ -111,6 +119,14 @@ void MyGraphicEngine::Draw(){
 		1.0f,
 		1.0f,
 		0.0f);
+	GraphicPrimitives::drawText2D(
+		"75$",
+		-0.715f,
+		-0.77f,
+		1.f,
+		0.8f,
+		0.f);
+
 	// spaceship 3
 	GraphicPrimitives::drawFillTriangle2D(
 		squarePosX + squareSide + 0.30f,
@@ -142,4 +158,11 @@ void MyGraphicEngine::Draw(){
 		0.2f,
 		0.1f,
 		1.0f);
+	GraphicPrimitives::drawText2D(
+		"150$",
+		-0.57f,
+		-0.77f,
+		1.f,
+		0.8f,
+		0.f);
 }

@@ -30,7 +30,6 @@ int main(int argc, char * argv[])
 	Wave wave;
 	Player player;
 
-	
 	// GameBoard construction
 	for (int rows = 0; rows < 10; rows++) {
 		square.emplace_back();
