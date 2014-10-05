@@ -22,6 +22,10 @@ void Player::earnMoney(int x){
 	money_ += x;
 }
 
+void Player::earnHealth(int x){
+	health_ += x;
+}
+
 int Player::getSpaceShipSelected() const{
 	return spaceShipSelected_;
 }

@@ -7,10 +7,10 @@
 class Wave
 {
 private:
-	int waveDifficulty_;	// plus grande est la valeur plus élevée est la difficulté
+	int waveDifficulty_;		// plus grande est la valeur plus élevée est la difficulté
 	bool isLaunched_;			// true si la vague est lancée
-	int generatedEnemies_;
-	int nbEnemiesWanted_;
+	int generatedEnemies_;		// ennemis apparues pour la vague en cours
+	int nbEnemiesWanted_;		// nb d'ennemis total que contient une vague
 public:
 	Wave() :
 		waveDifficulty_(0),

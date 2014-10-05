@@ -26,5 +26,6 @@ public:
 	void earnMoney(int);
 	int getSpaceShipSelected() const;
 	void setSpaceShipSelected(int);
+	void earnHealth(int);
 };
 

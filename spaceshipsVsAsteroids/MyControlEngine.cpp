@@ -9,7 +9,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 	float graphX = (x - (f_.getWindowsWidth() / 2.f)) / (f_.getWindowsWidth() / 2.f);
 	float graphY = (y - (f_.getWindowsHeight() / 2.f)) / (-f_.getWindowsHeight() / 2.f);
 
-	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN){
+	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && player_.getHealth() > 0){
 		if (graphX >= -0.87f && graphX <= -0.75f && graphY >= -0.96f && graphY <= -0.77f){
 			player_.setSpaceShipSelected(1);
 		}
@@ -54,7 +54,10 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 			}
 		}
 
-	} 
+	}
+	else if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && player_.getHealth() <= 0){
+		// do nothing
+	}
 	else if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) {
 		(*square_)[indiceRows][indiceColumns].incrNbClick();
 		enemy_->push_back(new AsteroidFragment(indiceRows));

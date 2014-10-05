@@ -179,4 +179,9 @@ void MyGraphicEngine::Draw(){
 		1.0f,
 		0.f,
 		0.f);*/
+
+	if (player_.getHealth() <= 0){
+		GraphicPrimitives::drawFillRect2D(-0.04f, -0.026f, 0.44f, 0.1f, 0.0f, 0.0f, 0.0f);
+		GraphicPrimitives::drawText2D("   GAME OVER", 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+	}
 }
