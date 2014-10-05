@@ -16,9 +16,9 @@ public:
 		rapidity_ = 0.005f;
 		dropMoney_ = 20;
 		power_ = 5;
-		red_ = 0.0f;
-		green_ = 1.0f;
-		blue_ = 0.0f;
+		red_ = 0.9f;
+		green_ = 0.9f;
+		blue_ = 0.9f;
 	}
 	~AsteroidFragment();
 
