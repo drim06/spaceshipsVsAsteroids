@@ -8,6 +8,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 	int indiceRows = y / ((*square_)[0][0].getSide() * (f_.getWindowsHeight() / 2));
 	float graphX = (x - (f_.getWindowsWidth() / 2.f)) / (f_.getWindowsWidth() / 2.f);
 	float graphY = (y - (f_.getWindowsHeight() / 2.f)) / (-f_.getWindowsHeight() / 2.f);
+	float sideSquare = (*square_)[0][0].getSide();
 
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && player_.getHealth() > 0){
 		if (graphX >= -0.87f && graphX <= -0.75f && graphY >= -0.96f && graphY <= -0.77f){
@@ -55,12 +56,24 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		}
 
 	}
+
 	else if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && player_.getHealth() <= 0){
 		// do nothing
 	}
+
+	// click droit sur un vaisseau => supprime le vaisseau
 	else if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) {
-		(*square_)[indiceRows][indiceColumns].incrNbClick();
-		enemy_->push_back(new AsteroidFragment(indiceRows));
+		if (indiceColumns < 10 && indiceRows < 10 && (*square_)[indiceRows][indiceColumns].isOccuped()){
+			for (int i = 0; i < spaceShips_->size(); i++){
+				if ((*spaceShips_)[i]->getWeaponPosX() >= graphX && ((*spaceShips_)[i]->getWeaponPosX() - sideSquare) <= graphX
+					&& ((*spaceShips_)[i]->getWeaponPosY() + sideSquare / 2) >= graphY && ((*spaceShips_)[i]->getWeaponPosY() - sideSquare / 2) <= graphY){
+					(*spaceShips_)[i]->cleanSquare();
+					delete (*spaceShips_)[i];
+					(*spaceShips_)[i] = nullptr;
+					(*spaceShips_).erase((*spaceShips_).begin() + i);
+				}
+			}
+		}
 
 	}
 	else if (button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN) {
