@@ -165,4 +165,18 @@ void MyGraphicEngine::Draw(){
 		1.f,
 		0.8f,
 		0.f);
+
+	// Circle
+	/*std::vector<float> vecX;
+	std::vector<float> vecY;
+	for (int i = 0; i < 100; i++){
+		vecX.push_back(cos(i / 10.f));
+		vecY.push_back(sin(i / 10.f));
+	}
+	GraphicPrimitives::drawFillPolygone2D(
+		vecX,
+		vecY,
+		1.0f,
+		0.f,
+		0.f);*/
 }

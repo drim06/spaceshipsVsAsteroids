@@ -5,7 +5,7 @@
 void MyGameEngine::idle(){
 	if (tick % 3 == 0){
 		wave_.run(tick, enemy_);
-
+		
 		for (int i = 0; i < spaceShips_->size(); i++){
 			if ((*spaceShips_)[i]->canShoot(tick)){
 				switch ((*spaceShips_)[i]->getSpaceShipValue()){
