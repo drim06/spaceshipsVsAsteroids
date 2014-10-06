@@ -20,6 +20,7 @@ public:
 		frequency_ = 50;
 		cost_ = 75;
 		player_.loseMoney(cost_);
+		health_ = 20;
 		spaceShipValue_ = 2;
 		red_ = 1.0f;
 		green_ = 1.0f;

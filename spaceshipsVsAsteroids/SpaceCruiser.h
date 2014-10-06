@@ -11,6 +11,7 @@ class SpaceCruiser : public SpaceShip
 	Player& player_;
 	int tickOnCreation_;
 
+
 public:
 	SpaceCruiser(Square& square, Player& player) :
 		square_(square),
@@ -22,6 +23,7 @@ public:
 		cost_ = 40;
 		player_.loseMoney(cost_);
 		spaceShipValue_ = 1;
+		health_ = 15;
 		red_ = 1.0f;
 		green_ = 0.0f;
 		blue_ = 0.0f;

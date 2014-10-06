@@ -8,6 +8,7 @@ protected:
 	float red_, green_, blue_;
 	int cost_;
 	int spaceShipValue_;
+	int health_;
 	
 
 public:
@@ -28,5 +29,18 @@ public:
 
 	int getSpaceShipValue() const{
 		return spaceShipValue_;
+	}
+
+	bool isAlive() const{
+		return health_ > 0;
+	}
+
+	void receiveDamage(int x){
+		if (health_ - x < 0){
+			health_ = 0;
+		}
+		else {
+			health_ -= x;
+		}
 	}
 }; 

@@ -44,5 +44,9 @@ public:
 	void dealDamageToPlayer(Player& player){
 		player.loseHealth(power_);
 	}
+
+	void dealDamage(SpaceShip& spaceShip){
+		spaceShip.receiveDamage(power_);
+	}
 };
 
