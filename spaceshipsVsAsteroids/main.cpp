@@ -38,8 +38,10 @@ int main(int argc, char * argv[])
 			square[rows].emplace_back(-1 + columns*squareSide, 1.f - squareSide - rows*squareSide, squareSide, 0.1f - 0.5f*(((columns + rows) % 2)/5.f) + columns / 80.f, 0.1f - 0.5f*(((columns + rows) % 2)/5.f) + columns / 100.f, 0.1f - 0.5f*(((columns + rows) % 2)/5.f) + columns / 100.f);
 		}
 	}
+
+	GraphicPrimitives::drawFillRect2D(0.0, 0.0, 0.5, 0.5, 1.0, 0.0, 0.0);
     
-    GraphicEngine * ge = new MyGraphicEngine(f, &square, &spaceShips, &missiles, &enemy, wave, player);
+	GraphicEngine * ge = new MyGraphicEngine(f, &square, &spaceShips, &missiles, &enemy, wave, player);
 	GameEngine * gme = new MyGameEngine(f, &spaceShips, &missiles, &enemy, wave, player);
 	ControlEngine * ce = new MyControlEngine(f, &square, &spaceShips, &missiles, &enemy, wave, player);
     

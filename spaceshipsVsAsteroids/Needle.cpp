@@ -30,7 +30,7 @@ bool Needle::hit(Enemy& enemy){
 
 	// calcul des cotés de la hitbox B
 	leftB = enemy.getPosX();
-	rightB = enemy.getPosX();
+	rightB = enemy.getPosX() + 0.1f;
 	topB = enemy.getPosY() + 0.1f;
 	bottomB = enemy.getPosY() - 0.1f;
 

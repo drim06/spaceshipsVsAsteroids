@@ -80,6 +80,9 @@ void MyGraphicEngine::Draw(){
 	case 3:
 		GraphicPrimitives::drawLine2D(-0.57f, -0.96f, -0.45f, -0.96f, 0.0f, 0.0f, 1.f);
 		break;
+	case 4:
+		GraphicPrimitives::drawLine2D(-0.42f, -0.96f, -0.3f, -0.96f, 0.0f, 1.0f, 0.f);
+		break;
 	}
 	float squarePosX = -0.92f;
 	float squarePosY = -0.96f;
@@ -166,6 +169,39 @@ void MyGraphicEngine::Draw(){
 	GraphicPrimitives::drawText2D(
 		"150$",
 		-0.57f,
+		-0.77f,
+		1.f,
+		0.8f,
+		0.f);
+
+	// spaceship 4
+	GraphicPrimitives::drawFillRect2D(
+		-0.45f + 0.08f,
+		-0.95f,
+		0.02f,
+		0.171667f,
+		0.0f,
+		1.0f,
+		0.0f);
+	GraphicPrimitives::drawFillRect2D(
+		-0.425f,
+		-0.95f + 0.0858335f - 0.01f,
+		0.13f,
+		0.02f,
+		0.0f,
+		1.0f,
+		0.0f);
+	GraphicPrimitives::drawFillRect2D(
+		-0.385f,
+		-0.89f,
+		0.05f,
+		0.05f,
+		0.0f,
+		1.0f,
+		0.0f);
+	GraphicPrimitives::drawText2D(
+		"400$",
+		-0.4f,
 		-0.77f,
 		1.f,
 		0.8f,

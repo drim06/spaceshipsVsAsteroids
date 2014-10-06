@@ -4,6 +4,7 @@
 #include "Asteroid.h"
 #include "AsteroidFragment.h"
 #include "AsteroidNyobe.h"
+#include "AsteroidKnuckle.h"
 
 class Wave
 {

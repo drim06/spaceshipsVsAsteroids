@@ -13,7 +13,7 @@ public:
 		health_ = 25;
 		posX_ = (1.0f - 0.42f);
 		posY_ = 1 - rows*0.171667f - 0.171667f / 2;
-		rapidity_ = 0.015f;
+		rapidity_ = 0.02f;
 		dropMoney_ = 20;
 		power_ = 5;
 		red_ = 0.9f;

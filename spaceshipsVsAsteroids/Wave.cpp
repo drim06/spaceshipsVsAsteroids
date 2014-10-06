@@ -83,13 +83,21 @@ void Wave::run(const int &tick, std::vector<Enemy * > *enemy){
 			break;
 		case 5:
 			if ((tick % 200) == 0){
-				switch (rand() % 2){
+				switch (rand() % 4){
 				case 0:
 					enemy->push_back(new Asteroid(rand() % 10));
 					generatedEnemies_++;
 					break;
 				case 1:
 					enemy->push_back(new AsteroidFragment(rand() % 10));
+					generatedEnemies_++;
+					break;
+				case 2:
+					enemy->push_back(new AsteroidNyobe(rand() % 10));
+					generatedEnemies_++;
+					break;
+				case 3:
+					enemy->push_back(new AsteroidKnuckle(rand() % 10));
 					generatedEnemies_++;
 					break;
 				}
@@ -97,13 +105,17 @@ void Wave::run(const int &tick, std::vector<Enemy * > *enemy){
 			break;
 		case 6:
 			if ((tick % 180) == 0){
-				switch (rand() % 2){
+				switch (rand() % 3){
 				case 0:
 					enemy->push_back(new Asteroid(rand() % 10));
 					generatedEnemies_++;
 					break;
 				case 1:
-					enemy->push_back(new AsteroidFragment(rand() % 10));
+					enemy->push_back(new AsteroidNyobe(rand() % 10));
+					generatedEnemies_++;
+					break;
+				case 2:
+					enemy->push_back(new AsteroidKnuckle(rand() % 10));
 					generatedEnemies_++;
 					break;
 				}

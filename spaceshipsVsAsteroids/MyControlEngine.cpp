@@ -20,6 +20,9 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		else if (graphX >= -0.57f && graphX <= -0.45f && graphY >= -0.96f && graphY <= -0.77f){
 			player_.setSpaceShipSelected(3);
 		}
+		else if (graphX >= -0.42f && graphX <= -0.30f && graphY >= -0.96f && graphY <= -0.77f){
+			player_.setSpaceShipSelected(4);
+		}
 
 		// click sur le bouton pour lancer la prochaine vague
 		if (graphX > 0.78f && graphX < 0.9f
@@ -84,7 +87,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 	}
 	else if (button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN) {
 		(*square_)[indiceRows][indiceColumns].incrNbClick();
-		enemy_->push_back(new Asteroid(indiceRows));
+		enemy_->push_back(new AsteroidKnuckle(indiceRows));
 		player_.earnMoney(1000);
 	}
 }
