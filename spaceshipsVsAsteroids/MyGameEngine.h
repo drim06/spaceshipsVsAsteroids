@@ -11,6 +11,7 @@
 #include "Player.h"
 #include "Needle.h"
 #include "RapidFire.h"
+#include "Venom.h"
 
 class MyGameEngine:public GameEngine {
 	Fenetre f_;

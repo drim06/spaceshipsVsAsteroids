@@ -105,6 +105,12 @@
     <ClCompile Include="AsteroidNyobe.cpp">
       <Filter>Fichiers sources\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="SpaceSnake.cpp">
+      <Filter>Fichiers sources\SpaceShip</Filter>
+    </ClCompile>
+    <ClCompile Include="Venom.cpp">
+      <Filter>Fichiers sources\Missile</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Missile.h">
@@ -169,6 +175,12 @@
     </ClInclude>
     <ClInclude Include="AsteroidNyobe.h">
       <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceSnake.h">
+      <Filter>Fichiers d%27en-tête\SpaceShip</Filter>
+    </ClInclude>
+    <ClInclude Include="Venom.h">
+      <Filter>Fichiers d%27en-tête\Missile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

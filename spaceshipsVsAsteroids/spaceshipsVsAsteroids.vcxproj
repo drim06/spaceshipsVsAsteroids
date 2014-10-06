@@ -95,9 +95,11 @@
     <ClCompile Include="Shop.cpp" />
     <ClCompile Include="SpaceCruiser.cpp" />
     <ClCompile Include="SpaceFalcon.cpp" />
+    <ClCompile Include="SpaceSnake.cpp" />
     <ClCompile Include="SpaceTroy.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="utility.cpp" />
+    <ClCompile Include="Venom.cpp" />
     <ClCompile Include="Wave.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -117,10 +119,12 @@
     <ClInclude Include="Shop.h" />
     <ClInclude Include="SpaceCruiser.h" />
     <ClInclude Include="SpaceFalcon.h" />
+    <ClInclude Include="SpaceSnake.h" />
     <ClInclude Include="SpaceTroy.h" />
     <ClInclude Include="SpaceShip.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="utility.h" />
+    <ClInclude Include="Venom.h" />
     <ClInclude Include="Wave.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

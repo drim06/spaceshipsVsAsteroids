@@ -52,6 +52,12 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 					(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
 				}
 				break;
+			case 4:
+				if (player_.getMoney() >= 400){
+					spaceShips_->push_back(new SpaceSnake((*square_)[indiceRows][indiceColumns], player_));
+					(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
+				}
+				break;
 			}
 		}
 

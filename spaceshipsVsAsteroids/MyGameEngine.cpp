@@ -20,6 +20,12 @@ void MyGameEngine::idle(){
 					missiles_->push_back(new RapidFire((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY(), 1, 0.5f));
 					missiles_->push_back(new RapidFire((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY(), 1, -0.5f));
 					break;
+				case 4:
+					missiles_->push_back(new Venom((*spaceShips_)[i]->getWeaponPosX() - 0.08583f, (*spaceShips_)[i]->getWeaponPosY(), 1, 0.f));
+					missiles_->push_back(new Venom((*spaceShips_)[i]->getWeaponPosX() - 0.08583f, (*spaceShips_)[i]->getWeaponPosY(), 0, -1.f));
+					missiles_->push_back(new Venom((*spaceShips_)[i]->getWeaponPosX() - 0.08583f, (*spaceShips_)[i]->getWeaponPosY(), -1, 0.f));
+					missiles_->push_back(new Venom((*spaceShips_)[i]->getWeaponPosX() - 0.08583f, (*spaceShips_)[i]->getWeaponPosY(), 0, 1.f));
+					break;
 				}
 			}
 			for (int j = 0; j < enemy_->size(); j++){ // supprime spaceship lors de collision avec enemy

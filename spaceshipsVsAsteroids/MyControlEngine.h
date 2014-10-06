@@ -12,6 +12,7 @@
 #include "Player.h"
 #include "SpaceFalcon.h"
 #include "SpaceTroy.h"
+#include "SpaceSnake.h"
 
 class MyControlEngine:public ControlEngine {
 	Fenetre f_;
