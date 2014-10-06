@@ -11,6 +11,14 @@ void AsteroidKnuckle::draw(){
 		red_,
 		green_,
 		blue_);
+	GraphicPrimitives::drawFillRect2D(
+		posX_,
+		posY_ - 0.05f,
+		height_/2,
+		width_ - 0.03f,
+		red_,
+		green_,
+		blue_);
 }
 
 bool AsteroidKnuckle::hit(SpaceShip& spaceShip){
