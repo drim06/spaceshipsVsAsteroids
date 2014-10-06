@@ -3,7 +3,7 @@
 
 
 void MyGameEngine::idle(){
-	if (tick % 3 == 0 && player_.getHealth() > 0){
+	if (tick % 20 == 0 && player_.getHealth() > 0){
 		wave_.run(tick, enemy_);
 		
 		for (int i = 0; i < spaceShips_->size(); i++){

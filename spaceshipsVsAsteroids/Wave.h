@@ -3,6 +3,7 @@
 #include "Enemy.h"
 #include "Asteroid.h"
 #include "AsteroidFragment.h"
+#include "AsteroidNyobe.h"
 
 class Wave
 {

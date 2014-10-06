@@ -5,10 +5,15 @@
 void MyGraphicEngine::Draw(){
     
 	// GameBoard
-	for (unsigned int rows = 0; rows < square_->size(); rows++) {
+	/*for (unsigned int rows = 0; rows < square_->size(); rows++) {
 		for (unsigned int columns = 0; columns < square_->size(); columns++){
 			(*square_)[rows][columns].draw();
 		}
+	}*/
+
+	for (int i = 1; i < 11; i++){
+		GraphicPrimitives::drawLine2D(-1.0f, 1.0f - i*0.171667f, 0.71667f, 1.0f - i*0.171667f, 1.0f, 1.0f, 1.0f);
+		GraphicPrimitives::drawLine2D(-1.0f + i * 0.171667f, 1.0f, -1.0f + i * 0.171667f, - 0.71667f, 1.0f, 1.0f, 1.0f);
 	}
 
 	// SpaceShips
@@ -28,9 +33,9 @@ void MyGraphicEngine::Draw(){
 
 	if (!wave_.getIsLaunched()){
 		// Button Next Round
-		GraphicPrimitives::drawFillRect2D(0.78f, -0.91f, 0.12f, 0.12f, 0.35f, 0.5f, 0.3f);
+		GraphicPrimitives::drawFillRect2D(0.78f, -0.91f, 0.12f, 0.12f, 0.8f, 0.8f, 0.8f);
 		// Text "GO"
-		GraphicPrimitives::drawText2D("GO", 0.8f, -0.87f, 0.9f, 0.9f, 0.9f);
+		GraphicPrimitives::drawText2D("GO", 0.8f, -0.87f, 0.0f, 0.0f, 0.0f);
 	}
 
 	// Text Current Round

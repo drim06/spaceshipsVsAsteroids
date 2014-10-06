@@ -102,6 +102,9 @@
     <ClCompile Include="RapidFire.cpp">
       <Filter>Fichiers sources\Missile</Filter>
     </ClCompile>
+    <ClCompile Include="AsteroidNyobe.cpp">
+      <Filter>Fichiers sources\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Missile.h">
@@ -163,6 +166,9 @@
     </ClInclude>
     <ClInclude Include="RapidFire.h">
       <Filter>Fichiers d%27en-tête\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="AsteroidNyobe.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
