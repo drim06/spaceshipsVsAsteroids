@@ -54,14 +54,14 @@ public:
 	virtual void drawCost(){
 		GraphicPrimitives::drawText2D(
 			"$",
-			weaponPosX_ - 0.12f,
+			weaponPosX_ - 0.17f,
 			weaponPosY_ + 0.1f,
 			1.f,
 			0.8f,
 			0.f);
 		GraphicPrimitives::drawText2D(
 			costTxt_,// 40$
-			weaponPosX_ - 0.09f,
+			weaponPosX_ - 0.14f,
 			weaponPosY_+0.1f,
 			1.f,
 			0.8f,
