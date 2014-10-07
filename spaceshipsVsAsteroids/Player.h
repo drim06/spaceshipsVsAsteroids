@@ -8,7 +8,7 @@ private:
 
 public:
 	Player() :
-		money_(300),
+		money_(150),
 		health_(100),
 		spaceShipSelected_(1)
 	{}

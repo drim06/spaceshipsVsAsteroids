@@ -4,7 +4,7 @@
 
 
 void MyGameEngine::idle(){
-	if (tick % 20 == 0 && player_.getHealth() > 0){
+	if (tick % 15 == 0 && player_.getHealth() > 0){
 		
 		wave_.run(tick, enemy_);
 		
