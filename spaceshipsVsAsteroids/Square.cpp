@@ -54,3 +54,9 @@ bool Square::isOccuped() const{
 void Square::setIsOccuped(bool b){
 	occuped_ = b;
 }
+
+void Square::setColor(float x){
+	red_ = x;
+	green_ = x;
+	blue_ = x;
+}

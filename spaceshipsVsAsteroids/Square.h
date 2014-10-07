@@ -33,5 +33,6 @@ public:
 	float getPosY() const;
 	bool isOccuped() const;
 	void setIsOccuped(bool);
+	void setColor(float);
 };
 

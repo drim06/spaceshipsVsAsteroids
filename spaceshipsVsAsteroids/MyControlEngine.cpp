@@ -13,15 +13,31 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && player_.getHealth() > 0){
 		if (graphX >= -0.87f && graphX <= -0.75f && graphY >= -0.96f && graphY <= -0.77f){
 			player_.setSpaceShipSelected(1);
+			for (int i = 0; i < 4; i++){
+				(*shopShip_)[i].setColor(0.0f);
+			}
+			(*shopShip_)[0].setColor(0.9f);
 		}
 		else if (graphX >= -0.72f && graphX <= -0.6f && graphY >= -0.96f && graphY <= -0.77f){
 			player_.setSpaceShipSelected(2);
+			for (int i = 0; i < 4; i++){
+				(*shopShip_)[i].setColor(0.0f);
+			}
+			(*shopShip_)[1].setColor(0.9f);
 		}
 		else if (graphX >= -0.57f && graphX <= -0.45f && graphY >= -0.96f && graphY <= -0.77f){
 			player_.setSpaceShipSelected(3);
+			for (int i = 0; i < 4; i++){
+				(*shopShip_)[i].setColor(0.0f);
+			}
+			(*shopShip_)[2].setColor(0.9f);
 		}
 		else if (graphX >= -0.42f && graphX <= -0.30f && graphY >= -0.96f && graphY <= -0.77f){
 			player_.setSpaceShipSelected(4);
+			for (int i = 0; i < 4; i++){
+				(*shopShip_)[i].setColor(0.0f);
+			}
+			(*shopShip_)[3].setColor(0.9f);
 		}
 
 		// click sur le bouton pour lancer la prochaine vague

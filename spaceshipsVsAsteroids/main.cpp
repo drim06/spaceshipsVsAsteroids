@@ -65,7 +65,7 @@ int main(int argc, char * argv[])
 
 	GraphicEngine * ge = new MyGraphicEngine(f, &square, &spaceShips, &missiles, &enemy, wave, player, &shopShip, &shopShipList);
 	GameEngine * gme = new MyGameEngine(f, &spaceShips, &missiles, &enemy, wave, player);
-	ControlEngine * ce = new MyControlEngine(f, &square, &spaceShips, &missiles, &enemy, wave, player, &shopShip);
+	ControlEngine * ce = new MyControlEngine(f, &square, &spaceShips, &missiles, &enemy, wave, player, &shopShip, &shopShipList);
     
     e.setGraphicEngine(ge);
     e.setGameEngine(gme);
