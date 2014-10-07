@@ -36,6 +36,9 @@ public:
 		weaponPosY_ = square_.getPosY() + square_.getSide() / 2;
 		spaceShipValue_ = 3;
 		health_ = 15;
+		cost_ = 150;
+		costTxt_ = new char[100];
+		utility::itoa(cost_, costTxt_);
 		red_ = 0.2f;
 		green_ = 0.1f;
 		blue_ = 1.0f;

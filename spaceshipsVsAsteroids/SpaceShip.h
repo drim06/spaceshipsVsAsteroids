@@ -1,4 +1,6 @@
 #pragma once
+#include "GraphicPrimitives.h"
+#include "utility.h"
 
 class SpaceShip // classe abstraite 
 {
@@ -9,6 +11,7 @@ protected:
 	int cost_;
 	int spaceShipValue_;
 	int health_;
+	char* costTxt_;
 	
 
 public:
@@ -35,6 +38,10 @@ public:
 		return health_ > 0;
 	}
 
+	int getCost() const {
+		return cost_;
+	}
+
 	void receiveDamage(int x){
 		if (health_ - x < 0){
 			health_ = 0;
@@ -42,5 +49,22 @@ public:
 		else {
 			health_ -= x;
 		}
+	}
+
+	virtual void drawCost(){
+		GraphicPrimitives::drawText2D(
+			"$",
+			weaponPosX_ - 0.12f,
+			weaponPosY_ + 0.1f,
+			1.f,
+			0.8f,
+			0.f);
+		GraphicPrimitives::drawText2D(
+			costTxt_,// 40$
+			weaponPosX_ - 0.09f,
+			weaponPosY_+0.1f,
+			1.f,
+			0.8f,
+			0.f);
 	}
 }; 

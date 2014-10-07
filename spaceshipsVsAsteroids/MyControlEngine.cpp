@@ -58,10 +58,8 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 					(*shopShip_)[i].setColor(0.0f);
 				}
 			}
-			// gestion bouton GO
-			// rectangle : (0.78f, -0.91f, 0.12f, 0.12f)
+			// gestion click sur le bouton Go
 			if (graphX <= 0.9f && graphX >= 0.78f && graphY >= -0.91f && graphY <= -0.79f && !wave_.getIsLaunched()){
-				std::cout << "okokok" << std::endl;
 				wave_.nextWave();
 			}
 		}

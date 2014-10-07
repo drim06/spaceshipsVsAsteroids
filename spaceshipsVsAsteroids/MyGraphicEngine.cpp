@@ -22,6 +22,7 @@ void MyGraphicEngine::Draw(){
 	for (int i = 0; i < shopShip_->size(); i++){
 		(*shopShip_)[i].draw();
 		(*shopShipList_)[i]->draw();
+		(*shopShipList_)[i]->drawCost();
 		GraphicPrimitives::drawLine2D((*shopShip_)[i].getPosX(), (*shopShip_)[i].getPosY(), (*shopShip_)[i].getPosX() + squareSide, (*shopShip_)[i].getPosY(), 0.9f, 0.9f, 0.9f);
 		GraphicPrimitives::drawLine2D((*shopShip_)[i].getPosX(), (*shopShip_)[i].getPosY() + squareSide, (*shopShip_)[i].getPosX() + squareSide, (*shopShip_)[i].getPosY() + squareSide, 0.9f, 0.9f, 0.9f);
 		GraphicPrimitives::drawLine2D((*shopShip_)[i].getPosX(), (*shopShip_)[i].getPosY(), (*shopShip_)[i].getPosX(), (*shopShip_)[i].getPosY() + squareSide, 0.9f, 0.9f, 0.9f);

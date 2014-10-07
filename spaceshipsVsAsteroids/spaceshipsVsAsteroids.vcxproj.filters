@@ -108,9 +108,6 @@
     <ClCompile Include="Venom.cpp">
       <Filter>Fichiers sources\Missile</Filter>
     </ClCompile>
-    <ClCompile Include="Shop.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="AsteroidKnuckle.cpp">
       <Filter>Fichiers sources\Enemy</Filter>
     </ClCompile>
@@ -181,9 +178,6 @@
     </ClInclude>
     <ClInclude Include="Venom.h">
       <Filter>Fichiers d%27en-tête\Missile</Filter>
-    </ClInclude>
-    <ClInclude Include="Shop.h">
-      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="AsteroidKnuckle.h">
       <Filter>Fichiers d%27en-tête\Enemy</Filter>

@@ -17,7 +17,7 @@ public:
 	{
 		weaponPosX_ = square_.getPosX() + square_.getSide();
 		weaponPosY_ = square_.getPosY() + square_.getSide() / 2;
-		frequency_ = 50;
+		frequency_ = 40;
 		cost_ = 75;
 		player_.loseMoney(cost_);
 		health_ = 20;
@@ -34,6 +34,9 @@ public:
 		weaponPosX_ = square_.getPosX() + square_.getSide();
 		weaponPosY_ = square_.getPosY() + square_.getSide() / 2;
 		spaceShipValue_ = 2;
+		cost_ = 75;
+		costTxt_ = new char[100];
+		utility::itoa(cost_, costTxt_);
 		health_ = 15;
 		red_ = 1.0f;
 		green_ = 1.0f;

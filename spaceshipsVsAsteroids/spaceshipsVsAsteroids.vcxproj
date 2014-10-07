@@ -93,7 +93,6 @@
     <ClCompile Include="Needle.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="RapidFire.cpp" />
-    <ClCompile Include="Shop.cpp" />
     <ClCompile Include="SpaceCruiser.cpp" />
     <ClCompile Include="SpaceFalcon.cpp" />
     <ClCompile Include="SpaceSnake.cpp" />
@@ -118,7 +117,6 @@
     <ClInclude Include="Needle.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RapidFire.h" />
-    <ClInclude Include="Shop.h" />
     <ClInclude Include="SpaceCruiser.h" />
     <ClInclude Include="SpaceFalcon.h" />
     <ClInclude Include="SpaceSnake.h" />
