@@ -21,6 +21,8 @@ class MyGraphicEngine:public GraphicEngine {
 	std::vector<Enemy * > *enemy_;
 	Wave &wave_;
 	Player &player_;
+	std::vector<Square> *shopShip_;
+	std::vector<SpaceShip * > *shopShipList_;
 
     char * str;
 public:
@@ -31,7 +33,9 @@ public:
 		std::vector<Missile * > * missiles,
 		std::vector<Enemy * > *enemy,
 		Wave &wave,
-		Player &player)
+		Player &player,
+		std::vector<Square> *shopShip,
+		std::vector<SpaceShip * > *shopShipList)
 		:
 		f_(f),
 		square_(square),
@@ -40,6 +44,8 @@ public:
 		enemy_(enemy),
 		wave_(wave),
 		player_(player),
+		shopShip_(shopShip),
+		shopShipList_(shopShipList),
     	str(new char[13]{'C','l','i','c',' ','&',' ','E','n','j','o','y','\0'}){}
     
     virtual void Draw();

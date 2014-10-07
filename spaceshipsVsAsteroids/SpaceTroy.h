@@ -28,6 +28,19 @@ public:
 		blue_ = 1.0f;
 	}
 
+	SpaceTroy(Square& square, Player& player, bool isInShop) :
+		square_(square),
+		player_(player)
+	{
+		weaponPosX_ = square_.getPosX() + square_.getSide();
+		weaponPosY_ = square_.getPosY() + square_.getSide() / 2;
+		spaceShipValue_ = 3;
+		health_ = 15;
+		red_ = 0.2f;
+		green_ = 0.1f;
+		blue_ = 1.0f;
+	}
+
 	void draw();
 	void cleanSquare();
 };

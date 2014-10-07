@@ -22,6 +22,7 @@ class MyControlEngine:public ControlEngine {
 	std::vector<Enemy * > *enemy_;
 	Wave &wave_;
 	Player &player_;
+	std::vector<Square> *shopShip_;
 
 public:
 	MyControlEngine(
@@ -31,7 +32,8 @@ public:
 		std::vector<Missile * > *missiles,
 		std::vector<Enemy * > *enemy,
 		Wave &wave,
-		Player &player)
+		Player &player,
+		std::vector<Square> *shopShip)
 		:
 		f_(f),
 		square_(square),
@@ -39,7 +41,8 @@ public:
 		missiles_(missiles),
 		enemy_(enemy),
 		wave_(wave),
-		player_(player)
+		player_(player),
+		shopShip_(shopShip)
 	{}
     
     virtual void MouseCallback(int button, int state, int x, int y) ;

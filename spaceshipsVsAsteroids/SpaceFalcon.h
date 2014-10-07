@@ -27,6 +27,19 @@ public:
 		blue_ = 0.0f;
 	}
 
+	SpaceFalcon(Square& square, Player& player, bool isInShop) :
+		square_(square),
+		player_(player)
+	{
+		weaponPosX_ = square_.getPosX() + square_.getSide();
+		weaponPosY_ = square_.getPosY() + square_.getSide() / 2;
+		spaceShipValue_ = 2;
+		health_ = 15;
+		red_ = 1.0f;
+		green_ = 1.0f;
+		blue_ = 0.0f;
+	}
+
 	void draw();
 	void cleanSquare();
 };

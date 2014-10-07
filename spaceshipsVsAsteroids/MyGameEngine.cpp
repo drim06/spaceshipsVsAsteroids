@@ -1,9 +1,11 @@
 
 #include "MyGameEngine.h"
+#include <time.h>
 
 
 void MyGameEngine::idle(){
 	if (tick % 20 == 0 && player_.getHealth() > 0){
+		
 		wave_.run(tick, enemy_);
 		
 		for (int i = 0; i < spaceShips_->size(); i++){
@@ -75,7 +77,6 @@ void MyGameEngine::idle(){
 				(*enemy_).erase((*enemy_).begin() + i);
 			}
 		}
-
 	}
 	tick++;
 }

@@ -11,9 +11,21 @@ void MyGraphicEngine::Draw(){
 		}
 	}*/
 
+	// GameBoard
 	for (int i = 1; i < 11; i++){
 		GraphicPrimitives::drawLine2D(-1.0f, 1.0f - i*0.171667f, 0.71667f, 1.0f - i*0.171667f, 1.0f, 1.0f, 1.0f);
 		GraphicPrimitives::drawLine2D(-1.0f + i * 0.171667f, 1.0f, -1.0f + i * 0.171667f, - 0.71667f, 1.0f, 1.0f, 1.0f);
+	}
+
+	float squareSide = (*shopShip_)[0].getSide();
+	// ShopShip
+	for (int i = 0; i < shopShip_->size(); i++){
+		(*shopShip_)[i].draw();
+		(*shopShipList_)[i]->draw();
+		GraphicPrimitives::drawLine2D((*shopShip_)[i].getPosX(), (*shopShip_)[i].getPosY(), (*shopShip_)[i].getPosX() + squareSide, (*shopShip_)[i].getPosY(), 0.9f, 0.9f, 0.9f);
+		GraphicPrimitives::drawLine2D((*shopShip_)[i].getPosX(), (*shopShip_)[i].getPosY() + squareSide, (*shopShip_)[i].getPosX() + squareSide, (*shopShip_)[i].getPosY() + squareSide, 0.9f, 0.9f, 0.9f);
+		GraphicPrimitives::drawLine2D((*shopShip_)[i].getPosX(), (*shopShip_)[i].getPosY(), (*shopShip_)[i].getPosX(), (*shopShip_)[i].getPosY() + squareSide, 0.9f, 0.9f, 0.9f);
+		GraphicPrimitives::drawLine2D((*shopShip_)[i].getPosX() + squareSide, (*shopShip_)[i].getPosY(), (*shopShip_)[i].getPosX() + squareSide, (*shopShip_)[i].getPosY() + squareSide, 0.9f, 0.9f, 0.9f);
 	}
 
 	// SpaceShips
@@ -66,7 +78,7 @@ void MyGraphicEngine::Draw(){
 	GraphicPrimitives::drawText2D(userMoneyTxt, 0.79f, 0.15f, 1.f, 0.8f, 0.f);
 
 	// Shop
-	int spaceShipSelected = player_.getSpaceShipSelected();
+	/*int spaceShipSelected = player_.getSpaceShipSelected();
 	switch (spaceShipSelected){
 	case 0:
 		// do nothing
