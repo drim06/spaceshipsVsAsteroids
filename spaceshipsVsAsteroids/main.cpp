@@ -37,7 +37,6 @@ int main(int argc, char * argv[])
 	for (int rows = 0; rows < 10; rows++) {
 		square.emplace_back();
 		for (int columns = 0; columns < 10; columns++){
-		std::cout << squareSide << std::endl;
 			square[rows].emplace_back(-1 + columns*squareSide, 1.f - squareSide - rows*squareSide, squareSide, 0.1f - 0.5f*(((columns + rows) % 2)/5.f) + columns / 80.f, 0.1f - 0.5f*(((columns + rows) % 2)/5.f) + columns / 100.f, 0.1f - 0.5f*(((columns + rows) % 2)/5.f) + columns / 100.f);
 		}
 	}
