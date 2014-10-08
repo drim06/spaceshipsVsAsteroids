@@ -46,7 +46,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		}
 		else {
 			// permet de colorer en blanc la case selectionnée dans le shop
-			for (int i = 0; i < (shopShip_)->size(); i++){
+			for (int i = 0; i < (int) (shopShip_)->size(); i++){
 				if (graphX >= (*shopShip_)[i].getPosX()
 					&& graphX <= (*shopShip_)[i].getPosX() + sideSquare
 					&& graphY >= (*shopShip_)[i].getPosY()
@@ -73,7 +73,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 	// click droit sur un vaisseau => supprime le vaisseau
 	else if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) {
 		if (indiceColumns < 10 && indiceRows < 10 && (*square_)[indiceRows][indiceColumns].isOccuped()){
-			for (int i = 0; i < spaceShips_->size(); i++){
+			for (int i = 0; i < (int) spaceShips_->size(); i++){
 				if ((*spaceShips_)[i]->getWeaponPosX() >= graphX && ((*spaceShips_)[i]->getWeaponPosX() - sideSquare) <= graphX
 					&& ((*spaceShips_)[i]->getWeaponPosY() + sideSquare / 2) >= graphY && ((*spaceShips_)[i]->getWeaponPosY() - sideSquare / 2) <= graphY){
 					(*spaceShips_)[i]->cleanSquare();

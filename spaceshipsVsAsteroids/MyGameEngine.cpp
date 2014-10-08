@@ -8,7 +8,7 @@ void MyGameEngine::idle(){
 		
 		wave_.run(tick, enemy_);
 		
-		for (int i = 0; i < spaceShips_->size(); i++){
+		for (int i = 0; i < (int) spaceShips_->size(); i++){
 			if ((*spaceShips_)[i]->canShoot(tick)){
 				switch ((*spaceShips_)[i]->getSpaceShipValue()){
 				case 1:
@@ -30,7 +30,7 @@ void MyGameEngine::idle(){
 					break;
 				}
 			}
-			for (int j = 0; j < enemy_->size(); j++){ // supprime spaceship lors de collision avec enemy
+			for (int j = 0; j < (int) enemy_->size(); j++){ // supprime spaceship lors de collision avec enemy
 				if ((*spaceShips_)[i] != nullptr && (*enemy_)[j] != nullptr){
 					if ((*enemy_)[j]->hit(*(*spaceShips_)[i])){
 						(*spaceShips_)[i]->cleanSquare();
@@ -41,7 +41,7 @@ void MyGameEngine::idle(){
 				}
 			}
 		}
-		for (int i = 0; i < missiles_->size(); i++){ // supprime les missiles qui sortent du GameBoard 
+		for (int i = 0; i < (int) missiles_->size(); i++){ // supprime les missiles qui sortent du GameBoard 
 			(*missiles_)[i]->tick();
 			if ((*missiles_)[i]->getPosX() >= 0.67f 
 				|| (*missiles_)[i]->getPosX() <= -1.1f
@@ -51,7 +51,7 @@ void MyGameEngine::idle(){
 				(*missiles_)[i] = nullptr;
 				(*missiles_).erase((*missiles_).begin() + i);
 			}
-			for (int j = 0; j < enemy_->size(); j++){ // supprime les missiles/ennemis lors d'une collision
+			for (int j = 0; j < (int) enemy_->size(); j++){ // supprime les missiles/ennemis lors d'une collision
 				if ((*missiles_)[i] != nullptr){
 					if ((*missiles_)[i]->hit(*(*enemy_)[j])){
 						(*missiles_)[i]->dealDamage(*(*enemy_)[j]);
@@ -68,7 +68,7 @@ void MyGameEngine::idle(){
 				}
 			}
 		}
-		for (int i = 0; i < enemy_->size(); i++){	// supprime les ennemis qui sortent du GameBoard
+		for (int i = 0; i < (int) enemy_->size(); i++){	// supprime les ennemis qui sortent du GameBoard
 			(*enemy_)[i]->tick();
 			if ((*enemy_)[i]->getPosX() <= -1.15f){
 				(*enemy_)[i]->dealDamageToPlayer(player_);

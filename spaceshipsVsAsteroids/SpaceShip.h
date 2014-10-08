@@ -60,7 +60,7 @@ public:
 			0.8f,
 			0.f);
 		GraphicPrimitives::drawText2D(
-			costTxt_,// 40$
+			costTxt_,
 			weaponPosX_ - 0.14f,
 			weaponPosY_+0.1f,
 			1.f,
