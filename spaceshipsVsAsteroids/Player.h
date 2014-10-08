@@ -1,4 +1,6 @@
 #pragma once
+#include "GraphicPrimitives.h"
+#include "utility.h"
 
 class Player
 {
@@ -8,6 +10,7 @@ private:
 	char * roundTxt_;
 	char * healthTxt_;
 	char * moneyTxt_;
+	float rValue, gValue, yValue;
 
 public:
 	Player() :
@@ -16,7 +19,10 @@ public:
 		spaceShipSelected_(0),
 		roundTxt_(new char[3]),
 		healthTxt_(new char[4]),
-		moneyTxt_(new char[7])
+		moneyTxt_(new char[7]),
+		yValue(0.1f * health_ / 100.f),
+	    rValue((100 - health_) / 100.f),
+	    gValue(health_ / 100.f)
 	{}
 
 	inline int getMoney() const{
@@ -37,6 +43,28 @@ public:
 
 	inline char* getMoneyTxt() const{
 		return moneyTxt_;
+	}
+
+	inline void drawCurrentHealth(){
+		GraphicPrimitives::drawText2D("Health", 0.75f, 0.65, 0.9f, 0.9f, 0.9f);
+		GraphicPrimitives::drawFillRect2D(0.75f, 0.5f, 0.1f, 0.1f, 1.f, 1.f, 1.f);
+		yValue = 0.1f * health_ / 100.f;
+		rValue = (100 - health_) / 100.f;
+		gValue = health_ / 100.f;
+		GraphicPrimitives::drawFillRect2D(0.75f, 0.5f, 0.1f, yValue, rValue, gValue, 0.f);
+		utility::itoa(health_, getHealthTxt());
+		GraphicPrimitives::drawText2D(getHealthTxt(), 0.9f, 0.53f, rValue, gValue, 0.f);
+		if (getHealth() <= 0){
+			GraphicPrimitives::drawFillRect2D(-0.04f, -0.026f, 0.44f, 0.1f, 0.0f, 0.0f, 0.0f);
+			GraphicPrimitives::drawText2D("   GAME OVER", 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+		}
+	}
+
+	inline void drawCurrentMoney(){
+		utility::itoa(getMoney(), getMoneyTxt());
+		GraphicPrimitives::drawText2D("Money", 0.75f, 0.25, 0.9f, 0.9f, 0.9f);
+		GraphicPrimitives::drawText2D("$", 0.75f, 0.15f, 1.f, 0.8f, 0.f);
+		GraphicPrimitives::drawText2D(getMoneyTxt(), 0.79f, 0.15f, 1.f, 0.8f, 0.f);
 	}
 
 	void loseMoney(unsigned int);

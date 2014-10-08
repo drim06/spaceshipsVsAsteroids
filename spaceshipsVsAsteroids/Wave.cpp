@@ -1,6 +1,6 @@
 #include "Wave.h"
 
-int Wave::getCurrentWaveDifficulty(){
+int Wave::getCurrentWaveDifficulty() const{
 	return waveDifficulty_;
 }
 
@@ -8,7 +8,7 @@ void Wave::setIsLaunched(bool b){
 	isLaunched_ = b;
 }
 
-bool Wave::getIsLaunched(){
+bool Wave::getIsLaunched() const{
 	return isLaunched_;
 }
 

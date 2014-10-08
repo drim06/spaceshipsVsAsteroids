@@ -21,9 +21,15 @@ public:
 		nbEnemiesWanted_(0)
 	{}
 
-	int getCurrentWaveDifficulty();
+	inline void drawCurrentRound(Player& p) const{
+		utility::itoa(getCurrentWaveDifficulty(), p.getRoundTxt());
+		GraphicPrimitives::drawText2D("Round", 0.75f, 0.9f, 0.9f, 0.9f, 0.9f);
+		GraphicPrimitives::drawText2D(p.getRoundTxt(), 0.9f, 0.9f, 0.9f, 0.9f, 0.9f);
+	}
+
+	int getCurrentWaveDifficulty() const;
 	void setIsLaunched(bool);
-	bool getIsLaunched();
+	bool getIsLaunched() const;
 	void nextWave();
 	void run(const int&, std::vector<Enemy * > *);
 };
