@@ -46,6 +46,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		}
 		else {
 			// permet de colorer en blanc la case selectionnée dans le shop
+			player_.setSpaceShipSelected(0);
 			for (int i = 0; i < (int) (shopShip_)->size(); i++){
 				if (graphX >= (*shopShip_)[i].getPosX()
 					&& graphX <= (*shopShip_)[i].getPosX() + sideSquare
