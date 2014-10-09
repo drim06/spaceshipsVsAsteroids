@@ -11,7 +11,7 @@ public:
 	{
 		rows_ = rows;
 		coeffReducteur_ = 0.0f;
-		health_ = 9000;
+		health_ = 15000;
 		posX_ = (1.0f - 0.42f);
 		posY_ = 1 - rows*0.171667f - 0.171667f / 2;
 		rapidity_ = 0.0015f;
