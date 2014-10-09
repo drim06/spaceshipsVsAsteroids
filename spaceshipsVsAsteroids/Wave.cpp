@@ -260,10 +260,11 @@ void Wave::run(const int &tick, std::vector<Enemy * > *enemy){
 		case 15:
 			if ((tick % 80) == 0){
 				switch (rand() % 2){
+				case 0:
 					enemy->push_back(new AsteroidKnuckle(rand() % 10));
 					generatedEnemies_++;
 					break;
-				case 2:
+				case 1:
 					enemy->push_back(new AsteroidShyro(rand() % 10));
 					generatedEnemies_++;
 					break;

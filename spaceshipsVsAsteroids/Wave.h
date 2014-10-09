@@ -17,7 +17,7 @@ private:
 	int nbEnemiesWanted_;		// nb d'ennemis total que contient une vague
 public:
 	Wave() :
-		waveDifficulty_(15),
+		waveDifficulty_(14),
 		isLaunched_(false),
 		generatedEnemies_(0),
 		nbEnemiesWanted_(0)

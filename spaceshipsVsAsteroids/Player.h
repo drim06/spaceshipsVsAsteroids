@@ -55,8 +55,8 @@ public:
 		utility::itoa(health_, getHealthTxt());
 		GraphicPrimitives::drawText2D(getHealthTxt(), 0.9f, 0.53f, rValue, gValue, 0.f);
 		if (getHealth() <= 0){
-			GraphicPrimitives::drawFillRect2D(-0.04f, -0.026f, 0.44f, 0.1f, 0.0f, 0.0f, 0.0f);
-			GraphicPrimitives::drawText2D("   GAME OVER", 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+			GraphicPrimitives::drawText2D("   GAME OVER", 0.1f, -0.84f, 0.0f, 1.0f, 0.0f);
+			GraphicPrimitives::drawText2D("   Click to try again", 0.07f, -0.94f, 0.0f, 1.0f, 0.0f);
 		}
 	}
 
