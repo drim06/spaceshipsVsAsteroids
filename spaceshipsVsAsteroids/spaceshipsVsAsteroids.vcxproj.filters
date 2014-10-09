@@ -111,6 +111,12 @@
     <ClCompile Include="AsteroidKnuckle.cpp">
       <Filter>Fichiers sources\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="AsteroidShyro.cpp">
+      <Filter>Fichiers sources\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="AsteroidFinal.cpp">
+      <Filter>Fichiers sources\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Missile.h">
@@ -180,6 +186,12 @@
       <Filter>Fichiers d%27en-tête\Missile</Filter>
     </ClInclude>
     <ClInclude Include="AsteroidKnuckle.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="AsteroidFinal.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="AsteroidShyro.h">
       <Filter>Fichiers d%27en-tête\Enemy</Filter>
     </ClInclude>
   </ItemGroup>

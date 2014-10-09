@@ -5,6 +5,8 @@
 #include "AsteroidFragment.h"
 #include "AsteroidNyobe.h"
 #include "AsteroidKnuckle.h"
+#include "AsteroidShyro.h"
+#include "AsteroidFinal.h"
 
 class Wave
 {
@@ -15,7 +17,7 @@ private:
 	int nbEnemiesWanted_;		// nb d'ennemis total que contient une vague
 public:
 	Wave() :
-		waveDifficulty_(0),
+		waveDifficulty_(15),
 		isLaunched_(false),
 		generatedEnemies_(0),
 		nbEnemiesWanted_(0)

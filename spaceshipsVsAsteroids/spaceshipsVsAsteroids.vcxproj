@@ -82,9 +82,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Asteroid.cpp" />
+    <ClCompile Include="AsteroidFinal.cpp" />
     <ClCompile Include="AsteroidFragment.cpp" />
     <ClCompile Include="AsteroidKnuckle.cpp" />
     <ClCompile Include="AsteroidNyobe.cpp" />
+    <ClCompile Include="AsteroidShyro.cpp" />
     <ClCompile Include="Laser.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyControlEngine.cpp" />
@@ -104,9 +106,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Asteroid.h" />
+    <ClInclude Include="AsteroidFinal.h" />
     <ClInclude Include="AsteroidFragment.h" />
     <ClInclude Include="AsteroidKnuckle.h" />
     <ClInclude Include="AsteroidNyobe.h" />
+    <ClInclude Include="AsteroidShyro.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Fenetre.h" />
     <ClInclude Include="Laser.h" />
