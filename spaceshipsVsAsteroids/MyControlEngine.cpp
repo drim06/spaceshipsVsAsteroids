@@ -67,7 +67,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 
 	}
 
-	else if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && player_.getHealth() <= 0){
+	else if (player_.getHealth() <= 0){
 		// do nothing
 	}
 

@@ -127,9 +127,6 @@
     <ClInclude Include="Venom.h" />
     <ClInclude Include="Wave.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Media Include="..\..\..\..\..\..\..\chiptune_proj_cpp.wav" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
