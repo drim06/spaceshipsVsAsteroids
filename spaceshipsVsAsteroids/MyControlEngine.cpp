@@ -12,7 +12,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && player_.getHealth() > 0){
 
-		// si c'est une case vide du GameBoard 
+		// si c'est une case vide du GameBoard, on créé le vaisseau sélectionné
 		if (indiceColumns < 10 && indiceRows < 10 && !((*square_)[indiceRows][indiceColumns].isOccuped())){
 			switch (player_.getSpaceShipSelected()){
 			case 0:
@@ -31,7 +31,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 				}
 				break;
 			case 3:
-				if (player_.getMoney() >= 150){
+				if (player_.getMoney() >= 200){
 					spaceShips_->push_back(new SpaceTroy((*square_)[indiceRows][indiceColumns], player_));
 					(*square_)[indiceRows][indiceColumns].setIsOccuped(true);
 				}
@@ -44,6 +44,10 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 				break;
 			}
 		}
+		// gestion click sur le bouton Go
+		else if (graphX <= 0.9f && graphX >= 0.78f && graphY >= -0.91f && graphY <= -0.79f && !wave_.getIsLaunched()){
+			wave_.nextWave();
+		} 
 		else {
 			// permet de colorer en blanc la case selectionnée dans le shop
 			player_.setSpaceShipSelected(0);
@@ -59,10 +63,6 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 					(*shopShip_)[i].setColor(0.0f);
 				}
 			}
-			// gestion click sur le bouton Go
-			if (graphX <= 0.9f && graphX >= 0.78f && graphY >= -0.91f && graphY <= -0.79f && !wave_.getIsLaunched()){
-				wave_.nextWave();
-			}
 		}
 
 	}
@@ -77,6 +77,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 			for (int i = 0; i < (int) spaceShips_->size(); i++){
 				if ((*spaceShips_)[i]->getWeaponPosX() >= graphX && ((*spaceShips_)[i]->getWeaponPosX() - sideSquare) <= graphX
 					&& ((*spaceShips_)[i]->getWeaponPosY() + sideSquare / 2) >= graphY && ((*spaceShips_)[i]->getWeaponPosY() - sideSquare / 2) <= graphY){
+					player_.earnMoney((*spaceShips_)[i]->getCost()/2);
 					(*spaceShips_)[i]->cleanSquare();
 					delete (*spaceShips_)[i];
 					(*spaceShips_)[i] = nullptr;

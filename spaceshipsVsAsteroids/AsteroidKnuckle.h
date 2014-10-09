@@ -11,11 +11,11 @@ public:
 	{
 		rows_ = rows;
 		coeffReducteur_ = 0.0f;
-		health_ = 900;
+		health_ = 1000;
 		posX_ = (1.0f - 0.42f);
 		posY_ = 1 - rows*0.171667f - 0.171667f / 2;
 		rapidity_ = 0.007f;
-		dropMoney_ = 60;
+		dropMoney_ = 25;
 		power_ = 20;
 		red_ = 1.0f;
 		green_ = 0.6f;

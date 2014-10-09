@@ -19,7 +19,7 @@ public:
 	{
 		weaponPosX_ = square_.getPosX() + square_.getSide();
 		weaponPosY_ = square_.getPosY() + square_.getSide() / 2;
-		frequency_ = 150;
+		frequency_ = 300;
 		cost_ = 40;
 		player_.loseMoney(cost_);
 		spaceShipValue_ = 1;
