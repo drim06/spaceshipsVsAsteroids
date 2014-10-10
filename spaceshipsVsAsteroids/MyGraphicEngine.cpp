@@ -46,6 +46,9 @@ void MyGraphicEngine::Draw(){
 	// Money
 	player_.drawCurrentMoney();
 
+	// Score
+	player_.drawCurrentScore();
+
 	if (!wave_.getIsLaunched() && !(wave_.getCurrentWaveDifficulty() == 16)){
 		// Button Next Round
 		GraphicPrimitives::drawFillRect2D(0.78f, -0.91f, 0.12f, 0.12f, 0.8f, 0.8f, 0.8f);

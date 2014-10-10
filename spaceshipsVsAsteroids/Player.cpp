@@ -22,6 +22,11 @@ void Player::earnMoney(int x){
 	money_ += x;
 }
 
+void Player::earnScore(int x){
+	score_ += x;
+}
+
+
 void Player::earnHealth(int x){
 	health_ += x;
 }
@@ -38,4 +43,5 @@ void Player::init(){
 	health_ = 100;
 	money_ = 150;
 	spaceShipSelected_ = 0;
+	score_ = 0;
 }

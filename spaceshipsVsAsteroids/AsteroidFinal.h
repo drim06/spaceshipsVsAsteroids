@@ -14,8 +14,9 @@ public:
 		health_ = 20000;
 		posX_ = (1.0f - 0.42f);
 		posY_ = 1 - rows*0.171667f - 0.171667f / 2;
-		rapidity_ = 0.0015f;
+		rapidity_ = 0.0028f;
 		dropMoney_ = 0;
+		dropScore_ = 500;
 		power_ = 100;
 		red_ = 1.0f - (rand() % 100) / 100.f;
 		green_ = 1.0f - (rand() % 100) / 100.f;

@@ -57,6 +57,7 @@ void MyGameEngine::idle(){
 						(*missiles_)[i]->dealDamage(*(*enemy_)[j]);
 						if (!(*enemy_)[j]->isAlive()){ // s'il ne reste plus de vie à l'ennemi on le supprime du GameBoard
 							player_.earnMoney((*enemy_)[j]->getDropMoney());
+							player_.earnScore((*enemy_)[j]->getDropScore());
 							delete (*enemy_)[j];
 							(*enemy_)[j] = nullptr;
 							(*enemy_).erase((*enemy_).begin() + j);

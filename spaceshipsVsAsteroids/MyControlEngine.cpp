@@ -69,22 +69,22 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 
 	else if (player_.getHealth() <= 0){
 		// On réinitialise les données du jeu pour une nouvelle partie
-		for (int i = 0; i < missiles_->size(); i++){
+		for (int i = 0; i < (int) missiles_->size(); i++){
 			delete (*missiles_)[i];
 			(*missiles_)[i] = nullptr;
 		}
 		(*missiles_).clear();
-		for (int i = 0; i < spaceShips_->size(); i++){
+		for (int i = 0; i < (int) spaceShips_->size(); i++){
 			(*spaceShips_)[i]->cleanSquare();
 			delete (*spaceShips_)[i];
 			(*spaceShips_)[i] = nullptr;
 		}
 		(*spaceShips_).clear();
-		for (int i = 0; i < enemy_->size(); i++){
+		for (int i = 0; i < (int) enemy_->size(); i++){
 			delete (*enemy_)[i];
 			(*enemy_)[i] = nullptr;
 		}
-		for (int i = 0; i < shopShip_->size(); i++){
+		for (int i = 0; i < (int) shopShip_->size(); i++){
 			(*shopShip_)[i].setColor(0.0f);
 		}
 		(*enemy_).clear();

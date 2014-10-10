@@ -10,7 +10,7 @@ protected:
 	float red_, green_, blue_;
 	int rows_;
 	float coeffReducteur_;
-	int dropMoney_;
+	int dropMoney_, dropScore_;
 	int power_;
 
 public: 
@@ -39,6 +39,10 @@ public:
 
 	int getDropMoney(){
 		return dropMoney_;
+	}
+
+	int getDropScore(){
+		return dropScore_;
 	}
 
 	void dealDamageToPlayer(Player& player){
