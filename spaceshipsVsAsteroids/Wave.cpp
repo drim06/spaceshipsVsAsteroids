@@ -19,6 +19,11 @@ void Wave::nextWave(){
 	isLaunched_ = true;
 }
 
+void Wave::init(){
+	waveDifficulty_ = 0;
+	isLaunched_ = false;
+}
+
 void Wave::run(const int &tick, std::vector<Enemy * > *enemy){
 	if (isLaunched_){
 		switch (waveDifficulty_){

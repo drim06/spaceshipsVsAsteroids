@@ -33,3 +33,9 @@ int Player::getSpaceShipSelected() const{
 void Player::setSpaceShipSelected(int x){
 	spaceShipSelected_ = x;
 }
+
+void Player::init(){
+	health_ = 100;
+	money_ = 150;
+	spaceShipSelected_ = 0;
+}

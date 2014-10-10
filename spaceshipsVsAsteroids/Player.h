@@ -73,5 +73,6 @@ public:
 	int getSpaceShipSelected() const;
 	void setSpaceShipSelected(int);
 	void earnHealth(int);
+	void init();
 };
 

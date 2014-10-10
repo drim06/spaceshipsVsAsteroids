@@ -68,11 +68,32 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 	}
 
 	else if (player_.getHealth() <= 0){
-		// do nothing
+		// On réinitialise les données du jeu pour une nouvelle partie
+		for (int i = 0; i < missiles_->size(); i++){
+			delete (*missiles_)[i];
+			(*missiles_)[i] = nullptr;
+		}
+		(*missiles_).clear();
+		for (int i = 0; i < spaceShips_->size(); i++){
+			(*spaceShips_)[i]->cleanSquare();
+			delete (*spaceShips_)[i];
+			(*spaceShips_)[i] = nullptr;
+		}
+		(*spaceShips_).clear();
+		for (int i = 0; i < enemy_->size(); i++){
+			delete (*enemy_)[i];
+			(*enemy_)[i] = nullptr;
+		}
+		for (int i = 0; i < shopShip_->size(); i++){
+			(*shopShip_)[i].setColor(0.0f);
+		}
+		(*enemy_).clear();
+		player_.init();
+		wave_.init();
 	}
 
-	// click droit sur un vaisseau => supprime le vaisseau
 	else if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN) {
+		// click droit sur un vaisseau => supprime le vaisseau
 		if (indiceColumns < 10 && indiceRows < 10 && (*square_)[indiceRows][indiceColumns].isOccuped()){
 			for (int i = 0; i < (int) spaceShips_->size(); i++){
 				if ((*spaceShips_)[i]->getWeaponPosX() >= graphX && ((*spaceShips_)[i]->getWeaponPosX() - sideSquare) <= graphX

@@ -34,4 +34,5 @@ public:
 	bool getIsLaunched() const;
 	void nextWave();
 	void run(const int&, std::vector<Enemy * > *);
+	void init();
 };
