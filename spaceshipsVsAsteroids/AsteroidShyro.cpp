@@ -49,7 +49,3 @@ bool AsteroidShyro::hit(SpaceShip& spaceShip){
 	// alors il y a eu collision
 	return true;
 }
-
-void AsteroidShyro::shrink(){
-	coeffReducteur_ += 0.01f;
-}

@@ -13,12 +13,12 @@ void Asteroid::draw(){
 	x.push_back((posX_ + 0.07f));
 
 	// y values
-	y.push_back((posY_) - coeffReducteur_);
-	y.push_back((posY_ + 0.035f) - coeffReducteur_);
-	y.push_back((posY_ + 0.07f)- coeffReducteur_*2);
-	y.push_back((posY_ + 0.035f) - coeffReducteur_*2);
-	y.push_back((posY_) - coeffReducteur_);
-	y.push_back((posY_ - 0.07f) + coeffReducteur_);
+	y.push_back(posY_);
+	y.push_back(posY_ + 0.035f);
+	y.push_back(posY_ + 0.07f);
+	y.push_back(posY_ + 0.035f);
+	y.push_back(posY_);
+	y.push_back(posY_ - 0.07f);
 
 	GraphicPrimitives::drawFillPolygone2D(
 		x,
@@ -38,8 +38,8 @@ bool Asteroid::hit(SpaceShip& spaceShip){
 	// calcul des cotés de la hitbox A
 	leftA = posX_;
 	rightA = posX_ + 0.24f;
-	topA = (posY_)-coeffReducteur_;
-	bottomA = (posY_ - 0.07f)+coeffReducteur_;
+	topA = posY_;
+	bottomA = posY_ - 0.07f;
 
 	// calcul des cotés de la hitbox B
 	leftB = spaceShip.getWeaponPosX();
@@ -55,8 +55,4 @@ bool Asteroid::hit(SpaceShip& spaceShip){
 
 	// alors il y a eu collision
 	return true;
-}
-
-void Asteroid::shrink(){
-	coeffReducteur_ += 0.01f;
 }

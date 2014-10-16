@@ -108,9 +108,4 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		}
 
 	}
-	else if (button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN) {
-		(*square_)[indiceRows][indiceColumns].incrNbClick();
-		enemy_->push_back(new AsteroidKnuckle(indiceRows));
-		player_.earnMoney(1000);
-	}
 }

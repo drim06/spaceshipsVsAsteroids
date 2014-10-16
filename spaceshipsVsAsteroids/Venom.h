@@ -15,8 +15,8 @@ public:
 		vectX_(vectX),
 		vectY_(vectY)
 	{
-		posX_ = posX - (0.008f / 2.f);;
-		posY_ = posY - (0.008f / 2.f);	// pour placer le rectangle à la bonne hauteur : posY - largeur rectangle /2
+		posX_ = posX - (0.008f / 2.f);
+		posY_ = posY - (0.008f / 2.f);
 		power_ = 500;
 		rapidity_ = 0.01f;
 		red_ = 0.0f;

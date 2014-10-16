@@ -31,10 +31,6 @@ void Square::changeColor(){
 	blue_ = 0.0f;
 }
 
-void Square::incrNbClick(){
-	nbClick_++;
-}
-
 float Square::getSide() const{
 	return side_;
 }

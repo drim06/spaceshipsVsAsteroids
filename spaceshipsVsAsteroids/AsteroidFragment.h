@@ -9,7 +9,6 @@ public:
 		width_(0.04f), height_(0.01f)
 	{
 		rows_ = rows;
-		coeffReducteur_ = 0.0f;
 		health_ = 30;
 		posX_ = (1.0f - 0.42f);
 		posY_ = 1 - rows*0.171667f - 0.171667f / 2;
@@ -25,5 +24,4 @@ public:
 
 	void draw();
 	bool hit(SpaceShip&);
-	void shrink();
 };

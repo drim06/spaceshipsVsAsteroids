@@ -1,10 +1,5 @@
 #include "Laser.h"
 
-
-Laser::~Laser()
-{
-}
-
 void Laser::draw(){
 	GraphicPrimitives::drawFillRect2D(
 		posX_,

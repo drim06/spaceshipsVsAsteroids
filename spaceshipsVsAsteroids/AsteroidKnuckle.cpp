@@ -49,7 +49,3 @@ bool AsteroidKnuckle::hit(SpaceShip& spaceShip){
 	// alors il y a eu collision
 	return true;
 }
-
-void AsteroidKnuckle::shrink(){
-	coeffReducteur_ += 0.01f;
-}

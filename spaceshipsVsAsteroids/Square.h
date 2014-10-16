@@ -8,7 +8,6 @@ class Square
 private:
 	float posX_, posY_, side_;
 	float red_, green_, blue_;
-	int nbClick_;
 	bool occuped_;
 
 public:
@@ -19,7 +18,6 @@ public:
 		red_(red),
 		green_(green),
 		blue_(blue),
-		nbClick_(0),
 		occuped_(false)
 	{}
 
@@ -27,7 +25,6 @@ public:
 	void tick();
 	bool isClicked(float&, float&);
 	void changeColor();
-	void incrNbClick();
 	float getSide() const;
 	float getPosX() const;
 	float getPosY() const;

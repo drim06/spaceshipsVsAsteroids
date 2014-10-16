@@ -6,10 +6,9 @@ class Enemy // classe abstraite
 protected:
 	float posX_, posY_;
 	float rapidity_;
-	int health_;
 	float red_, green_, blue_;
+	int health_;
 	int rows_;
-	float coeffReducteur_;
 	int dropMoney_, dropScore_;
 	int power_;
 
@@ -37,11 +36,11 @@ public:
 		return health_ > 0;
 	}
 
-	int getDropMoney(){
+	int getDropMoney() const{
 		return dropMoney_;
 	}
 
-	int getDropScore(){
+	int getDropScore() const{
 		return dropScore_;
 	}
 
