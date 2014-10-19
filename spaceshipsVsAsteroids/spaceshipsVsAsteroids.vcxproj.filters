@@ -195,4 +195,7 @@
       <Filter>Fichiers d%27en-tête\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
 </Project>
