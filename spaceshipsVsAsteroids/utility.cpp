@@ -1,5 +1,6 @@
 #include "utility.h"
 #include <iostream>
+#include <string.h>
 
 namespace utility
 {
