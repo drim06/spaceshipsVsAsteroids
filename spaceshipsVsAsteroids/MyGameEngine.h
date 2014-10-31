@@ -12,6 +12,7 @@
 #include "Needle.h"
 #include "RapidFire.h"
 #include "Venom.h"
+#include "ManageFps.h"
 
 class MyGameEngine:public GameEngine {
 	Fenetre f_;
@@ -20,6 +21,7 @@ class MyGameEngine:public GameEngine {
 	std::vector<Enemy * > *enemy_;
 	Wave &wave_;
 	Player &player_;
+	ManageFps mFps;
 
 public:
     int tick;

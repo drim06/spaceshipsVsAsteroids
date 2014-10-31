@@ -18,7 +18,7 @@ public:
 	{
 		weaponPosX_ = square_.getPosX() + square_.getSide();
 		weaponPosY_ = square_.getPosY() + square_.getSide() / 2;
-		frequency_ = 150;
+		frequency_ = 10;
 		cost_ = 200;
 		health_ = 30;
 		player_.loseMoney(cost_);

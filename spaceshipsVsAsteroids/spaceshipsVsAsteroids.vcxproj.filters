@@ -194,6 +194,9 @@
     <ClInclude Include="AsteroidShyro.h">
       <Filter>Fichiers d%27en-tête\Enemy</Filter>
     </ClInclude>
+    <ClInclude Include="ManageFps.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

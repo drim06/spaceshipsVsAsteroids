@@ -4,8 +4,8 @@
 
 
 void MyGameEngine::idle(){
-
-	if (tick % 15 == 0 && player_.getHealth() > 0){
+	if (mFps.getCurrentTime() >= 33 && player_.getHealth() > 0){
+		std::cout << "fps : " << mFps.getCurrentTime() << " ---- tick : " << tick << std::endl;
 		
 		wave_.run(tick, enemy_);
 		
@@ -79,6 +79,8 @@ void MyGameEngine::idle(){
 				(*enemy_).erase((*enemy_).begin() + i);
 			}
 		}
+		std::cout << "reset chrono" << std::endl;
+		mFps.resetChrono();
+		tick++;
 	}
-	tick++;
 }
