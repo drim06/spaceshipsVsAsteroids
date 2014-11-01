@@ -1,171 +1,178 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Fenetre" Collapsed="true">
-    <Position X="14.5" Y="0.5" Width="1.5" />
+  <Class Name="Fenetre">
+    <Position X="16.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAgACAEAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>Fenetre.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Player" Collapsed="true">
-    <Position X="16.25" Y="1.5" Width="1.5" />
+  <Class Name="Player">
+    <Position X="16.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAEAAAhAAgBACCCAAhAIUEAoAEAAAQKAIAAAA4IBECA=</HashCode>
       <FileName>Player.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wave" Collapsed="true">
-    <Position X="14.5" Y="2.5" Width="1.5" />
+  <Class Name="Wave">
+    <Position X="14.75" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAgAAAAACIAQQAgAAAAAAACAACAIBAAAAAAAAAAA=</HashCode>
       <FileName>Wave.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MyControlEngine" Collapsed="true">
+  <Class Name="MyControlEngine">
     <Position X="16.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAQAAAAAAABAAAAAAAAEAAAAgAABAAAAAgAAAEAiI=</HashCode>
       <FileName>MyControlEngine.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MyGameEngine" Collapsed="true">
+  <Class Name="MyGameEngine">
     <Position X="18" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABBAQAAAAAAAQAAAQAAAAAAAAAgAABAAAAAAAAAAAgI=</HashCode>
+      <HashCode>ABAAQAAAAAAAQAAAQAAAAAAAAAgAABAAgAAAAIAAAgI=</HashCode>
       <FileName>MyGameEngine.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MyGraphicEngine" Collapsed="true">
-    <Position X="14.5" Y="1.5" Width="1.5" />
+  <Class Name="MyGraphicEngine">
+    <Position X="14.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAQAAAAAAAAgAAAAAAAEAAAAgAADBAAAAgAAAEAgI=</HashCode>
+      <HashCode>ABAAQAAAAAAAAgAAAAAAAEAAAAgAABBAAAAgAAAEAgI=</HashCode>
       <FileName>MyGraphicEngine.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Laser" Collapsed="true">
-    <Position X="2.75" Y="7.75" Width="1.5" />
+  <Class Name="Laser">
+    <Position X="2.75" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAgAgQAIAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Laser.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Missile" Collapsed="true">
-    <Position X="3.75" Y="6.5" Width="1.5" />
+  <Class Name="Missile">
+    <Position X="3.75" Y="18.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>FABAAAAAAAAADgABAAIBIAAAAAEAAAAAAABgAAAAAAI=</HashCode>
       <FileName>Missile.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Needle" Collapsed="true">
-    <Position X="5" Y="7.75" Width="1.5" />
+  <Class Name="Needle">
+    <Position X="5" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAgAgQAIAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Needle.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RapidFire" Collapsed="true">
-    <Position X="7.25" Y="7.75" Width="1.5" />
+  <Class Name="RapidFire">
+    <Position X="7.25" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAgAwQAICAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>RapidFire.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Venom" Collapsed="true">
-    <Position X="0.5" Y="7.75" Width="1.5" />
+  <Class Name="Venom">
+    <Position X="0.5" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAgAwQAIAIAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Venom.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceCruiser" Collapsed="true">
-    <Position X="0.5" Y="4.75" Width="1.5" />
+  <Class Name="SpaceCruiser">
+    <Position X="0.75" Y="15.75" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIUAEAAAAAAAIAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIQAEAAAAAAAIAAAAAAAAAAAgA=</HashCode>
       <FileName>SpaceCruiser.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceFalcon" Collapsed="true">
-    <Position X="2.75" Y="4.75" Width="1.5" />
+  <Class Name="SpaceFalcon">
+    <Position X="3" Y="15.75" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIEAEAAIAAAAIAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAEAAIAAAAIAAAAAAAAAAAgA=</HashCode>
       <FileName>SpaceFalcon.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceSnake" Collapsed="true">
-    <Position X="5" Y="4.75" Width="1.5" />
+  <Class Name="SpaceSnake">
+    <Position X="5.25" Y="15.75" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAAIEAEAAAAAAAIAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAIAAAAAIAAEAAAAAAAIAAAAAAAAAAAgA=</HashCode>
       <FileName>SpaceSnake.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceTroy" Collapsed="true">
-    <Position X="7.25" Y="4.75" Width="1.5" />
+  <Class Name="SpaceTroy">
+    <Position X="7.5" Y="15.75" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIEAEAAAAAAAIAAAAAAQAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAEAAAAAAAIAAAAAAQAAAAgA=</HashCode>
       <FileName>SpaceTroy.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceShip" Collapsed="true">
-    <Position X="3.75" Y="3.5" Width="1.5" />
+  <Class Name="SpaceShip">
+    <Position X="3.75" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAACCEAAAAAAAQBAAMBQCAAAAAAAIIMYAAAAAEIAAA=</HashCode>
       <FileName>SpaceShip.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Square" Collapsed="true">
-    <Position X="18" Y="1.5" Width="1.5" />
+  <Class Name="Square">
+    <Position X="18" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EABAAAABAIAADAgBAAIBAABIAAAAAAAAAABiAAAIAAA=</HashCode>
       <FileName>Square.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Asteroid" Collapsed="true">
-    <Position X="5.25" Y="1.75" Width="1.5" />
+  <Class Name="Asteroid">
+    <Position X="5.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgABAAIAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAIAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Asteroid.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AsteroidFinal" Collapsed="true">
-    <Position X="9.75" Y="1.75" Width="1.5" />
+  <Class Name="AsteroidFinal">
+    <Position X="9.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAgQCIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AsteroidFinal.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AsteroidFragment" Collapsed="true">
-    <Position X="12" Y="1.75" Width="1.5" />
+  <Class Name="AsteroidFragment">
+    <Position X="12" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAgQAKAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAgQAKAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AsteroidFragment.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AsteroidKnuckle" Collapsed="true">
-    <Position X="0.75" Y="1.75" Width="1.5" />
+  <Class Name="AsteroidKnuckle">
+    <Position X="0.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAgQAIAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>AsteroidKnuckle.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AsteroidNyobe" Collapsed="true">
-    <Position X="3" Y="1.75" Width="1.5" />
+  <Class Name="AsteroidNyobe">
+    <Position X="3" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AsteroidNyobe.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AsteroidShyro" Collapsed="true">
-    <Position X="7.5" Y="1.75" Width="1.5" />
+  <Class Name="AsteroidShyro">
+    <Position X="7.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAgQAIAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>AsteroidShyro.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Enemy" Collapsed="true">
+  <Class Name="Enemy">
     <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>FABACAAAAAAADgABAIIBQBAAAAEgAAgAAABgAAEAAAc=</HashCode>
       <FileName>Enemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageFps">
+    <Position X="14.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgABAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>ManageFps.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -8,7 +8,6 @@ class SpaceTroy : public SpaceShip
 {
 	Square& square_;
 	Player& player_;
-	int tickOnCreation_;
 	
 
 public:

@@ -21,10 +21,10 @@ class MyGameEngine:public GameEngine {
 	std::vector<Enemy * > *enemy_;
 	Wave &wave_;
 	Player &player_;
-	ManageFps mFps;
+	ManageFps mFps_;
+	int tick_;
 
 public:
-    int tick;
 	MyGameEngine(Fenetre f, 
 		std::vector<SpaceShip * > *spaceShips, 
 		std::vector<Missile *> * missiles, 

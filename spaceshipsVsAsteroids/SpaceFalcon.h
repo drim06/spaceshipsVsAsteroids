@@ -8,7 +8,6 @@ class SpaceFalcon : public SpaceShip
 {
 	Square& square_;
 	Player& player_;
-	int tickOnCreation_;
 
 public:
 	SpaceFalcon(Square& square, Player& player) :

@@ -4,13 +4,12 @@
 
 
 void MyGameEngine::idle(){
-	if (mFps.getCurrentTime() >= 33 && player_.getHealth() > 0){
-		std::cout << "fps : " << mFps.getCurrentTime() << " ---- tick : " << tick << std::endl;
-		
-		wave_.run(tick, enemy_);
+	if (mFps_.getCurrentTime() >= 33 && player_.getHealth() > 0){
+
+		wave_.run(tick_, enemy_);
 		
 		for (int i = 0; i < (int) spaceShips_->size(); i++){
-			if ((*spaceShips_)[i]->canShoot(tick)){
+			if ((*spaceShips_)[i]->canShoot(tick_)){
 				switch ((*spaceShips_)[i]->getSpaceShipValue()){
 				case 1:
 					missiles_->push_back(new Laser((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY()));
@@ -79,8 +78,7 @@ void MyGameEngine::idle(){
 				(*enemy_).erase((*enemy_).begin() + i);
 			}
 		}
-		std::cout << "reset chrono" << std::endl;
-		mFps.resetChrono();
-		tick++;
+		mFps_.resetChrono();
+		tick_++;
 	}
 }

@@ -1,12 +1,16 @@
-﻿La génération a démarré 31/10/2014 18:50:27.
+﻿La génération a démarré 01/11/2014 14:43:17.
      1>Projet "C:\Users\Marc\Desktop\annees_etudes\M1_info_sophia\S7\C++\PROJET\spaceshipsVsAsteroids\spaceshipsVsAsteroids\spaceshipsVsAsteroids.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Marc\Desktop\annees_etudes\M1_info_sophia\S7\C++\PROJET\uselibgraph\uselibgraph\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AsteroidKnuckle.cpp AsteroidShyro.cpp MyControlEngine.cpp MyGameEngine.cpp MyGraphicEngine.cpp Square.cpp Wave.cpp main.cpp
-         AsteroidKnuckle.cpp
-         AsteroidShyro.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Marc\Desktop\annees_etudes\M1_info_sophia\S7\C++\PROJET\uselibgraph\uselibgraph\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Asteroid.cpp AsteroidFragment.cpp MyControlEngine.cpp MyGameEngine.cpp MyGraphicEngine.cpp SpaceCruiser.cpp SpaceFalcon.cpp SpaceSnake.cpp SpaceTroy.cpp Square.cpp Wave.cpp main.cpp
+         Asteroid.cpp
+         AsteroidFragment.cpp
          MyControlEngine.cpp
          MyGameEngine.cpp
          MyGraphicEngine.cpp
+         SpaceCruiser.cpp
+         SpaceFalcon.cpp
+         SpaceSnake.cpp
+         SpaceTroy.cpp
          Square.cpp
          Wave.cpp
          main.cpp
@@ -45,4 +49,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:08.07
+Temps écoulé 00:00:32.69

@@ -21,8 +21,6 @@ public:
 		blue_ = 0.9f;
 	}
 
-	~Asteroid();
-
 	void draw();
 	bool hit(SpaceShip&);
 };

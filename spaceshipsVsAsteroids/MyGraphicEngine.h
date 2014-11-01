@@ -23,8 +23,6 @@ class MyGraphicEngine:public GraphicEngine {
 	Player &player_;
 	std::vector<Square> *shopShip_;
 	std::vector<SpaceShip * > *shopShipList_;
-
-    char * str;
 public:
     
 	MyGraphicEngine(Fenetre f,
@@ -45,8 +43,7 @@ public:
 		wave_(wave),
 		player_(player),
 		shopShip_(shopShip),
-		shopShipList_(shopShipList),
-    	str(new char[13]{'C','l','i','c',' ','&',' ','E','n','j','o','y','\0'}){}
+		shopShipList_(shopShipList){}
     
     virtual void Draw();
 };

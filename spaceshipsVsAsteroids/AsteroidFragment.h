@@ -20,7 +20,6 @@ public:
 		green_ = 0.9f;
 		blue_ = 0.4f;
 	}
-	~AsteroidFragment();
 
 	void draw();
 	bool hit(SpaceShip&);
