@@ -9,7 +9,7 @@ void MyGameEngine::idle(){
 		wave_.run(tick_, enemy_);
 		
 		for (int i = 0; i < (int) spaceShips_->size(); i++){
-			if ((*spaceShips_)[i]->canShoot(tick_)){
+			if ((*spaceShips_)[i]->canShoot()){
 				switch ((*spaceShips_)[i]->getSpaceShipValue()){
 				case 1:
 					missiles_->push_back(new Laser((*spaceShips_)[i]->getWeaponPosX(), (*spaceShips_)[i]->getWeaponPosY()));
@@ -30,6 +30,7 @@ void MyGameEngine::idle(){
 					break;
 				}
 			}
+			(*spaceShips_)[i]->incrN();
 			for (int j = 0; j < (int) enemy_->size(); j++){ // supprime spaceship lors de collision avec enemy
 				if ((*spaceShips_)[i] != nullptr && (*enemy_)[j] != nullptr){
 					if ((*enemy_)[j]->hit(*(*spaceShips_)[i])){

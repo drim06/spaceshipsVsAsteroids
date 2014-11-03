@@ -21,6 +21,7 @@ public:
 		player_.loseMoney(cost_);
 		health_ = 20;
 		spaceShipValue_ = 2;
+		n_ = 8;
 		red_ = 1.0f;
 		green_ = 1.0f;
 		blue_ = 0.0f;

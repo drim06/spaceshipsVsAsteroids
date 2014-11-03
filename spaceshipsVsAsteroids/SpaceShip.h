@@ -12,6 +12,7 @@ protected:
 	int spaceShipValue_;
 	int health_;
 	char* costTxt_;
+	int n_;
 	
 
 public:
@@ -26,8 +27,12 @@ public:
 		return weaponPosY_;
 	}
 
-	bool canShoot(const int& x) const{
-		return x % frequency_ == 0;
+	bool canShoot() const{
+		return (!n_ == 0) && (n_ % frequency_ == 0);
+	}
+
+	void incrN(){
+		n_++;
 	}
 
 	int getSpaceShipValue() const{
