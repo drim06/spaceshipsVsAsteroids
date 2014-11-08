@@ -17,7 +17,7 @@ public:
 	{
 		posX_ = posX - (0.008f / 2.f);
 		posY_ = posY - (0.008f / 2.f);
-		power_ = 500;
+		power_ = 1500;
 		rapidity_ = 0.01f;
 		red_ = 0.0f;
 		green_ = 1.0f;

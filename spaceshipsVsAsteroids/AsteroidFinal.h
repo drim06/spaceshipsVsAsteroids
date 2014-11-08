@@ -10,7 +10,7 @@ public:
 		width_(0.13f), height_(0.05f)
 	{
 		rows_ = rows;
-		health_ = 20000;
+		health_ = 60000;
 		posX_ = (1.0f - 0.42f);
 		posY_ = 1 - rows*0.171667f - 0.171667f / 2;
 		rapidity_ = 0.0028f;

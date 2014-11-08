@@ -108,7 +108,7 @@
   <Class Name="SpaceShip">
     <Position X="3.75" Y="10" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAACCEAAAAAAAQBAAMBQCAAAAAAAIIMYAAAAAEIAAA=</HashCode>
+      <HashCode>EAAACCEAAAAAAAQBAAMBQCAACAAAAIIMYAAAAAEKAAA=</HashCode>
       <FileName>SpaceShip.h</FileName>
     </TypeIdentifier>
   </Class>
